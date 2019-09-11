@@ -1,0 +1,170 @@
+@font-face {
+  font-family: FiraSansSemiBold;
+  src: url(/fonts/FiraSans-SemiBold.otf?67cf35fead4c694f9ff5b0aeace739bc);
+}
+
+@font-face {
+  font-family: FiraSansLight;
+  src: url(/fonts/FiraSans-Light.otf?a35b04a47658272244d456dd1cbfeb66);
+}
+
+@font-face {
+  font-family: FiraSansRegular;
+  src: url(/fonts/FiraSans-Regular.otf?e7988865e2e32f23de6205effcc3a95d);
+}
+
+@font-face {
+  font-family: FiraSansItalic;
+  src: url(/fonts/FiraSans-Italic.otf?9ae15b27cb0856cac6e422932211091f);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.centro {
+  text-align: center;
+}
+
+.cem {
+  width: 100%;
+}
+
+.invalido {
+  color: red;
+  display: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body header {
+  width: 100%;
+  height: 100vh;
+  background: #6f7983;
+}
+
+body header .container {
+  position: relative;
+  z-index: 20;
+}
+
+body header .container .topHeader {
+  height: 15vh;
+  padding-top: 30px;
+}
+
+body header .container .topHeader .esquerda {
+  width: 20%;
+  float: left;
+  text-align: left;
+}
+
+body header .container .topHeader .direita {
+  width: 80%;
+  float: left;
+  text-align: right;
+}
+
+body header .container .topHeader .direita ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+body header .container .topHeader .direita ul li {
+  display: inline;
+  margin-left: 70px;
+}
+
+body header .container .topHeader .direita ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: firaSansSemiBold;
+}
+
+body header .container .topHeader .direita ul :last-child {
+  width: 200px;
+  height: 50px;
+}
+
+body header .container .topHeader .direita ul :last-child :hover {
+  color: black;
+}
+
+body header .container .topHeader .direita ul :last-child a {
+  padding-top: 12px;
+}
+
+body header .container .centro {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body header .container .centro a {
+  width: 165px;
+  margin-top: 60px;
+  font-family: firaSansSemiBold;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body header .container .seta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 15vh;
+  padding-top: 25px;
+  font-size: 10pt;
+  font-family: firaSansSemiBold;
+}
+
+body header .slider {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+body header .slider ul {
+  list-style: none;
+}
+
+body header .slider ul li .slide1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/images/img POLARIS.png?3e6271fe5cc64747a47907930fa68541");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body header .slider ul li .slide1 a {
+  width: 165px;
+  margin-top: 60px;
+  font-family: firaSansSemiBold;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 21;
+}
+

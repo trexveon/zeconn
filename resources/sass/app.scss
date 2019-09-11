@@ -1,0 +1,155 @@
+@import "variables";
+@import "mixins";
+@import "fonts";
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+.centro{
+    text-align: center;
+}
+.cem{
+    width:100%;
+}
+.invalido{
+    color:red;
+    display:none;
+}
+
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    header{
+        width:100%;
+        height:100vh;
+        background: $cinzaEscuro;
+        // background-image:url('../img/img POLARIS.png');
+        // background-repeat:no-repeat;
+        // background-size:cover;
+        // background-position: center;
+        .container{ 
+            position:relative;
+            z-index:20;
+            .topHeader{
+                height:15vh;
+                padding-top:30px;
+                .esquerda{
+                    width:20%;
+                    float:left;
+                    text-align: left;
+                }
+                .direita{
+                    width:80%;
+                    float:left;
+                    text-align: right;
+                    ul{
+                        text-decoration: none;
+                        list-style: none;
+                        // font-size:16pt;
+                       li{
+                        display:inline;
+                        margin-left:70px;
+                            a{
+                                color:white;
+                                text-decoration:none;
+                                font-family:firaSansSemiBold;
+                            }
+                            
+                       }
+                       :last-child{
+                           width: 200px;
+                           height:50px;
+                                :hover{
+                                    color:black;
+                                }
+                               a{
+                                   padding-top:12px;
+                               }
+                       } 
+
+                    }
+                }
+            }
+            
+        .centro{
+            height:70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            a{
+                width:165px;
+                margin-top:60px;
+                font-family:firaSansSemiBold;
+                height:55px;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                // font-size:16pt;
+            }
+        }
+            .seta{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color:white;
+                height:15vh;
+                padding-top: 25px;
+                font-size:10pt;
+                font-family: firaSansSemiBold;
+            }
+            
+        }
+        .slider{
+            width:100%;
+            height:100vh;
+            position:absolute;
+            top:0;
+            left:0; 
+            ul{
+                list-style:none;
+                li{
+                    .slide1{
+                        position:relative;
+                        width:100%;
+                        height:100vh;
+                        background-image:url('../img/img POLARIS.png');
+                        background-repeat:no-repeat;
+                        background-size:cover;
+                        background-position: center;
+                        display:flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        a{
+                            width:165px;
+                            margin-top:60px;
+                            font-family:firaSansSemiBold;
+                            height:55px;
+                            display:flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            z-index:21;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include for-size(phone-only){
+
+}
