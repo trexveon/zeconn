@@ -18,6 +18,11 @@
   src: url(/fonts/FiraSans-Italic.otf?9ae15b27cb0856cac6e422932211091f);
 }
 
+@font-face {
+  font-family: FiraSansLightItalic;
+  src: url(/fonts/FiraSans-LightItalic.otf?3e380267a8088e9c58dbcf224c9f3945);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -45,6 +50,11 @@ body header {
   width: 100%;
   height: 100vh;
   background: #6f7983;
+  background-image: url("/images/img POLARIS.png?3e6271fe5cc64747a47907930fa68541");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 body header .container {
@@ -76,7 +86,7 @@ body header .container .topHeader .direita ul {
 
 body header .container .topHeader .direita ul li {
   display: inline;
-  margin-left: 70px;
+  margin-left: 50px;
 }
 
 body header .container .topHeader .direita ul li a {
@@ -127,6 +137,12 @@ body header .container .seta {
   padding-top: 25px;
   font-size: 10pt;
   font-family: firaSansSemiBold;
+  transition-duration: 3s 1s;
+}
+
+body header .container .seta a :hover {
+  transition: all 0.3s linear;
+  transform: scale(1.4);
 }
 
 body header .slider {
@@ -166,5 +182,166 @@ body header .slider ul li .slide1 a {
   justify-content: center;
   position: relative;
   z-index: 21;
+}
+
+body header .anterior {
+  position: absolute;
+  top: 47%;
+  left: 80px;
+  transition: all 0.3s linear;
+}
+
+body header .anterior :hover {
+  transition: all 0.3s linear;
+  transform: scale(1.4);
+}
+
+body header .proximo {
+  position: absolute;
+  top: 47%;
+  right: 80px;
+  transition: all 0.3s linear;
+}
+
+body header .proximo :hover {
+  transition: all 0.3s linear;
+  transform: scale(1.4);
+}
+
+body #construtora {
+  width: 100%;
+  height: 650px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+body #construtora h2 {
+  text-align: center;
+  font-family: FiraSansLight;
+  font-size: 20pt;
+  color: #4c799a;
+  margin: 0;
+  padding: 0;
+}
+
+body #construtora h3 {
+  text-align: center;
+  font-family: FiraSansLightItalic;
+  font-size: 30pt;
+  color: #25355f;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+body #construtora p {
+  color: #9a9a9a;
+  text-align: left;
+  font-family: FiraSansLight;
+  font-size: 14pt;
+  padding: 30px;
+}
+
+body #empreendimentos {
+  width: 100%;
+  height: 100vh;
+  background: #fafafa;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body #empreendimentos h3 {
+  font-family: FiraSansLight;
+  color: #25355f;
+  font-size: 30pt;
+}
+
+body #empreendimentos h2 {
+  font-family: FiraSansLight;
+  color: #9a9a9a;
+  font-size: 18pt;
+}
+
+body #parallax {
+  width: 100%;
+  height: 600px;
+  background-image: url("/images/img UM.png?f2162f049c8b38a7d3f02a5cebe67122");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 350px;
+}
+
+body #parallax .filtro1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #25355f;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+}
+
+body #parallax .filtro2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #25355f;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+}
+
+body #parallax .filtro3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3f4043;
+  opacity: 0.15;
+  top: 0;
+  left: 0;
+}
+
+body #parallax h1 {
+  font-family: FiraSansLight;
+  font-family: 36pt;
+  position: relative;
+  z-index: 50px;
+}
+
+body #parallax p {
+  font-family: FiraSansRegular;
+  font-family: 15t;
+  position: relative;
+  z-index: 50px;
+}
+
+body #parallax div a {
+  position: relative;
+  z-index: 50px;
+}
+
+body #parallax div .last {
+  margin-left: 60px;
+}
+
+body #noticias {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
 }
 
