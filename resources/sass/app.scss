@@ -317,7 +317,191 @@ body{
         width:100%;
         height:100vh;
         background-color: white;
+        text-align:center;
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        h1{
+            font-family:FiraSansLight;
+            font-size: 24pt;
+            color:$azulEscuro2;
+        }
+        a{
+            text-align:center;
+            margin:0 auto;
+            width:200px;
+            height:50px;
+            padding-top:13px;
+        }
+        .container{
+            text-align:center;
+            .row{
+                .noticia{
+                    .imagemnoticia{
+                        background-image: url('img/1351515183.jpg');
+                        width:90%;
+                        margin: 0 auto;
+                        height:200px;
+                        background-size:cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        border-top-left-radius: 25px;   
+                    }
+                    .titulonoticia{
+                        width:80%;
+                        margin: 0 auto;
+                        font-family:FiraSansLight;
+                        font-size:15pt;
+                        color:$cinzafonte;
+                        text-align: justify;
+                        margin-top:15px;
+                        margin-bottom:15px;
+                    }
+                    .conteudonoticia{
+                        width:80%;
+                        margin: 0 auto;
+                        font-family:FiraSansLight;
+                        font-size:10pt;
+                        color:$cinzafonte2;
+                        text-align: justify;
+                        line-height: 26px;
+                    }
+                }
+            }
+        }
+    }//noticias
+   
+    .links{
+        height:460px;
+        width:100%;
+        display:flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top:100px;
+        position: relative;
+        background-color: $brancofundo;
+        .idatopo{
+            position: absolute;
+            bottom: 55px;
+            right:25px; 
+        };
+        .container{
+            .row{
+                .row1{
+                    text-align: center;
+                    margin-top:12px;
+                }
+                .row2{
+                    text-align: left;
+                    hr{
+                        color:$laranja;
+                        background-color:$laranja;
+                        width:15%;
+                        height:1px;
+                        margin-left:30px;
+                    }
+                    ul{
+                        list-style:none;
+                        color:$cinzafonte3;
+                        font-family:FiraSansLight;
+                        font-size:10pt;
+                        text-align: left;
+                        li{
+                            margin-top:7px;
+                        }
+                    }
+                }
+                .row3{
+                    text-align: center;
+                    margin-top:12px;
+                }
+                .row4{
+                    text-align: left;
+                    hr{
+                        color:$azulEscuro;
+                        background-color:$azulEscuro;
+                        width:15%;
+                        height:1px;
+                        margin-left:30px;
+                    }
+                    ul{
+                        list-style:none;
+                        color:$cinzafonte3;
+                        font-family:FiraSansLight;
+                        font-size:10pt;
+                        text-align: left;
+                        li{
+                            margin-top:7px;
+                        }
+                    }
+                }
+            }
+        }
+    }//links
+
+    footer{
+        width:100%;
+        background:$azulEscuro2;
+        color:white; 
+        .container{
+            padding-top:70px;
+            
+            .end{
+                width:100%;
+                .icone{
+                    display:flex;
+                    align-items: center;
+                    flex-direction: row;
+                    justify-content: center;
+                    padding-bottom:80px;
+                }
+                .endereco{
+                    padding-bottom:100px;
+                    ul{
+                        list-style:none;
+                        text-align:left; 
+                        :nth-child(1){
+                            list-style-image: url('../img/local.png');
+                        }
+                        :nth-child(2){
+                            list-style-image: url('../img/tel.png');
+                        }
+                        :nth-child(3){
+                            list-style-image: url('../img/carta.png');
+                        } 
+                         li{
+                             margin-bottom:14px;
+                             font-family:FiraSansLight;
+                             font-size:10pt;
+                         }                   
+                    }
+                }
+            }
+            .redes{
+                img{
+                    width:20px;
+                    margin-bottom: 20px;
+                    margin-top:5px;
+                }
+            }
+            .copyright{
+                border-top: 1px solid $azul;
+                width:100%;
+                padding-top:35px;
+                padding-bottom:35px;
+                font-family:FiraSansRegular;
+                color:$za;
+                span{
+                    font-family:FiraSansSemiBold;  
+                }
+            }
+        }   
     }
+    // footer
+    
+    
 }
 
 @include for-size(phone-only){
