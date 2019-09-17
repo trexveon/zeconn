@@ -122,7 +122,7 @@ body header .container .seta {
   justify-content: center;
   color: white;
   height: 15vh;
-  padding-top: 25px;
+  padding-bottom: 25px;
   font-size: 10pt;
   font-family: firaSansSemiBold;
   transition-duration: 3s 1s;
@@ -201,13 +201,9 @@ body header .slidestop .c {
 
 body #construtora {
   width: 100%;
-  height: 650px;
   background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
+  padding-top: 130px;
 }
 
 body #construtora h2 {
@@ -234,17 +230,16 @@ body #construtora p {
   text-align: left;
   font-family: FiraSansLight;
   font-size: 14pt;
-  padding: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 0;
+  margin-bottom: 130px;
 }
 
 body #empreendimentos {
   width: 100%;
   background: #fafafa;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   position: relative;
 }
 
@@ -252,12 +247,14 @@ body #empreendimentos h3 {
   font-family: FiraSansLight;
   color: #25355f;
   font-size: 30pt;
+  padding-top: 100px;
 }
 
 body #empreendimentos h2 {
   font-family: FiraSansLight;
   color: #9a9a9a;
   font-size: 18pt;
+  margin-bottom: 30px;
 }
 
 body #empreendimentos a {
@@ -265,6 +262,12 @@ body #empreendimentos a {
   width: 200px;
   height: 40px;
   font-family: FiraSansSemiBold;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #a5b0b7;
+  border-color: #a5b0b7;
 }
 
 body #empreendimentos a .esqemp {
@@ -304,8 +307,8 @@ body #empreendimentos .fotoresidencial {
 body #empreendimentos .fotoresidencial .statusresidencial {
   padding: 5px 15px;
   background-color: white;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 5px;
   bottom: 0;
   left: 40px;
   position: absolute;
@@ -317,6 +320,8 @@ body #empreendimentos .descricaoresidencial {
   height: 240px;
   background-color: white;
   border: 1px solid #f8f8f8;
+  overflow: hidden;
+  position: relative;
 }
 
 body #empreendimentos .descricaoresidencial h3 {
@@ -325,7 +330,7 @@ body #empreendimentos .descricaoresidencial h3 {
   color: #25355f;
   text-align: left;
   padding-top: 35px;
-  padding-left: 25px;
+  padding-left: 10%;
 }
 
 body #empreendimentos .descricaoresidencial p {
@@ -333,30 +338,29 @@ body #empreendimentos .descricaoresidencial p {
   font-size: 12pt;
   color: #959da4;
   text-align: left;
-  padding-left: 25px;
-  padding-bottom: 50px;
-}
-
-body #empreendimentos .descricaoresidencial hr {
-  width: 80%;
-  margin: 0 auto;
-  padding: 0;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 body #empreendimentos .descricaoresidencial ul {
   list-style: none;
-  margin-top: 0;
-  padding-top: 0;
+  position: absolute;
+  bottom: -12px;
+  left: 10%;
+  border-top: 1px solid #d5dadd;
+  overflow: hidden;
+  background-color: white;
+  margin-right: 10%;
 }
 
 body #empreendimentos .descricaoresidencial ul li {
   display: inline;
   font-family: FiraSansSemiBold;
   font-size: 8pt;
-  margin-left: 2px;
-  margin-right: 2px;
+  padding-left: 2px;
+  padding-right: 5px;
   border-right: 1px solid #d5dadd;
-  padding-right: 8px;
+  padding-bottom: 2px;
 }
 
 body #empreendimentos .descricaoresidencial ul li a {
@@ -468,6 +472,8 @@ body #noticias a {
   padding-top: 13px;
   margin: 80px;
   font-family: FiraSansSemiBold;
+  color: #a5b0b7;
+  border-color: #a5b0b7;
 }
 
 body #noticias a :hover {
@@ -480,7 +486,7 @@ body #noticias .noticia :hover {
 
 body #noticias .noticia .imagemnoticia {
   background-image: url(/images/1351515183.jpg?c191144b43d375ec3871fb264b0012fb);
-  width: 450px;
+  width: 90%;
   margin: 0 auto;
   height: 240px;
   background-size: cover;
@@ -490,7 +496,7 @@ body #noticias .noticia .imagemnoticia {
 }
 
 body #noticias .noticia .titulonoticia {
-  width: 370px;
+  width: 80%;
   margin: 0 auto;
   font-family: FiraSansLight;
   font-size: 15pt;
@@ -501,7 +507,7 @@ body #noticias .noticia .titulonoticia {
 }
 
 body #noticias .noticia .conteudonoticia {
-  width: 370px;
+  width: 80%;
   margin: 0 auto;
   font-family: FiraSansLight;
   font-size: 10pt;
@@ -511,13 +517,9 @@ body #noticias .noticia .conteudonoticia {
 }
 
 body .links {
-  height: 460px;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
   padding-top: 100px;
+  padding-bottom: 100px;
   position: relative;
   background-color: #fafafa;
 }
@@ -542,7 +544,6 @@ body .links .container .row .row2 hr {
   background-color: #ce5a2a;
   width: 15%;
   height: 1px;
-  margin-left: 30px;
 }
 
 body .links .container .row .row2 ul {
@@ -555,6 +556,14 @@ body .links .container .row .row2 ul {
 
 body .links .container .row .row2 ul li {
   margin-top: 7px;
+}
+
+body .links .container .row .row2 ul li a {
+  color: #abb5bb;
+}
+
+body .links .container .row .row2 ul li a :hover {
+  text-decoration: none;
 }
 
 body .links .container .row .row3 {
@@ -571,7 +580,6 @@ body .links .container .row .row4 hr {
   background-color: #1b2125;
   width: 15%;
   height: 1px;
-  margin-left: 30px;
 }
 
 body .links .container .row .row4 ul {
@@ -584,6 +592,14 @@ body .links .container .row .row4 ul {
 
 body .links .container .row .row4 ul li {
   margin-top: 7px;
+}
+
+body .links .container .row .row4 ul li a {
+  color: #abb5bb;
+}
+
+body .links .container .row .row4 ul li a :hover {
+  text-decoration: none;
 }
 
 body footer {
@@ -615,6 +631,8 @@ body footer .container .end .endereco {
 body footer .container .end .endereco ul {
   list-style: none;
   text-align: left;
+  padding-top: 0;
+  margin-top: 0;
 }
 
 body footer .container .end .endereco ul :nth-child(1) {
@@ -630,15 +648,24 @@ body footer .container .end .endereco ul :nth-child(3) {
 }
 
 body footer .container .end .endereco ul li {
-  margin-bottom: 14px;
   font-family: FiraSansLight;
-  font-size: 10pt;
+  font-size: 20px;
+  margin-bottom: 14px;
 }
 
-body footer .container .redes img {
+body footer .container .redes {
+  text-align: right;
+}
+
+body footer .container .redes ul {
+  list-style: none;
+}
+
+body footer .container .redes ul img {
   width: 20px;
   margin-bottom: 20px;
   margin-top: 5px;
+  text-align: right;
 }
 
 body footer .container .copyright {
@@ -652,5 +679,520 @@ body footer .container .copyright {
 
 body footer .container .copyright span {
   font-family: FiraSansSemiBold;
+}
+
+body footer .container .copyright a {
+  float: right;
+  padding: 0;
+  margin: 0;
+}
+
+/*HUMAN2BE*/
+
+#human2be {
+  fill: #748bb3;
+  max-width: 30px;
+}
+
+#human2be .h2be_h {
+  transition: all ease 0.5s;
+}
+
+#human2be .h2be_dot {
+  transition: all ease 0.5s;
+}
+
+#human2be .h2be_2 {
+  transition: all ease 0.3s;
+}
+
+#human2be .h2be_b {
+  transition: all ease 0.5s;
+}
+
+#human2be .h2be_circle {
+  transition: all ease 0.7s;
+}
+
+#human2be:hover .h2be_2,
+#human2be:hover .h2be_b,
+#human2be:hover .h2be_circle {
+  fill: #0ab49b;
+}
+
+#human2be:hover .h2be_h {
+  fill: #748bb3;
+}
+
+#human2be:hover .h2be_dot {
+  fill: #748bb3;
+}
+
+@media (max-width: 600px) {
+  body header {
+    background-size: cover;
+    background-position: center;
+  }
+
+  body header .container .topHeader .esquerda img {
+    width: 150%;
+    height: 150%;
+  }
+
+  body header .container .topHeader .direita {
+    display: none;
+  }
+
+  body header .container .topHeader .direita ul {
+    text-decoration: none;
+    list-style: none;
+  }
+
+  body header .container .topHeader .direita ul li {
+    display: inline;
+    margin-left: 50px;
+  }
+
+  body header .container .topHeader .direita ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: firaSansSemiBold;
+  }
+
+  body header .container .topHeader .direita ul :last-child {
+    width: 200px;
+    height: 50px;
+  }
+
+  body header .container .topHeader .direita ul :last-child :hover {
+    color: black;
+  }
+
+  body header .container .topHeader .direita ul :last-child a {
+    padding-top: 12px;
+  }
+
+  body header .anterior {
+    left: 20px;
+  }
+
+  body header .proximo {
+    right: 20px;
+  }
+
+  body header .slidestop .a {
+    background-image: url("/images/img POLARIS.png?3e6271fe5cc64747a47907930fa68541");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  body header .slidestop .a img {
+    width: 250px;
+  }
+
+  body #construtora {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  body #construtora h2 {
+    font-size: 18pt;
+  }
+
+  body #construtora h3 {
+    font-size: 26pt;
+  }
+
+  body #construtora p {
+    margin-bottom: 0;
+  }
+
+  body #empreendimentos h3 {
+    font-size: 30pt;
+    padding-top: 60px;
+  }
+
+  body #empreendimentos h2 {
+    font-size: 16pt;
+  }
+
+  body #empreendimentos a .esqemp {
+    left: 30px;
+  }
+
+  body #empreendimentos a .diremp {
+    right: 30px;
+  }
+
+  body #empreendimentos .fotoresidencial {
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  body #empreendimentos .descricaoresidencial {
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  body #empreendimentos .descricaoresidencial h3 {
+    font-size: 20pt;
+    padding-top: 25px;
+  }
+
+  body #empreendimentos .descricaoresidencial p {
+    font-family: FiraSansLight;
+    font-size: 12pt;
+    color: #959da4;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  body #empreendimentos .descricaoresidencial ul {
+    list-style: none;
+    position: absolute;
+    bottom: -12px;
+    border-top: 1px solid #d5dadd;
+    overflow: hidden;
+    background-color: white;
+    width: 80%;
+  }
+
+  body #empreendimentos .descricaoresidencial ul li {
+    display: inline;
+    font-family: FiraSansSemiBold;
+    font-size: 8pt;
+    padding-left: 2px;
+    padding-right: 5px;
+    border-right: 1px solid #d5dadd;
+    padding-bottom: 2px;
+  }
+
+  body #empreendimentos .descricaoresidencial ul li a {
+    color: #d5dadd;
+  }
+
+  body #empreendimentos .descricaoresidencial ul li a :hover {
+    text-decoration: none;
+  }
+
+  body #empreendimentos .descricaoresidencial ul :last-child {
+    border: none;
+  }
+
+  body #parallax {
+    width: 100%;
+    height: 600px;
+    background-image: url("/images/img UM.png?f2162f049c8b38a7d3f02a5cebe67122");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 350px;
+  }
+
+  body #parallax .filtro1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #25355f;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+  }
+
+  body #parallax .filtro2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #25355f;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+  }
+
+  body #parallax .filtro3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #3f4043;
+    opacity: 0.15;
+    top: 0;
+    left: 0;
+  }
+
+  body #parallax h1 {
+    font-family: FiraSansLight;
+    font-family: 36pt;
+    position: relative;
+    z-index: 50px;
+  }
+
+  body #parallax p {
+    font-family: FiraSansRegular;
+    font-family: 15t;
+    position: relative;
+    z-index: 50px;
+  }
+
+  body #parallax div a {
+    position: relative;
+    z-index: 50px;
+  }
+
+  body #parallax div .last {
+    margin-left: 60px;
+  }
+
+  body #noticias {
+    background-color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  body #noticias h1 {
+    font-family: FiraSansLight;
+    font-size: 24pt;
+    color: #25355f;
+    margin: 80px;
+  }
+
+  body #noticias a {
+    text-align: center;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    padding-top: 13px;
+    margin: 80px;
+    font-family: FiraSansSemiBold;
+    color: #a5b0b7;
+    border-color: #a5b0b7;
+  }
+
+  body #noticias a :hover {
+    text-decoration: none;
+  }
+
+  body #noticias .noticia :hover {
+    text-decoration: none;
+  }
+
+  body #noticias .noticia .imagemnoticia {
+    background-image: url(/images/1351515183.jpg?c191144b43d375ec3871fb264b0012fb);
+    width: 90%;
+    margin: 0 auto;
+    height: 240px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 25px;
+  }
+
+  body #noticias .noticia .titulonoticia {
+    width: 80%;
+    margin: 0 auto;
+    font-family: FiraSansLight;
+    font-size: 15pt;
+    color: #585c5f;
+    text-align: justify;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  body #noticias .noticia .conteudonoticia {
+    width: 80%;
+    margin: 0 auto;
+    font-family: FiraSansLight;
+    font-size: 10pt;
+    color: #959da4;
+    text-align: justify;
+    line-height: 26px;
+  }
+
+  body .links {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    background-color: #fafafa;
+  }
+
+  body .links .idatopo {
+    position: absolute;
+    bottom: 55px;
+    right: 25px;
+  }
+
+  body .links .container .row .row1 {
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  body .links .container .row .row2 {
+    text-align: left;
+  }
+
+  body .links .container .row .row2 hr {
+    color: #ce5a2a;
+    background-color: #ce5a2a;
+    width: 15%;
+    height: 1px;
+  }
+
+  body .links .container .row .row2 ul {
+    list-style: none;
+    color: #abb5bb;
+    font-family: FiraSansLight;
+    font-size: 10pt;
+    text-align: left;
+  }
+
+  body .links .container .row .row2 ul li {
+    margin-top: 7px;
+  }
+
+  body .links .container .row .row2 ul li a {
+    color: #abb5bb;
+  }
+
+  body .links .container .row .row2 ul li a :hover {
+    text-decoration: none;
+  }
+
+  body .links .container .row .row3 {
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  body .links .container .row .row4 {
+    text-align: left;
+  }
+
+  body .links .container .row .row4 hr {
+    color: #1b2125;
+    background-color: #1b2125;
+    width: 15%;
+    height: 1px;
+  }
+
+  body .links .container .row .row4 ul {
+    list-style: none;
+    color: #abb5bb;
+    font-family: FiraSansLight;
+    font-size: 10pt;
+    text-align: left;
+  }
+
+  body .links .container .row .row4 ul li {
+    margin-top: 7px;
+  }
+
+  body .links .container .row .row4 ul li a {
+    color: #abb5bb;
+  }
+
+  body .links .container .row .row4 ul li a :hover {
+    text-decoration: none;
+  }
+
+  body footer {
+    width: 100%;
+    background: #25355f;
+    color: white;
+  }
+
+  body footer .container {
+    padding-top: 70px;
+  }
+
+  body footer .container .end {
+    width: 100%;
+  }
+
+  body footer .container .end .icone {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 80px;
+  }
+
+  body footer .container .end .endereco {
+    padding-bottom: 100px;
+  }
+
+  body footer .container .end .endereco ul {
+    list-style: none;
+    text-align: left;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  body footer .container .end .endereco ul :nth-child(1) {
+    list-style-image: url(/images/local.png?82ec47752c8bc7a16ce3cc4bc0b241c4);
+  }
+
+  body footer .container .end .endereco ul :nth-child(2) {
+    list-style-image: url(/images/tel.png?f5efdcf3dcae5ed9d3534a2c051fd2d3);
+  }
+
+  body footer .container .end .endereco ul :nth-child(3) {
+    list-style-image: url(/images/carta.png?b2629fd276ce801a364d33c6dc7633d6);
+  }
+
+  body footer .container .end .endereco ul li {
+    font-family: FiraSansLight;
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+
+  body footer .container .redes {
+    text-align: right;
+  }
+
+  body footer .container .redes ul {
+    list-style: none;
+  }
+
+  body footer .container .redes ul img {
+    width: 20px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    text-align: right;
+  }
+
+  body footer .container .copyright {
+    border-top: 1px solid #3f6f93;
+    width: 100%;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    font-family: FiraSansRegular;
+    color: #3a6589;
+  }
+
+  body footer .container .copyright span {
+    font-family: FiraSansSemiBold;
+  }
+
+  body footer .container .copyright a {
+    float: right;
+    padding: 0;
+    margin: 0;
+  }
 }
 

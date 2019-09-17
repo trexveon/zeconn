@@ -93,7 +93,7 @@ body{
                 justify-content: center;
                 color:white;
                 height:15vh;
-                padding-top: 25px;
+                padding-bottom: 25px;
                 font-size:10pt;
                 font-family: firaSansSemiBold;
                 transition-duration: 3s 1s;
@@ -168,20 +168,18 @@ body{
 
     #construtora{
         width:100%;
-        height:650px;
         background-color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content:center;
         text-align: center;
+        padding-top: 130px;
         h2{
+
             text-align: center;
             font-family:FiraSansLight;
             font-size:20pt;
             color:$azul2;
             margin:0;
             padding:0;
+            
         }
         h3{
             text-align: center;
@@ -197,7 +195,11 @@ body{
             text-align:left;
             font-family:FiraSansLight;
             font-size:14pt;
-            padding:30px;
+            padding-left:30px;
+            padding-right:30px;
+            padding-top: 0;
+            margin-bottom: 130px;
+
         }
 
     } //construtora
@@ -206,26 +208,34 @@ body{
         width:100%;
         background:$brancofundo;
         text-align:center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content:center;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-content:center;
         position:relative;
         h3{
             font-family: FiraSansLight;
             color:$azulEscuro2;
             font-size:30pt;
+            padding-top:100px;
         }
         h2{
             font-family: FiraSansLight;
             color:$cinzaletra;
             font-size:18pt;
+            margin-bottom:30px;
         }
         a{
             text-align: center;
             width: 200px;
             height: 40px;
             font-family: FiraSansSemiBold;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            color:$cinza;
+            border-color: $cinza;
             .esqemp{
                 position: absolute;
                 top:47%;
@@ -258,8 +268,8 @@ body{
             .statusresidencial{
                 padding:5px 15px;
                 background-color: white;
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 5px;
                 bottom: 0;
                 left:40px;
                 position: absolute;
@@ -271,40 +281,41 @@ body{
             height:240px;
             background-color: white;
             border: 1px solid $border;
-            // box-shadow: 12px 12px 12px 12px $border;
+            overflow: hidden;
+            position: relative;
             h3{
                 font-family: FiraSansLight;
                 font-size:24pt;
                 color: $azulEscuro2;
                 text-align: left;
                 padding-top: 35px;
-                padding-left: 25px;
+                padding-left: 10%;
             }
             p{
                 font-family: FiraSansLight;
                 font-size:12pt;
                 color: $cinzafonte2;
                 text-align: left;
-                padding-left: 25px;
-                padding-bottom: 50px;
-            }
-            hr{
-                width: 80%;
-                margin: 0 auto;
-                padding:0;
+                padding-left: 10%;
+                padding-right: 10%;
             }
             ul{
                 list-style: none;
-                margin-top: 0;
-                padding-top: 0;
+                position: absolute;
+                bottom: -12px;
+                left: 10%;
+                border-top: 1px solid $textotulipa;
+                overflow: hidden;
+                background-color:white;
+                margin-right: 10%;
                 li{
                     display: inline;
                     font-family: FiraSansSemiBold;
                     font-size:8pt;
-                    margin-left: 2px;
-                    margin-right: 2px;
+                    padding-left: 2px;
+                    padding-right: 5px;
                     border-right: 1px solid $textotulipa;
-                    padding-right: 8px;
+                    padding-bottom: 2px;
                     a{
                         color:$textotulipa;
                         :hover{
@@ -318,14 +329,6 @@ body{
             }
         }
     }//empreendimentos
-
-
-
-
-
-
-
-
 
     #parallax{
         width:100%;
@@ -393,30 +396,6 @@ body{
     }//parallax
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     #noticias{
         background-color: white;
         text-align:center;
@@ -440,7 +419,9 @@ body{
             height:50px;
             padding-top:13px;
             margin: 80px;
-             font-family: FiraSansSemiBold;
+            font-family: FiraSansSemiBold;
+            color:$cinza;
+            border-color: $cinza;
             :hover{
                     text-decoration: none;
             }
@@ -453,7 +434,7 @@ body{
                 }
                 .imagemnoticia{
                         background-image: url('img/1351515183.jpg');
-                        width:450px;
+                        width:90%;
                         margin: 0 auto;
                         height:240px;
                         background-size:cover;
@@ -462,7 +443,7 @@ body{
                         border-top-left-radius: 25px;
                     }
                     .titulonoticia{
-                        width:370px;
+                        width:80%;
                         margin: 0 auto;
                         font-family:FiraSansLight;
                         font-size:15pt;
@@ -472,7 +453,7 @@ body{
                         margin-bottom:15px;
                     }
                     .conteudonoticia{
-                        width:370px;
+                        width:80%;
                         margin: 0 auto;
                         font-family:FiraSansLight;
                         font-size:10pt;
@@ -488,20 +469,20 @@ body{
     }//noticias
 
     .links{
-        height:460px;
         width:100%;
-        display:flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
+        // display:flex;
+        // flex-direction: row;
+        // align-items: flex-start;
+        // justify-content: center;
         padding-top:100px;
+        padding-bottom:100px;
         position: relative;
         background-color: $brancofundo;
         .idatopo{
             position: absolute;
             bottom: 55px;
             right:25px; 
-        };
+        }
         .container{
             .row{
                 .row1{
@@ -515,7 +496,7 @@ body{
                         background-color:$laranja;
                         width:15%;
                         height:1px;
-                        margin-left:30px;
+                        // margin-left:30px;
                     }
                     ul{
                         list-style:none;
@@ -525,6 +506,12 @@ body{
                         text-align: left;
                         li{
                             margin-top:7px;
+                            a{
+                                color:$cinzafonte3;
+                                :hover{
+                                    text-decoration: none;
+                                }
+                            }
                         }
                     }
                 }
@@ -539,7 +526,7 @@ body{
                         background-color:$azulEscuro;
                         width:15%;
                         height:1px;
-                        margin-left:30px;
+                        // margin-left:30px;
                     }
                     ul{
                         list-style:none;
@@ -549,6 +536,12 @@ body{
                         text-align: left;
                         li{
                             margin-top:7px;
+                            a{
+                                color:$cinzafonte3;
+                                :hover{
+                                    text-decoration: none;
+                                }
+                            }
                         }
                     }
                 }
@@ -576,6 +569,8 @@ body{
                     ul{
                         list-style:none;
                         text-align:left;
+                        padding-top: 0;
+                        margin-top: 0;
                         :nth-child(1){
                             list-style-image: url('../img/local.png');
                         }
@@ -586,23 +581,29 @@ body{
                             list-style-image: url('../img/carta.png');
                         }
                          li{
-                             margin-bottom:14px;
                              font-family:FiraSansLight;
-                             font-size:10pt;
+                             font-size:20px;
+                             margin-bottom:14px;
                          }
                     }
                 }
             }
             .redes{
-                img{
-                    width:20px;
-                    margin-bottom: 20px;
-                    margin-top:5px;
+                text-align: right;
+                ul{
+                    list-style: none;
+                    img{
+                        width:20px;
+                        margin-bottom: 20px;
+                        margin-top:5px;
+                        text-align: right;
+                    }
                 }
             }
             .copyright{
                 border-top: 1px solid $azul;
                 width:100%;
+                // float: left;
                 padding-top:35px;
                 padding-bottom:35px;
                 font-family:FiraSansRegular;
@@ -610,12 +611,524 @@ body{
                 span{
                     font-family:FiraSansSemiBold;
                 }
+                a{
+                    float: right;
+                    padding:0;
+                    margin:0;
+                }
             }
+
         }
     }
     // footer
 }
 
-@include for-size(phone-only){
+/*HUMAN2BE*/
+// .human2be {
+    // width: 20%;
+    // text-align: right;
+    // float: left;
+    // padding-top: 25px;
+    // display:inline;
+// }
 
+#human2be {
+    fill: #748bb3;
+    max-width: 30px;
+}
+#human2be .h2be_h {
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+#human2be .h2be_dot {
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+#human2be .h2be_2 {
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+#human2be .h2be_b {
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+#human2be .h2be_circle {
+  -webkit-transition: all ease 0.7s;
+  -moz-transition: all ease 0.7s;
+  -ms-transition: all ease 0.7s;
+  -o-transition: all ease 0.7s;
+  transition: all ease 0.7s;
+}
+#human2be:hover .h2be_2,
+#human2be:hover .h2be_b,
+#human2be:hover .h2be_circle {
+  fill: #0ab49b;
+}
+#human2be:hover .h2be_h {
+  fill: #748bb3;
+}
+#human2be:hover .h2be_dot {
+  fill: #748bb3;
+}
+
+#human2be {
+    // float: right;
+}
+
+
+// --------------------------------------------------------------------------------------------------------------
+@include for-size(phone-only){
+    body{
+    header{
+        background-size:cover;
+        background-position: center;
+        .container{ 
+            .topHeader{
+                .esquerda{
+                    img{
+                        width:150%;
+                        height:150%;
+                    }
+                }
+                .direita{
+                    display:none;
+                    ul{
+                        text-decoration: none;
+                        list-style: none;
+                        // font-size:16pt;
+                       li{
+                        display:inline;
+                        margin-left:50px;
+                            a{
+                                color:white;
+                                text-decoration:none;
+                                font-family:firaSansSemiBold;
+                            }
+
+                       }
+                       :last-child{
+                           width: 200px;
+                           height:50px;
+                                :hover{
+                                    color:black;
+                                }
+                               a{
+                                   padding-top:12px;
+                               }
+                       }
+
+                    }
+                }
+            }
+        }
+
+        .anterior{
+            left:20px;
+        }
+        .proximo{
+            right:20px;
+        }
+        .slidestop{
+            .a{
+                background-image: url('../img/img POLARIS.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                img{
+                    width: 250px;
+                }
+            }
+
+        }
+    }
+
+    #construtora{
+        padding-top:50px;
+        padding-bottom:50px;
+        h2{
+            font-size:18pt;
+        }
+        h3{
+            font-size:26pt;
+        }
+        p{
+            margin-bottom: 0;
+        }
+
+    } //construtora
+
+    #empreendimentos{
+        h3{
+            font-size:30pt;
+            padding-top:60px;
+        }
+        h2{
+            font-size:16pt;
+        }
+        a{
+            .esqemp{
+                left:30px;
+            }
+            .diremp{
+                right:30px;
+            }
+        }
+        .fotoresidencial{
+            width:80%;
+            height:200px;
+            margin:0 auto;
+        }
+        .descricaoresidencial{
+            width:80%;
+            height:200px;
+            margin:0 auto;
+            h3{
+                font-size:20pt;
+                padding-top: 25px;
+            }
+            p{
+                font-family: FiraSansLight;
+                font-size:12pt;
+                color: $cinzafonte2;
+                text-align: left;
+                padding-left: 10%;
+                padding-right: 10%;
+            }
+            ul{
+                list-style: none;
+                position: absolute;
+                bottom: -12px;
+                // left: 25%;
+                border-top: 1px solid $textotulipa;
+                overflow: hidden;
+                background-color:white;
+                // margin-right: 10%;
+                // margin-left: 10%;
+                width:80%;
+                li{
+                    display: inline;
+                    font-family: FiraSansSemiBold;
+                    font-size:8pt;
+                    padding-left: 2px;
+                    padding-right: 5px;
+                    border-right: 1px solid $textotulipa;
+                    padding-bottom: 2px;
+                    a{
+                        color:$textotulipa;
+                        :hover{
+                            text-decoration: none;
+                        }
+                    }
+                }
+                :last-child{
+                    border:none;
+                }
+            }
+        }
+    }//empreendimentos
+
+    #parallax{
+        width:100%;
+        height:600px;
+        background-image: url('../img/img UM.png');
+        background-attachment:fixed;
+        background-position:center;
+        background-size:cover;
+        background-repeat: no-repeat;
+        position:relative;
+        color:white;
+        display:flex;
+        align-items: left;
+        flex-direction: column;
+        justify-content: center;
+        padding-left:350px;
+        .filtro1{
+            position:absolute;
+            width:100%;
+            height:100%;
+            background-color: $azulEscuro2;
+            opacity:0.3;
+            top:0;
+            left:0;
+        }
+        .filtro2{
+            position:absolute;
+            width:100%;
+            height:100%;
+            background-color: $azulEscuro2;
+            opacity:0.3;
+            top:0;
+            left:0;
+        }
+        .filtro3{
+            position:absolute;
+            width:100%;
+            height:100%;
+            background-color: $filtropreto;
+            opacity:0.15;
+            top:0;
+            left:0;
+        }
+        h1{
+            font-family:FiraSansLight;
+            font-family:36pt;
+            position:relative;
+            z-index:50px;
+        }
+        p{
+            font-family:FiraSansRegular;
+            font-family:15t;
+            position:relative;
+            z-index:50px;
+        }
+        div{
+            a{
+                position:relative;
+                z-index:50px;
+            }
+            .last{
+                margin-left:60px;
+            }
+        }
+    }//parallax
+
+
+    #noticias{
+        background-color: white;
+        text-align:center;
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align:center;
+        width:90%;
+        margin: 0 auto;
+        h1{
+            font-family:FiraSansLight;
+            font-size: 24pt;
+            color:$azulEscuro2;
+            margin: 80px;
+        }
+        a{
+            text-align:center;
+            margin:0 auto;
+            width:200px;
+            height:50px;
+            padding-top:13px;
+            margin: 80px;
+            font-family: FiraSansSemiBold;
+            color:$cinza;
+            border-color: $cinza;
+            :hover{
+                    text-decoration: none;
+            }
+        }
+
+
+        .noticia{
+            :hover{
+                    text-decoration: none;
+                }
+                .imagemnoticia{
+                        background-image: url('img/1351515183.jpg');
+                        width:90%;
+                        margin: 0 auto;
+                        height:240px;
+                        background-size:cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        border-top-left-radius: 25px;
+                    }
+                    .titulonoticia{
+                        width:80%;
+                        margin: 0 auto;
+                        font-family:FiraSansLight;
+                        font-size:15pt;
+                        color:$cinzafonte;
+                        text-align: justify;
+                        margin-top:15px;
+                        margin-bottom:15px;
+                    }
+                    .conteudonoticia{
+                        width:80%;
+                        margin: 0 auto;
+                        font-family:FiraSansLight;
+                        font-size:10pt;
+                        color:$cinzafonte2;
+                        text-align: justify;
+                        line-height: 26px;
+
+                    }
+
+            
+
+        }
+    }//noticias
+
+    .links{
+        width:100%;
+        // display:flex;
+        // flex-direction: row;
+        // align-items: flex-start;
+        // justify-content: center;
+        padding-top:100px;
+        padding-bottom:100px;
+        position: relative;
+        background-color: $brancofundo;
+        .idatopo{
+            position: absolute;
+            bottom: 55px;
+            right:25px; 
+        }
+        .container{
+            .row{
+                .row1{
+                    text-align: center;
+                    margin-top:12px;
+                }
+                .row2{
+                    text-align: left;
+                    hr{
+                        color:$laranja;
+                        background-color:$laranja;
+                        width:15%;
+                        height:1px;
+                        // margin-left:30px;
+                    }
+                    ul{
+                        list-style:none;
+                        color:$cinzafonte3;
+                        font-family:FiraSansLight;
+                        font-size:10pt;
+                        text-align: left;
+                        li{
+                            margin-top:7px;
+                            a{
+                                color:$cinzafonte3;
+                                :hover{
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .row3{
+                    text-align: center;
+                    margin-top:12px;
+                }
+                .row4{
+                    text-align: left;
+                    hr{
+                        color:$azulEscuro;
+                        background-color:$azulEscuro;
+                        width:15%;
+                        height:1px;
+                        // margin-left:30px;
+                    }
+                    ul{
+                        list-style:none;
+                        color:$cinzafonte3;
+                        font-family:FiraSansLight;
+                        font-size:10pt;
+                        text-align: left;
+                        li{
+                            margin-top:7px;
+                            a{
+                                color:$cinzafonte3;
+                                :hover{
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }//links
+
+    footer{
+        width:100%;
+        background:$azulEscuro2;
+        color:white;
+        .container{
+            padding-top:70px;
+            .end{
+                width:100%;
+                .icone{
+                    display:flex;
+                    align-items: center;
+                    flex-direction: row;
+                    justify-content: center;
+                    padding-bottom:80px;
+                }
+                .endereco{
+                    padding-bottom:100px;
+                    ul{
+                        list-style:none;
+                        text-align:left;
+                        padding-top: 0;
+                        margin-top: 0;
+                        :nth-child(1){
+                            list-style-image: url('../img/local.png');
+                        }
+                        :nth-child(2){
+                            list-style-image: url('../img/tel.png');
+                        }
+                        :nth-child(3){
+                            list-style-image: url('../img/carta.png');
+                        }
+                         li{
+                             font-family:FiraSansLight;
+                             font-size:20px;
+                             margin-bottom:14px;
+                         }
+                    }
+                }
+            }
+            .redes{
+                text-align: right;
+                ul{
+                    list-style: none;
+                    img{
+                        width:20px;
+                        margin-bottom: 20px;
+                        margin-top:5px;
+                        text-align: right;
+                    }
+                }
+            }
+            .copyright{
+                border-top: 1px solid $azul;
+                width:100%;
+                // float: left;
+                padding-top:35px;
+                padding-bottom:35px;
+                font-family:FiraSansRegular;
+                color:$za;
+                span{
+                    font-family:FiraSansSemiBold;
+                }
+                a{
+                    float: right;
+                    padding:0;
+                    margin:0;
+                }
+            }
+
+        }
+    }
+    // footer
+}
 }
