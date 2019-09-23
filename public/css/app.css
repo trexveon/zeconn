@@ -107,6 +107,22 @@ body header .container .topHeader .direita ul :last-child a {
   padding-top: 12px;
 }
 
+body header .container .topHeader .direita .extrabtn {
+  display: none;
+  width: 200px;
+  height: 40px;
+  color: white;
+  text-decoration: none;
+  font-family: firaSansSemiBold;
+  padding-top: 8px;
+  float: right;
+  width: 140px;
+}
+
+body header .container .topHeader .direita .extrabtn :hover {
+  color: black;
+}
+
 body header .container .centro {
   height: 75vh;
   display: flex;
@@ -137,7 +153,7 @@ body header .anterior {
   position: absolute;
   top: 47%;
   left: 80px;
-  z-index: 200;
+  z-index: 20;
   transition: all 0.3s linear;
 }
 
@@ -151,7 +167,7 @@ body header .proximo {
   top: 47%;
   right: 80px;
   transition: all 0.3s linear;
-  z-index: 200;
+  z-index: 20;
 }
 
 body header .proximo :hover {
@@ -165,7 +181,7 @@ body header .slidestop {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 19;
 }
 
 body header .slidestop .a {
@@ -179,6 +195,17 @@ body header .slidestop .a {
   justify-content: center;
   width: 100%;
   height: 100vh;
+}
+
+body header .slidestop .a div {
+  position: relative;
+  z-index: 21;
+}
+
+body header .slidestop .a div a {
+  padding: 10px 20px;
+  font-family: FiraSansSemiBold;
+  margin-top: 20px;
 }
 
 body header .slidestop .b {
@@ -687,47 +714,6 @@ body footer .container .copyright a {
   margin: 0;
 }
 
-/*HUMAN2BE*/
-
-#human2be {
-  fill: #748bb3;
-  max-width: 30px;
-}
-
-#human2be .h2be_h {
-  transition: all ease 0.5s;
-}
-
-#human2be .h2be_dot {
-  transition: all ease 0.5s;
-}
-
-#human2be .h2be_2 {
-  transition: all ease 0.3s;
-}
-
-#human2be .h2be_b {
-  transition: all ease 0.5s;
-}
-
-#human2be .h2be_circle {
-  transition: all ease 0.7s;
-}
-
-#human2be:hover .h2be_2,
-#human2be:hover .h2be_b,
-#human2be:hover .h2be_circle {
-  fill: #0ab49b;
-}
-
-#human2be:hover .h2be_h {
-  fill: #748bb3;
-}
-
-#human2be:hover .h2be_dot {
-  fill: #748bb3;
-}
-
 @media (max-width: 600px) {
   body header {
     background-size: cover;
@@ -735,60 +721,37 @@ body footer .container .copyright a {
   }
 
   body header .container .topHeader .esquerda img {
-    width: 150%;
-    height: 150%;
-  }
-
-  body header .container .topHeader .direita {
-    display: none;
+    width: 220%;
+    height: 220%;
   }
 
   body header .container .topHeader .direita ul {
-    text-decoration: none;
-    list-style: none;
+    display: none;
   }
 
-  body header .container .topHeader .direita ul li {
-    display: inline;
-    margin-left: 50px;
-  }
-
-  body header .container .topHeader .direita ul li a {
-    color: white;
-    text-decoration: none;
-    font-family: firaSansSemiBold;
-  }
-
-  body header .container .topHeader .direita ul :last-child {
-    width: 200px;
-    height: 50px;
-  }
-
-  body header .container .topHeader .direita ul :last-child :hover {
-    color: black;
-  }
-
-  body header .container .topHeader .direita ul :last-child a {
-    padding-top: 12px;
+  body header .container .topHeader .direita .extrabtn {
+    display: block;
   }
 
   body header .anterior {
-    left: 20px;
+    left: 2px;
+    transform: scale(0.5);
   }
 
   body header .proximo {
-    right: 20px;
+    right: 2px;
+    transform: scale(0.5);
   }
 
   body header .slidestop .a {
     background-image: url("/images/img POLARIS.png?3e6271fe5cc64747a47907930fa68541");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 250% 100%;
     background-position: center;
   }
 
   body header .slidestop .a img {
-    width: 250px;
+    width: 200px;
   }
 
   body #construtora {
@@ -801,34 +764,54 @@ body footer .container .copyright a {
   }
 
   body #construtora h3 {
-    font-size: 26pt;
+    font-size: 20pt;
   }
 
   body #construtora p {
     margin-bottom: 0;
+    font-size: 12pt;
   }
 
   body #empreendimentos h3 {
-    font-size: 30pt;
-    padding-top: 60px;
+    font-size: 22pt;
+    padding-top: 15px;
+    padding-bottom: 10px;
   }
 
   body #empreendimentos h2 {
     font-size: 16pt;
   }
 
+  body #empreendimentos a {
+    margin: 15px;
+  }
+
   body #empreendimentos a .esqemp {
-    left: 30px;
+    left: 2px;
+    transform: rotate(180deg) scale(0.6, 0.6);
+  }
+
+  body #empreendimentos a .esqemp :hover {
+    transform: rotate(180deg) scale(0.8, 0.8);
   }
 
   body #empreendimentos a .diremp {
-    right: 30px;
+    right: 2px;
+    transform: scale(0.6, 0.6);
+  }
+
+  body #empreendimentos a .diremp :hover {
+    transform: scale(0.8, 0.8);
   }
 
   body #empreendimentos .fotoresidencial {
     width: 80%;
     height: 200px;
     margin: 0 auto;
+  }
+
+  body #empreendimentos .fotoresidencial .statusresidencial {
+    left: 15px;
   }
 
   body #empreendimentos .descricaoresidencial {
@@ -839,25 +822,16 @@ body footer .container .copyright a {
 
   body #empreendimentos .descricaoresidencial h3 {
     font-size: 20pt;
-    padding-top: 25px;
+    padding-top: 20px;
   }
 
   body #empreendimentos .descricaoresidencial p {
-    font-family: FiraSansLight;
-    font-size: 12pt;
-    color: #959da4;
-    text-align: left;
+    font-size: 12px;
     padding-left: 10%;
     padding-right: 10%;
   }
 
   body #empreendimentos .descricaoresidencial ul {
-    list-style: none;
-    position: absolute;
-    bottom: -12px;
-    border-top: 1px solid #d5dadd;
-    overflow: hidden;
-    background-color: white;
     width: 80%;
   }
 
@@ -867,81 +841,30 @@ body footer .container .copyright a {
     font-size: 8pt;
     padding-left: 2px;
     padding-right: 5px;
-    border-right: 1px solid #d5dadd;
     padding-bottom: 2px;
   }
 
   body #empreendimentos .descricaoresidencial ul li a {
-    color: #d5dadd;
-  }
-
-  body #empreendimentos .descricaoresidencial ul li a :hover {
-    text-decoration: none;
-  }
-
-  body #empreendimentos .descricaoresidencial ul :last-child {
-    border: none;
+    font-size: 8px;
   }
 
   body #parallax {
-    width: 100%;
-    height: 600px;
-    background-image: url("/images/img UM.png?f2162f049c8b38a7d3f02a5cebe67122");
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    color: white;
+    text-align: center;
+    background-size: 250% 100%;
     display: flex;
-    align-items: left;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding-left: 350px;
-  }
-
-  body #parallax .filtro1 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #25355f;
-    opacity: 0.3;
-    top: 0;
-    left: 0;
-  }
-
-  body #parallax .filtro2 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #25355f;
-    opacity: 0.3;
-    top: 0;
-    left: 0;
-  }
-
-  body #parallax .filtro3 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #3f4043;
-    opacity: 0.15;
-    top: 0;
-    left: 0;
+    padding-left: 0;
+    height: 70vh;
   }
 
   body #parallax h1 {
-    font-family: FiraSansLight;
-    font-family: 36pt;
-    position: relative;
-    z-index: 50px;
+    font-family: 30pt;
   }
 
   body #parallax p {
-    font-family: FiraSansRegular;
-    font-family: 15t;
-    position: relative;
-    z-index: 50px;
+    font-family: 15pt;
   }
 
   body #parallax div a {
@@ -953,80 +876,36 @@ body footer .container .copyright a {
     margin-left: 60px;
   }
 
-  body #noticias {
-    background-color: white;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: center;
-    width: 90%;
-    margin: 0 auto;
-  }
-
   body #noticias h1 {
-    font-family: FiraSansLight;
-    font-size: 24pt;
-    color: #25355f;
-    margin: 80px;
+    margin: 10px;
   }
 
   body #noticias a {
-    text-align: center;
-    margin: 0 auto;
-    width: 200px;
-    height: 50px;
-    padding-top: 13px;
-    margin: 80px;
-    font-family: FiraSansSemiBold;
-    color: #a5b0b7;
-    border-color: #a5b0b7;
-  }
-
-  body #noticias a :hover {
-    text-decoration: none;
-  }
-
-  body #noticias .noticia :hover {
-    text-decoration: none;
+    margin: 10px;
   }
 
   body #noticias .noticia .imagemnoticia {
-    background-image: url(/images/1351515183.jpg?c191144b43d375ec3871fb264b0012fb);
     width: 90%;
-    margin: 0 auto;
-    height: 240px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-top-left-radius: 25px;
+    height: 150px;
   }
 
   body #noticias .noticia .titulonoticia {
     width: 80%;
-    margin: 0 auto;
-    font-family: FiraSansLight;
-    font-size: 15pt;
-    color: #585c5f;
-    text-align: justify;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    font-size: 16px;
   }
 
   body #noticias .noticia .conteudonoticia {
     width: 80%;
-    margin: 0 auto;
-    font-family: FiraSansLight;
-    font-size: 10pt;
-    color: #959da4;
-    text-align: justify;
-    line-height: 26px;
+    font-size: 14px;
+  }
+
+  body #noticias .noticia .segunda {
+    display: none;
   }
 
   body .links {
     width: 100%;
-    padding-top: 100px;
+    padding-top: 0;
     padding-bottom: 100px;
     position: relative;
     background-color: #fafafa;
@@ -1034,13 +913,16 @@ body footer .container .copyright a {
 
   body .links .idatopo {
     position: absolute;
-    bottom: 55px;
-    right: 25px;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  body .links .idatopo img {
+    width: 50px;
   }
 
   body .links .container .row .row1 {
-    text-align: center;
-    margin-top: 12px;
+    margin-top: 25px;
   }
 
   body .links .container .row .row2 {
@@ -1075,8 +957,7 @@ body footer .container .copyright a {
   }
 
   body .links .container .row .row3 {
-    text-align: center;
-    margin-top: 12px;
+    margin-top: 25px;
   }
 
   body .links .container .row .row4 {
@@ -1110,83 +991,51 @@ body footer .container .copyright a {
     text-decoration: none;
   }
 
-  body footer {
-    width: 100%;
-    background: #25355f;
-    color: white;
-  }
-
   body footer .container {
-    padding-top: 70px;
-  }
-
-  body footer .container .end {
-    width: 100%;
+    padding-top: 0;
+    padding: 0;
   }
 
   body footer .container .end .icone {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    padding-bottom: 80px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  body footer .container .end .icone img {
+    transform: scale(0.5);
   }
 
   body footer .container .end .endereco {
-    padding-bottom: 100px;
-  }
-
-  body footer .container .end .endereco ul {
-    list-style: none;
-    text-align: left;
-    padding-top: 0;
-    margin-top: 0;
-  }
-
-  body footer .container .end .endereco ul :nth-child(1) {
-    list-style-image: url(/images/local.png?82ec47752c8bc7a16ce3cc4bc0b241c4);
-  }
-
-  body footer .container .end .endereco ul :nth-child(2) {
-    list-style-image: url(/images/tel.png?f5efdcf3dcae5ed9d3534a2c051fd2d3);
-  }
-
-  body footer .container .end .endereco ul :nth-child(3) {
-    list-style-image: url(/images/carta.png?b2629fd276ce801a364d33c6dc7633d6);
+    padding-bottom: 0;
   }
 
   body footer .container .end .endereco ul li {
-    font-family: FiraSansLight;
-    font-size: 20px;
-    margin-bottom: 14px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: 40px;
   }
 
   body footer .container .redes {
-    text-align: right;
+    text-align: center;
   }
 
-  body footer .container .redes ul {
-    list-style: none;
+  body footer .container .redes ul li {
+    display: inline;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 
-  body footer .container .redes ul img {
+  body footer .container .redes ul li img {
     width: 20px;
-    margin-bottom: 20px;
-    margin-top: 5px;
-    text-align: right;
+    margin-bottom: 0;
+    margin-top: 0;
   }
 
   body footer .container .copyright {
-    border-top: 1px solid #3f6f93;
-    width: 100%;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    font-family: FiraSansRegular;
-    color: #3a6589;
-  }
-
-  body footer .container .copyright span {
-    font-family: FiraSansSemiBold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    font-size: 8px;
   }
 
   body footer .container .copyright a {
@@ -1194,5 +1043,384 @@ body footer .container .copyright a {
     padding: 0;
     margin: 0;
   }
+}
+
+@media (max-width: 991px) {
+  body header {
+    background-size: cover;
+    background-position: center;
+  }
+
+  body header .container .topHeader .esquerda img {
+    width: 220%;
+    height: 220%;
+  }
+
+  body header .container .topHeader .direita ul {
+    display: none;
+  }
+
+  body header .container .topHeader .direita .extrabtn {
+    display: block;
+    width: 250px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  body header .anterior {
+    left: 12px;
+    transform: scale(1.2);
+  }
+
+  body header .proximo {
+    right: 12px;
+    transform: scale(1.2);
+  }
+
+  body header .slidestop .a {
+    background-size: 180% 100%;
+    background-position: center;
+  }
+
+  body header .slidestop .a img {
+    width: 300px;
+  }
+
+  body #construtora {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  body #construtora h2 {
+    font-size: 18pt;
+  }
+
+  body #construtora h3 {
+    font-size: 20pt;
+  }
+
+  body #construtora p {
+    margin-bottom: 0;
+    font-size: 12pt;
+  }
+
+  body #empreendimentos h3 {
+    font-size: 22pt;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+
+  body #empreendimentos h2 {
+    font-size: 16pt;
+  }
+
+  body #empreendimentos a {
+    margin: 15px;
+  }
+
+  body #empreendimentos a .esqemp {
+    left: 2px;
+    transform: rotate(180deg) scale(0.6, 0.6);
+  }
+
+  body #empreendimentos a .esqemp :hover {
+    transform: rotate(180deg) scale(0.8, 0.8);
+  }
+
+  body #empreendimentos a .diremp {
+    right: 2px;
+    transform: scale(0.6, 0.6);
+  }
+
+  body #empreendimentos a .diremp :hover {
+    transform: scale(0.8, 0.8);
+  }
+
+  body #empreendimentos .fotoresidencial {
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  body #empreendimentos .fotoresidencial .statusresidencial {
+    left: 15px;
+  }
+
+  body #empreendimentos .descricaoresidencial {
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  body #empreendimentos .descricaoresidencial h3 {
+    font-size: 20pt;
+    padding-top: 20px;
+  }
+
+  body #empreendimentos .descricaoresidencial p {
+    font-size: 12px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  body #empreendimentos .descricaoresidencial ul {
+    width: 80%;
+  }
+
+  body #empreendimentos .descricaoresidencial ul li {
+    display: inline;
+    font-family: FiraSansSemiBold;
+    font-size: 8pt;
+    padding-left: 2px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+  }
+
+  body #empreendimentos .descricaoresidencial ul li a {
+    font-size: 8px;
+  }
+
+  body #parallax {
+    text-align: center;
+    background-size: 250% 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0;
+    height: 70vh;
+  }
+
+  body #parallax h1 {
+    font-family: 30pt;
+  }
+
+  body #parallax p {
+    font-family: 15pt;
+  }
+
+  body #parallax div a {
+    position: relative;
+    z-index: 50px;
+  }
+
+  body #parallax div .last {
+    margin-left: 60px;
+  }
+
+  body #noticias h1 {
+    margin: 10px;
+  }
+
+  body #noticias a {
+    margin: 10px;
+  }
+
+  body #noticias .noticia .imagemnoticia {
+    width: 90%;
+    height: 150px;
+  }
+
+  body #noticias .noticia .titulonoticia {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  body #noticias .noticia .conteudonoticia {
+    width: 80%;
+    font-size: 14px;
+  }
+
+  body #noticias .noticia .segunda {
+    display: none;
+  }
+
+  body .links {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 100px;
+    position: relative;
+    background-color: #fafafa;
+  }
+
+  body .links .idatopo {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  body .links .idatopo img {
+    width: 50px;
+  }
+
+  body .links .container .row .row1 {
+    margin-top: 25px;
+  }
+
+  body .links .container .row .row2 {
+    text-align: left;
+  }
+
+  body .links .container .row .row2 hr {
+    color: #ce5a2a;
+    background-color: #ce5a2a;
+    width: 15%;
+    height: 1px;
+  }
+
+  body .links .container .row .row2 ul {
+    list-style: none;
+    color: #abb5bb;
+    font-family: FiraSansLight;
+    font-size: 10pt;
+    text-align: left;
+  }
+
+  body .links .container .row .row2 ul li {
+    margin-top: 7px;
+  }
+
+  body .links .container .row .row2 ul li a {
+    color: #abb5bb;
+  }
+
+  body .links .container .row .row2 ul li a :hover {
+    text-decoration: none;
+  }
+
+  body .links .container .row .row3 {
+    margin-top: 25px;
+  }
+
+  body .links .container .row .row4 {
+    text-align: left;
+  }
+
+  body .links .container .row .row4 hr {
+    color: #1b2125;
+    background-color: #1b2125;
+    width: 15%;
+    height: 1px;
+  }
+
+  body .links .container .row .row4 ul {
+    list-style: none;
+    color: #abb5bb;
+    font-family: FiraSansLight;
+    font-size: 10pt;
+    text-align: left;
+  }
+
+  body .links .container .row .row4 ul li {
+    margin-top: 7px;
+  }
+
+  body .links .container .row .row4 ul li a {
+    color: #abb5bb;
+  }
+
+  body .links .container .row .row4 ul li a :hover {
+    text-decoration: none;
+  }
+
+  body footer .container {
+    padding-top: 0;
+    padding: 0;
+  }
+
+  body footer .container .end .icone {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  body footer .container .end .icone img {
+    transform: scale(0.5);
+  }
+
+  body footer .container .end .endereco {
+    padding-bottom: 0;
+  }
+
+  body footer .container .end .endereco ul li {
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+  }
+
+  body footer .container .redes {
+    text-align: center;
+  }
+
+  body footer .container .redes ul li {
+    display: inline;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  body footer .container .redes ul li img {
+    width: 20px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  body footer .container .copyright {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    font-size: 8px;
+  }
+
+  body footer .container .copyright a {
+    float: right;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/*HUMAN2BE*/
+
+.human2be {
+  width: 100%;
+  text-align: right;
+  padding-top: 0;
+}
+
+#human2be {
+  fill: #748bb3;
+  max-width: 100%;
+}
+
+#human2be .h2be_h {
+  transition: all ease 0.5s;
+}
+
+#human2be .h2be_dot {
+  transition: all ease 0.5s;
+}
+
+#human2be .h2be_2 {
+  transition: all ease 0.3s;
+}
+
+#human2be .h2be_b {
+  transition: all ease 0.5s;
+}
+
+#human2be .h2be_circle {
+  transition: all ease 0.7s;
+}
+
+#human2be:hover .h2be_2,
+#human2be:hover .h2be_b,
+#human2be:hover .h2be_circle {
+  fill: #0ab49b;
+}
+
+#human2be:hover .h2be_h {
+  fill: #748bb3;
+}
+
+#human2be:hover .h2be_dot {
+  fill: #748bb3;
 }
 

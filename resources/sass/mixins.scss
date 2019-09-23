@@ -4,6 +4,6 @@
       @media (max-width: 600px) { @content; }
     }
     @else if $size == tablet-landscape-up {
-      @media (min-width: 900px) { @content; }
+      @media (max-width: 991px) { @content; }
     }
   }
