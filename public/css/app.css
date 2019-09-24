@@ -199,13 +199,14 @@ body header .slidestop .a {
 
 body header .slidestop .a div {
   position: relative;
-  z-index: 21;
+  z-index: 25;
 }
 
 body header .slidestop .a div a {
   padding: 10px 20px;
   font-family: FiraSansSemiBold;
   margin-top: 20px;
+  z-index: 25;
 }
 
 body header .slidestop .b {
@@ -270,6 +271,10 @@ body #empreendimentos {
   position: relative;
 }
 
+body #empreendimentos .empreendimentos {
+  margin: 0 auto;
+}
+
 body #empreendimentos h3 {
   font-family: FiraSansLight;
   color: #25355f;
@@ -329,6 +334,7 @@ body #empreendimentos .fotoresidencial {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  margin: 0 auto;
 }
 
 body #empreendimentos .fotoresidencial .statusresidencial {
@@ -349,6 +355,7 @@ body #empreendimentos .descricaoresidencial {
   border: 1px solid #f8f8f8;
   overflow: hidden;
   position: relative;
+  margin: 0 auto;
 }
 
 body #empreendimentos .descricaoresidencial h3 {
@@ -367,6 +374,7 @@ body #empreendimentos .descricaoresidencial p {
   text-align: left;
   padding-left: 10%;
   padding-right: 10%;
+  margin: 0 auto;
 }
 
 body #empreendimentos .descricaoresidencial ul {
@@ -714,15 +722,15 @@ body footer .container .copyright a {
   margin: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 991px) {
   body header {
     background-size: cover;
     background-position: center;
   }
 
   body header .container .topHeader .esquerda img {
-    width: 220%;
-    height: 220%;
+    width: 150%;
+    height: 150%;
   }
 
   body header .container .topHeader .direita ul {
@@ -731,27 +739,29 @@ body footer .container .copyright a {
 
   body header .container .topHeader .direita .extrabtn {
     display: block;
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    hover-color: black;
   }
 
   body header .anterior {
-    left: 2px;
-    transform: scale(0.5);
+    left: 12px;
+    transform: scale(0.8);
   }
 
   body header .proximo {
-    right: 2px;
-    transform: scale(0.5);
+    right: 12px;
+    transform: scale(0.8);
   }
 
   body header .slidestop .a {
-    background-image: url("/images/img POLARIS.png?3e6271fe5cc64747a47907930fa68541");
-    background-repeat: no-repeat;
-    background-size: 250% 100%;
+    background-size: cover;
     background-position: center;
   }
 
   body header .slidestop .a img {
-    width: 200px;
+    width: 300px;
   }
 
   body #construtora {
@@ -850,11 +860,7 @@ body footer .container .copyright a {
 
   body #parallax {
     text-align: center;
-    background-size: 250% 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    background-size: 100% 100%;
     padding-left: 0;
     height: 70vh;
   }
@@ -877,11 +883,11 @@ body footer .container .copyright a {
   }
 
   body #noticias h1 {
-    margin: 10px;
+    margin: 20px;
   }
 
   body #noticias a {
-    margin: 10px;
+    margin: 20px;
   }
 
   body #noticias .noticia .imagemnoticia {
@@ -900,7 +906,7 @@ body footer .container .copyright a {
   }
 
   body #noticias .noticia .segunda {
-    display: none;
+    display: block;
   }
 
   body .links {
@@ -1045,7 +1051,7 @@ body footer .container .copyright a {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 600px) {
   body header {
     background-size: cover;
     background-position: center;
@@ -1062,28 +1068,27 @@ body footer .container .copyright a {
 
   body header .container .topHeader .direita .extrabtn {
     display: block;
-    width: 250px;
-    height: 60px;
-    font-size: 20px;
   }
 
   body header .anterior {
-    left: 12px;
-    transform: scale(1.2);
+    left: 2px;
+    transform: scale(0.5);
   }
 
   body header .proximo {
-    right: 12px;
-    transform: scale(1.2);
+    right: 2px;
+    transform: scale(0.5);
   }
 
   body header .slidestop .a {
-    background-size: 180% 100%;
+    background-image: url("/images/img POLARIS.png?3e6271fe5cc64747a47907930fa68541");
+    background-repeat: no-repeat;
+    background-size: 250% 100%;
     background-position: center;
   }
 
   body header .slidestop .a img {
-    width: 300px;
+    width: 200px;
   }
 
   body #construtora {

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>
-        <!-- {{-- {{ config('app.name', 'Laravel') }} --}} -->
         Zecon
     </title>
     <link rel="shortcut icon" href={{asset('img/favicon.ico')}} type="image/x-icon" />
@@ -286,7 +285,7 @@
 
             <div class="row noticia">
 
-                <div class="col-lg-4 col-xl-4 col-md-12 col-sm-12 noticia">
+                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12 noticia">
                     <a href="#" target="_blank">
                         <div class="imagemnoticia">
 
@@ -303,7 +302,7 @@
                 </div>
 
 
-                <div class="col-lg-4 col-xl-4 col-md-12 col-sm-12 noticia segunda">
+                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12 noticia segunda">
                     <a href="">
                         <div class="imagemnoticia">
 
@@ -321,7 +320,7 @@
 
 
 
-                <div class="col-lg-4 col-xl-4 col-md-12 col-sm-12 noticia segunda">
+                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12 noticia segunda">
                     <a href="">
                         <div class="imagemnoticia">
 

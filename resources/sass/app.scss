@@ -162,11 +162,12 @@ body{
                 height: 100vh;
                 div{
                     position:relative;
-                    z-index: 21;
+                    z-index: 25;
                     a{
                         padding:10px 20px;
                         font-family: FiraSansSemiBold;
                         margin-top: 20px;
+                        z-index: 25;
                     }
                 }
             }
@@ -236,6 +237,9 @@ body{
         // align-items: center;
         // justify-content:center;
         position:relative;
+        .empreendimentos{
+            margin:0 auto;
+        }
         h3{
             font-family: FiraSansLight;
             color:$azulEscuro2;
@@ -288,6 +292,7 @@ body{
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
+            margin:0 auto;
             .statusresidencial{
                 padding:5px 15px;
                 background-color: white;
@@ -306,6 +311,7 @@ body{
             border: 1px solid $border;
             overflow: hidden;
             position: relative;
+            margin:0 auto;
             h3{
                 font-family: FiraSansLight;
                 font-size:24pt;
@@ -321,6 +327,7 @@ body{
                 text-align: left;
                 padding-left: 10%;
                 padding-right: 10%;
+                margin:0 auto;
             }
             ul{
                 list-style: none;
@@ -642,8 +649,318 @@ body{
     }
     // footer
 }
+// -----------------------------------------------------------------------------------------------------------------
+@include for-size(tablet-landscape-up){
+    body{
+    header{
+        background-size:cover;
+        background-position: center;
+        .container{ 
+            .topHeader{
+                .esquerda{
+                    img{
+                        width:150%;
+                        height:150%;
+                    }
+                }
+                .direita{
+                    ul{
+                        display:none;
+                    }
+                    .extrabtn{
+                        display: block;
+                        width: 250px;
+                        height:50px;
+                        font-size: 20px;
+                        hover:{color:black;};
+                    }
+                }
+            }
+        }
+
+        .anterior{
+            left:12px;
+            transform: scale(0.8);
+        }
+        .proximo{
+            right:12px;
+            transform: scale(0.8);
+        }
+        .slidestop{
+            .a{
+                background-size: cover;
+                background-position: center;
+                img{
+                    width: 300px;
+                }
+            }
+
+        }
+    }
+
+    #construtora{
+        padding-top:50px;
+        padding-bottom:50px;
+        h2{
+            font-size:18pt;
+        }
+        h3{
+            font-size:20pt;
+        }
+        p{
+            margin-bottom: 0;
+            font-size:12pt;
+        }
+
+    } //construtora
+
+    #empreendimentos{
+        h3{
+            font-size:22pt;
+            padding-top:15px;
+            padding-bottom:10px;
+        }
+        h2{
+            font-size:16pt;
+        }
+        a{
+            .esqemp{
+                left:2px;
+                transform: rotate(180deg) scale(0.6,0.6);
+                :hover{
+                    transform: rotate(180deg) scale(0.8,0.8);
+                };
+            }
+            .diremp{
+                right:2px;
+                transform: scale(0.6,0.6);
+                :hover{
+                    transform: scale(0.8,0.8);
+                };
+            }
+            margin:15px;
+        }
+        .fotoresidencial{
+            width:80%;
+            height:200px;
+            margin:0 auto;
+            .statusresidencial{
+                left:15px;
+            }
+        }
+        .descricaoresidencial{
+            width:80%;
+            height:200px;
+            margin:0 auto;
+            h3{
+                font-size:20pt;
+                padding-top: 20px;
+            }
+            p{
+                font-size: 12px;
+                padding-left: 10%;
+                padding-right: 10%;
+            }
+            ul{
+                width:80%;
+                li{
+                    display: inline;
+                    font-family: FiraSansSemiBold;
+                    font-size:8pt;
+                    padding-left: 2px;
+                    padding-right: 5px;
+                    padding-bottom: 2px;
+                    a{
+                        font-size: 8px;
+                    }
+                }
+            }
+        }
+     }//empreendimentos
+
+    #parallax{
+        text-align: center;
+        background-size:100% 100%;
+        padding-left:0;
+        height:70vh;
+        h1{
+            font-family:30pt;
+        }
+        p{
+            font-family:15pt;
+        }
+        div{
+            a{
+                position:relative;
+                z-index:50px;
+            }
+            .last{
+                margin-left:60px;
+            }
+        }
+    }//parallax
 
 
+    #noticias{
+        h1{
+            margin: 20px;
+        }
+        a{
+            margin: 20px;
+            }
+
+        .noticia{
+                .imagemnoticia{
+                        width:90%;
+                        height:150px;
+                    }
+                    .titulonoticia{
+                        width:80%;
+                        font-size: 16px;
+                    }
+                    .conteudonoticia{
+                        width:80%;
+                        font-size: 14px;
+                    }
+                    .segunda{
+                        display:block;
+                    }
+        }
+    }//noticias
+
+    .links{
+        width:100%;
+        padding-top:0;
+        padding-bottom:100px;
+        position: relative;
+        background-color: $brancofundo;
+        .idatopo{
+            position: absolute;
+            bottom: 10px;
+            right:10px;
+            img{
+                width: 50px;
+            }
+        }
+        .container{
+            .row{
+                .row1{
+                    margin-top:25px;
+                }
+                .row2{
+                    text-align: left;
+                    hr{
+                        color:$laranja;
+                        background-color:$laranja;
+                        width:15%;
+                        height:1px;
+                        // margin-left:30px;
+                    }
+                    ul{
+                        list-style:none;
+                        color:$cinzafonte3;
+                        font-family:FiraSansLight;
+                        font-size:10pt;
+                        text-align: left;
+                        li{
+                            margin-top:7px;
+                            a{
+                                color:$cinzafonte3;
+                                :hover{
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .row3{
+                    margin-top:25px;
+                }
+                .row4{
+                    text-align: left;
+                    hr{
+                        color:$azulEscuro;
+                        background-color:$azulEscuro;
+                        width:15%;
+                        height:1px;
+                        // margin-left:30px;
+                    }
+                    ul{
+                        list-style:none;
+                        color:$cinzafonte3;
+                        font-family:FiraSansLight;
+                        font-size:10pt;
+                        text-align: left;
+                        li{
+                            margin-top:7px;
+                            a{
+                                color:$cinzafonte3;
+                                :hover{
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }//links
+
+    footer{
+        .container{
+            padding-top:0;
+            padding:0;
+            .end{
+                .icone{
+                    padding-top:0;
+                    padding-bottom:0;
+                    img{
+                        transform: scale(0.5);
+                    }
+                }
+                .endereco{
+                    padding-bottom:0;
+                    ul{
+                         li{
+                             font-size:15px;
+                             margin-bottom:10px;
+                             margin-left: 40px;
+                         }
+                    }
+                }
+            }
+            .redes{
+                text-align: center;
+                ul{
+                    li{
+                        display: inline;
+                        margin-left: 30px;
+                        margin-right: 30px;
+                            img{
+                            width:20px;
+                            margin-bottom: 0;
+                            margin-top:0;
+                            }
+                    }
+                }
+            }
+            .copyright{
+                padding-top:10px;
+                padding-bottom:10px;
+                margin-left: 10px;
+                font-size: 8px;
+                a{
+                    float: right;
+                    padding:0;
+                    margin:0;
+                }
+            }
+
+        }
+    }
+    // footer
+    }
+}
 
 // --------------------------------------------------------------------------------------------------------------
 @include for-size(phone-only){
@@ -960,320 +1277,7 @@ body{
     }
 }
 // ----------------------------------------------------------------------------------------------------------
-@include for-size(tablet-landscape-up){
-    body{
-    header{
-        background-size:cover;
-        background-position: center;
-        .container{ 
-            .topHeader{
-                .esquerda{
-                    img{
-                        width:220%;
-                        height:220%;
-                    }
-                }
-                .direita{
-                    ul{
-                        display:none;
-                    }
-                    .extrabtn{
-                        display: block;
-                        width: 250px;
-                        height:60px;
-                        font-size: 20px;
-                    }
-                }
-            }
-        }
 
-        .anterior{
-            left:12px;
-            transform: scale(1.2);
-        }
-        .proximo{
-            right:12px;
-            transform: scale(1.2);
-        }
-        .slidestop{
-            .a{
-                background-size: 180% 100%;
-                background-position: center;
-                img{
-                    width: 300px;
-                }
-            }
-
-        }
-    }
-
-    #construtora{
-        padding-top:50px;
-        padding-bottom:50px;
-        h2{
-            font-size:18pt;
-        }
-        h3{
-            font-size:20pt;
-        }
-        p{
-            margin-bottom: 0;
-            font-size:12pt;
-        }
-
-    } //construtora
-
-    #empreendimentos{
-        h3{
-            font-size:22pt;
-            padding-top:15px;
-            padding-bottom:10px;
-        }
-        h2{
-            font-size:16pt;
-        }
-        a{
-            .esqemp{
-                left:2px;
-                transform: rotate(180deg) scale(0.6,0.6);
-                :hover{
-                    transform: rotate(180deg) scale(0.8,0.8);
-                };
-            }
-            .diremp{
-                right:2px;
-                transform: scale(0.6,0.6);
-                :hover{
-                    transform: scale(0.8,0.8);
-                };
-            }
-            margin:15px;
-        }
-        .fotoresidencial{
-            width:80%;
-            height:200px;
-            margin:0 auto;
-            .statusresidencial{
-                left:15px;
-            }
-        }
-        .descricaoresidencial{
-            width:80%;
-            height:200px;
-            margin:0 auto;
-            h3{
-                font-size:20pt;
-                padding-top: 20px;
-            }
-            p{
-                font-size: 12px;
-                padding-left: 10%;
-                padding-right: 10%;
-            }
-            ul{
-                width:80%;
-                li{
-                    display: inline;
-                    font-family: FiraSansSemiBold;
-                    font-size:8pt;
-                    padding-left: 2px;
-                    padding-right: 5px;
-                    padding-bottom: 2px;
-                    a{
-                        font-size: 8px;
-                    }
-                }
-            }
-        }
-     }//empreendimentos
-
-    #parallax{
-        text-align: center;
-        background-size:250% 100%;
-        display:flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        padding-left:0;
-        height:70vh;
-        h1{
-            font-family:30pt;
-        }
-        p{
-            font-family:15pt;
-        }
-        div{
-            a{
-                position:relative;
-                z-index:50px;
-            }
-            .last{
-                margin-left:60px;
-            }
-        }
-    }//parallax
-
-
-    #noticias{
-        h1{
-            margin: 10px;
-        }
-        a{
-            margin: 10px;
-            }
-
-        .noticia{
-                .imagemnoticia{
-                        width:90%;
-                        height:150px;
-                    }
-                    .titulonoticia{
-                        width:80%;
-                        font-size: 16px;
-                    }
-                    .conteudonoticia{
-                        width:80%;
-                        font-size: 14px;
-                    }
-                    .segunda{
-                        display:none;
-                    }
-        }
-    }//noticias
-
-    .links{
-        width:100%;
-        padding-top:0;
-        padding-bottom:100px;
-        position: relative;
-        background-color: $brancofundo;
-        .idatopo{
-            position: absolute;
-            bottom: 10px;
-            right:10px;
-            img{
-                width: 50px;
-            }
-        }
-        .container{
-            .row{
-                .row1{
-                    margin-top:25px;
-                }
-                .row2{
-                    text-align: left;
-                    hr{
-                        color:$laranja;
-                        background-color:$laranja;
-                        width:15%;
-                        height:1px;
-                        // margin-left:30px;
-                    }
-                    ul{
-                        list-style:none;
-                        color:$cinzafonte3;
-                        font-family:FiraSansLight;
-                        font-size:10pt;
-                        text-align: left;
-                        li{
-                            margin-top:7px;
-                            a{
-                                color:$cinzafonte3;
-                                :hover{
-                                    text-decoration: none;
-                                }
-                            }
-                        }
-                    }
-                }
-                .row3{
-                    margin-top:25px;
-                }
-                .row4{
-                    text-align: left;
-                    hr{
-                        color:$azulEscuro;
-                        background-color:$azulEscuro;
-                        width:15%;
-                        height:1px;
-                        // margin-left:30px;
-                    }
-                    ul{
-                        list-style:none;
-                        color:$cinzafonte3;
-                        font-family:FiraSansLight;
-                        font-size:10pt;
-                        text-align: left;
-                        li{
-                            margin-top:7px;
-                            a{
-                                color:$cinzafonte3;
-                                :hover{
-                                    text-decoration: none;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }//links
-
-    footer{
-        .container{
-            padding-top:0;
-            padding:0;
-            .end{
-                .icone{
-                    padding-top:0;
-                    padding-bottom:0;
-                    img{
-                        transform: scale(0.5);
-                    }
-                }
-                .endereco{
-                    padding-bottom:0;
-                    ul{
-                         li{
-                             font-size:15px;
-                             margin-bottom:10px;
-                             margin-left: 40px;
-                         }
-                    }
-                }
-            }
-            .redes{
-                text-align: center;
-                ul{
-                    li{
-                        display: inline;
-                        margin-left: 30px;
-                        margin-right: 30px;
-                            img{
-                            width:20px;
-                            margin-bottom: 0;
-                            margin-top:0;
-                            }
-                    }
-                }
-            }
-            .copyright{
-                padding-top:10px;
-                padding-bottom:10px;
-                margin-left: 10px;
-                font-size: 8px;
-                a{
-                    float: right;
-                    padding:0;
-                    margin:0;
-                }
-            }
-
-        }
-    }
-    // footer
-    }
-}
 
 
 // @media (min-width: 576px) { ... }
