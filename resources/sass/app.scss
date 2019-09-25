@@ -78,7 +78,7 @@ body{
                     }
                     .extrabtn{
                         display: none;
-                        width: 200px;
+                        width: 100px;
                         height:40px;
                         color:white;
                         text-decoration:none;
@@ -463,7 +463,7 @@ body{
                     text-decoration: none;
                 }
                 .imagemnoticia{
-                        background-image: url('img/1351515183.jpg');
+                        background-color:gray;
                         width:90%;
                         margin: 0 auto;
                         height:240px;
@@ -594,6 +594,7 @@ body{
                 }
                 .endereco{
                     padding-bottom:100px;
+                    padding-top:40px;
                     ul{
                         list-style:none;
                         text-align:left;
@@ -618,6 +619,7 @@ body{
             }
             .redes{
                 text-align: right;
+                padding-top: 40px;
                 ul{
                     list-style: none;
                     img{
@@ -669,7 +671,7 @@ body{
                     }
                     .extrabtn{
                         display: block;
-                        width: 250px;
+                        width: 50%;
                         height:50px;
                         font-size: 20px;
                         hover:{color:black;};
@@ -963,6 +965,39 @@ body{
 }
 
 // --------------------------------------------------------------------------------------------------------------
+@include for-size(tablet-landscape-down){
+    body{
+        #empreendimentos{
+
+        a{
+            .esqemp{
+                left:10px;
+                transform: rotate(180deg) scale(0.6,0.6);
+                :hover{
+                    transform: rotate(180deg) scale(0.8,0.8);
+                };
+            }
+            .diremp{
+                right:10px;
+                transform: scale(0.6,0.6);
+                :hover{
+                    transform: scale(0.8,0.8);
+                };
+            }
+            margin:15px;
+        }
+     }//empreendimentos
+     // #parallax{
+     //        padding-left: 200px;
+     //        display: flex;
+     //        flex-direction: row;
+     //        align-items: left;
+     //        justify-content: flex-start;
+     //  }  // #parallax
+    }
+}
+
+// ---------------------------------------------------------------------------------------------------------
 @include for-size(phone-only){
     body{
     header{
@@ -1236,6 +1271,8 @@ body{
                 .endereco{
                     padding-bottom:0;
                     ul{
+                        margin:0;
+                        padding: 0;
                          li{
                              font-size:15px;
                              margin-bottom:10px;
@@ -1247,6 +1284,8 @@ body{
             .redes{
                 text-align: center;
                 ul{
+                    margin-bottom: 20px;
+                    padding: 0;
                     li{
                         display: inline;
                         margin-left: 30px;
@@ -1277,7 +1316,24 @@ body{
     }
 }
 // ----------------------------------------------------------------------------------------------------------
-
+@media(max-width: 448px){
+    body{
+        header{
+            .container{
+                .topHeader{
+                    .direita{
+                        .extrabtn{
+                            font-size: 12px;
+                            padding-top: 11px;
+                            height:38px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// -----------------------------------------------------------------------------------------------------------
 
 
 // @media (min-width: 576px) { ... }
