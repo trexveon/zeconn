@@ -17,32 +17,35 @@
 </head>
 
 <body>
+
+    <div class="topHeader">
+        <div class="container">
+            <div class="esquerda">
+                <a href="#"><img src="{{asset('img/ZECON.png')}}" alt="zecon construtora" title="Zecon Construtora" class="iconz"></a>
+            </div>
+
+            <div class="direita ">
+                <ul>
+                    <li>
+                        <a href="#construtora " title="A zecon" class="itens">A ZECON</a>
+                    </li>
+                    <li>
+                        <a href="#empreendimentos" title="empreendimentos" class="itens">EMPREENDIMENTOS</a>
+                    </li>
+                    <li>
+                        <a href="#noticias" title="noticias" class="itens">NOTÍCIAS</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-outline-light bott" title="fale conosco">FALE CONOSCO</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
     <header id="head">
         <div class="container">
-            <div class="topHeader">
-
-                <div class="esquerda">
-                    <img src="{{asset('img/ZECON.png')}}" alt="zecon construtora" title="Zecon Construtora">
-                </div>
-
-                <div class="direita">
-                    <ul>
-                        <li>
-                            <a href="#construtora" title="A zecon">A ZECON</a>
-                        </li>
-                        <li>
-                            <a href="#empreendimentos" title="empreendimentos">EMPREENDIMENTOS</a>
-                        </li>
-                        <li>
-                            <a href="#noticias" title="noticias">NOTÍCIAS</a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-outline-light" title="fale conosco" data-toggle="modal" data-target="#modalContactForm">FALE CONOSCO</a>
-                        </li>
-                    </ul>
-                    <a href="#" class="btn btn-outline-light extrabtn" title="fale conosco" data-toggle="modal" data-target="#modalContactForm">FALE CONOSCO</a>
-                </div>
-            </div>
 
             <div class="centro">
 
@@ -66,7 +69,7 @@
                 <img src="{{asset('img/polaris.png')}}" alt="polaris">
 
                 <div>
-                    <a href="#" class="btn btn-outline-light" title="conheça mais Polaris">CONHEÇA MAIS</a>
+                    <a href="#" class="btn btn-outline-light" title="ver mais sobre o Polaris">VER MAIS</a>
                 </div>
 
             </div>
@@ -118,7 +121,8 @@
 
             <div class="empreendimentos anuncioss">
 
-                <div> <!-- modelo principal -->
+                <div>
+                    <!-- modelo principal -->
 
                     <div class="fotoresidencial" style="background-image:url({{asset('img/Externa_Sol.png')}});" alt="Polaris">
                         <div class="statusresidencial" style="color:#4e8a7f;">
@@ -135,7 +139,8 @@
                         </ul>
                     </div>
 
-                </div>  <!-- modelo principal -->
+                </div>
+                <!-- modelo principal -->
 
                 <div>
 
@@ -434,50 +439,47 @@
                     </div>
                 </div>
             </div>
-        <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Write to us</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <i class="fas fa-user prefix grey-text"></i>
-          <input type="text" id="form34" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="form34">Your name</label>
-        </div>
+            <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                            <h4 class="modal-title w-100 font-weight-bold">Write to us</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body mx-3">
+                            <div class="md-form mb-5">
+                                <i class="fas fa-user prefix grey-text"></i>
+                                <input type="text" id="form34" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="form34">Your name</label>
+                            </div>
 
-        <div class="md-form mb-5">
-          <i class="fas fa-envelope prefix grey-text"></i>
-          <input type="email" id="form29" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="form29">Your email</label>
-        </div>
+                            <div class="md-form mb-5">
+                                <i class="fas fa-envelope prefix grey-text"></i>
+                                <input type="email" id="form29" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="form29">Your email</label>
+                            </div>
 
-        <div class="md-form mb-5">
-          <i class="fas fa-tag prefix grey-text"></i>
-          <input type="text" id="form32" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="form32">Subject</label>
-        </div>
+                            <div class="md-form mb-5">
+                                <i class="fas fa-tag prefix grey-text"></i>
+                                <input type="text" id="form32" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="form32">Subject</label>
+                            </div>
 
-        <div class="md-form">
-          <i class="fas fa-pencil prefix grey-text"></i>
-          <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
-          <label data-error="wrong" data-success="right" for="form8">Your message</label>
-        </div>
+                            <div class="md-form">
+                                <i class="fas fa-pencil prefix grey-text"></i>
+                                <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
+                                <label data-error="wrong" data-success="right" for="form8">Your message</label>
+                            </div>
 
-      </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <button class="btn btn-unique">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <button class="btn btn-unique">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
     </footer>
 
