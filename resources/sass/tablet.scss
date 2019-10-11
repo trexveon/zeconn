@@ -1,0 +1,65 @@
+@media  screen and (max-width:768px){
+    body{
+        .topHeader{
+
+            .container{
+                .esquerda{
+                    width:50%;
+                }
+                .direita{
+                    width:50%;
+                    padding-top:10px;
+                    ul{
+                       li{
+                        margin-left:0;
+                        display:none;
+        
+                       }
+                       :last-child{
+
+                            display:inline;  
+                               
+                       }
+        
+                    }
+                }
+            }
+        }
+
+
+        header{
+
+    
+
+    
+            .anterior{
+
+                left:50px;
+
+            }
+            .proximo{
+
+                right:50px;
+
+            }
+            .slidestop{
+
+                .a{
+                    
+                    div{
+
+                        a{
+                            font-family: FiraSansSemiBold;
+                            margin-top: 60px;
+                            position:relative;
+                            z-index: 25;
+                            font-size:16px;
+                            padding: 10px 50px;
+                        }
+                    }
+                }
+    
+            }
+        }
+    }
+}

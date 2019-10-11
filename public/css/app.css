@@ -77,6 +77,7 @@ body .topHeader .container .direita {
 body .topHeader .container .direita ul {
   text-decoration: none;
   list-style: none;
+  font-size: 16px;
 }
 
 body .topHeader .container .direita ul li {
@@ -125,14 +126,18 @@ body header .container {
 }
 
 body header .container .centro {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-body header .container .seta {
+body header .seta {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,14 +145,13 @@ body header .container .seta {
   color: white;
   height: 15vh;
   padding-bottom: 25px;
-  font-size: 10pt;
+  font-size: 12px;
   font-family: firaSansSemiBold;
   transition-duration: 3s 1s;
-  position: relative;
-  z-index: 201;
+  z-index: 2000;
 }
 
-body header .container .seta a :hover {
+body header .seta a :hover {
   transition: all 0.3s linear;
   transform: scale(1.4);
 }
@@ -246,7 +250,7 @@ body #construtora {
 body #construtora h2 {
   text-align: center;
   font-family: FiraSansLight;
-  font-size: 20pt;
+  font-size: 30px;
   color: #4c799a;
   margin: 0;
   padding: 0;
@@ -266,7 +270,7 @@ body #construtora p {
   color: #9a9a9a;
   text-align: left;
   font-family: FiraSansLight;
-  font-size: 14pt;
+  font-size: 20px;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 0;
@@ -287,8 +291,8 @@ body #empreendimentos .empreendimentos {
 body #empreendimentos h3 {
   font-family: FiraSansLight;
   color: #25355f;
-  font-size: 30pt;
-  padding-top: 100px;
+  font-size: 48px;
+  padding-top: 120px;
 }
 
 body #empreendimentos h2 {
@@ -309,6 +313,7 @@ body #empreendimentos a {
   -moz-osx-font-smoothing: grayscale;
   color: #a5b0b7;
   border-color: #a5b0b7;
+  font-size: 16px;
 }
 
 body #empreendimentos a .esqemp {
@@ -344,6 +349,7 @@ body #empreendimentos .fotoresidencial {
   background-size: cover;
   position: relative;
   margin: 0 auto;
+  border-top-left-radius: 20px;
 }
 
 body #empreendimentos .fotoresidencial .statusresidencial {
@@ -351,8 +357,9 @@ body #empreendimentos .fotoresidencial .statusresidencial {
   background-color: white;
   border-top-left-radius: 20px;
   border-top-right-radius: 5px;
+  font-size: 16px;
   bottom: 0;
-  left: 40px;
+  left: 38px;
   position: absolute;
   font-family: FiraSansSemiBold;
 }
@@ -378,7 +385,7 @@ body #empreendimentos .descricaoresidencial h3 {
 
 body #empreendimentos .descricaoresidencial p {
   font-family: FiraSansLight;
-  font-size: 12pt;
+  font-size: 20px;
   color: #959da4;
   text-align: left;
   padding-left: 10%;
@@ -400,7 +407,7 @@ body #empreendimentos .descricaoresidencial ul {
 body #empreendimentos .descricaoresidencial ul li {
   display: inline;
   font-family: FiraSansSemiBold;
-  font-size: 8pt;
+  font-size: 14px;
   padding-left: 2px;
   padding-right: 5px;
   border-right: 1px solid #d5dadd;
@@ -409,14 +416,21 @@ body #empreendimentos .descricaoresidencial ul li {
 
 body #empreendimentos .descricaoresidencial ul li a {
   color: #d5dadd;
+  font-size: 10px;
 }
 
-body #empreendimentos .descricaoresidencial ul li a :hover {
+body #empreendimentos .descricaoresidencial ul li a:hover {
   text-decoration: none;
+  color: lightblue;
+}
+
+body #empreendimentos .descricaoresidencial ul :first-child {
+  padding-left: 4px;
 }
 
 body #empreendimentos .descricaoresidencial ul :last-child {
   border: none;
+  padding-right: 2px;
 }
 
 body #parallax {
@@ -468,14 +482,14 @@ body #parallax .filtro3 {
 
 body #parallax h1 {
   font-family: FiraSansLight;
-  font-family: 36pt;
+  font-size: 72px;
   position: relative;
   z-index: 50px;
 }
 
 body #parallax p {
   font-family: FiraSansRegular;
-  font-family: 15t;
+  font-size: 30px;
   position: relative;
   z-index: 50px;
 }
@@ -503,9 +517,9 @@ body #noticias {
 
 body #noticias h1 {
   font-family: FiraSansLight;
-  font-size: 24pt;
+  font-size: 48px;
   color: #25355f;
-  margin: 80px;
+  margin: 120px;
 }
 
 body #noticias a {
@@ -516,6 +530,7 @@ body #noticias a {
   padding-top: 13px;
   margin: 80px;
   font-family: FiraSansSemiBold;
+  font-size: 16px;
   color: #a5b0b7;
   border-color: #a5b0b7;
 }
@@ -543,7 +558,7 @@ body #noticias .noticia .titulonoticia {
   width: 80%;
   margin: 0 auto;
   font-family: FiraSansLight;
-  font-size: 15pt;
+  font-size: 30px;
   color: #585c5f;
   text-align: justify;
   margin-top: 15px;
@@ -554,7 +569,7 @@ body #noticias .noticia .conteudonoticia {
   width: 80%;
   margin: 0 auto;
   font-family: FiraSansLight;
-  font-size: 10pt;
+  font-size: 20px;
   color: #959da4;
   text-align: justify;
   line-height: 26px;
@@ -731,5 +746,177 @@ body footer .container .copyright a {
   float: right;
   padding: 0;
   margin: 0;
+}
+
+#human2be {
+  fill: white;
+  max-width: 25px;
+  float: right;
+  width: 50px;
+}
+
+#human2be .h2be_h {
+  transition: all ease 0.5s;
+}
+
+#human2be .h2be_dot {
+  transition: all ease 0.5s;
+}
+
+#human2be .h2be_2 {
+  transition: all ease 0.3s;
+}
+
+#human2be .h2be_b {
+  transition: all ease 0.5s;
+}
+
+#human2be .h2be_circle {
+  transition: all ease 0.7s;
+}
+
+#human2be:hover .h2be_2,
+#human2be:hover .h2be_b,
+#human2be:hover .h2be_circle {
+  fill: #0ab49b;
+}
+
+#human2be:hover .h2be_h {
+  fill: #fff;
+}
+
+#human2be:hover .h2be_dot {
+  fill: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  body .topHeader .container .direita {
+    display: block;
+  }
+
+  body .topHeader .container .direita ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+
+  body .topHeader .container .direita ul li a {
+    padding: 0;
+    margin: 0;
+  }
+
+  body .topHeader .container .direita ul li .itens {
+    color: white;
+    padding: 0;
+    margin-right: 20px;
+  }
+
+  body .topHeader .container .direita ul li .itens:hover {
+    color: black;
+  }
+
+  body .topHeader .container .direita ul :last-child {
+    padding: 10px 40px;
+    font-size: 16px;
+    display: inline;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .topHeader .container .esquerda {
+    width: 50%;
+  }
+
+  body .topHeader .container .direita {
+    width: 50%;
+    padding-top: 10px;
+  }
+
+  body .topHeader .container .direita ul li {
+    margin-left: 0;
+    display: none;
+  }
+
+  body .topHeader .container .direita ul :last-child {
+    display: inline;
+  }
+
+  body header .anterior {
+    left: 50px;
+  }
+
+  body header .proximo {
+    right: 50px;
+  }
+
+  body header .slidestop .a div a {
+    font-family: FiraSansSemiBold;
+    margin-top: 60px;
+    position: relative;
+    z-index: 25;
+    font-size: 16px;
+    padding: 10px 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body .topHeader {
+    width: 100%;
+  }
+
+  body .topHeader .container .esquerda {
+    width: 40%;
+  }
+
+  body .topHeader .container .esquerda img {
+    width: 130px;
+    margin: 0;
+  }
+
+  body .topHeader .container .direita {
+    width: 60%;
+    padding-top: 0;
+  }
+
+  body .topHeader .container .direita ul li {
+    margin-left: 0;
+    display: none;
+  }
+
+  body .topHeader .container .direita ul :last-child {
+    margin: 0;
+    display: inline;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  body header .anterior {
+    left: 20px;
+  }
+
+  body header .proximo {
+    right: 20px;
+  }
+
+  body header .slidestop .a {
+    background-size: 170% 100%;
+  }
+
+  body header .slidestop .a div a {
+    font-family: FiraSansSemiBold;
+    margin-top: 60px;
+    position: relative;
+    z-index: 25;
+    font-size: 16px;
+    padding: 10px 50px;
+  }
+
+  body header .slidestop .a img {
+    width: 200px;
+  }
 }
 

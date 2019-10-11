@@ -1,0 +1,46 @@
+@media  screen and (max-width:1024px){
+    body{
+        .topHeader{
+
+            .container{
+                .esquerda{
+                    
+                }
+                .direita{
+
+                    display:block;
+                    ul{
+
+                       li{
+                        display:inline-block;
+                        margin:0;
+                        padding:0;
+                            a{
+                                padding:0;
+                                margin:0;
+                            }
+                            .itens{
+                                color:white;
+                                padding:0;
+                                margin-right:20px;
+                                &:hover{
+                                    color:black;
+                                }
+                            }
+        
+                       }
+                       :last-child{
+                            padding:10px 40px;
+                            font-size:16px;
+                            display:inline;  
+                            margin:0;
+                       }
+        
+                    }
+                }
+            }
+        }
+    
+    }
+    
+}

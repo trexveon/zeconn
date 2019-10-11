@@ -1,0 +1,77 @@
+@media  screen and (max-width:480px){
+    body{
+        .topHeader{
+            width:100%;
+            .container{
+                .esquerda{
+                    width:40%;
+                    img{
+                        width:130px;
+                        margin:0;
+                    }
+                }
+                .direita{
+                    width:60%;
+                    padding-top:0;
+                    ul{
+                       li{
+                        margin-left:0;
+                        display:none;
+        
+                       }
+                       :last-child{
+                            margin:0;
+                            display:inline;  
+                            padding:0;
+                            padding-top:10px;
+                            padding-bottom:10px;
+                            padding-left:10px;
+                            padding-right:10px;
+                       }
+        
+                    }
+                }
+            }
+        }
+
+
+        header{
+
+    
+
+    
+            .anterior{
+
+                left:20px;
+
+            }
+            .proximo{
+
+                right:20px;
+
+            }
+            .slidestop{
+
+                .a{
+                    background-size:170% 100%;
+                    div{
+
+                        a{
+                            font-family: FiraSansSemiBold;
+                            margin-top: 60px;
+                            position:relative;
+                            z-index: 25;
+                            font-size:16px;
+                            padding: 10px 50px;
+                        }
+                        
+                    }
+                    img{
+                        width:200px;
+                    }
+                }
+    
+            }
+        }
+    }
+}

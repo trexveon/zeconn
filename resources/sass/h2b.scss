@@ -1,0 +1,52 @@
+#human2be {
+  fill: white;
+  max-width: 25px;
+  float:right;
+  width:50px;
+}
+#human2be .h2be_h {
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+#human2be .h2be_dot {
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+#human2be .h2be_2 {
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+#human2be .h2be_b {
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+#human2be .h2be_circle {
+  -webkit-transition: all ease 0.7s;
+  -moz-transition: all ease 0.7s;
+  -ms-transition: all ease 0.7s;
+  -o-transition: all ease 0.7s;
+  transition: all ease 0.7s;
+}
+#human2be:hover .h2be_2,
+#human2be:hover .h2be_b,
+#human2be:hover .h2be_circle {
+  fill: #0ab49b;
+}
+#human2be:hover .h2be_h {
+  fill: #fff;
+}
+#human2be:hover .h2be_dot {
+  fill: #fff;
+}
