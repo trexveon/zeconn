@@ -3,13 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\polaris;
+use App\Http\Controllers\Controller;
+
+use App\noticia;
+use App\empreendimento;
+
 class polarisController extends Controller
 {
 
     public function index()
     {
-        return view('index');
+        $empreendimentos = empreendimento::all();
+        $noticias = noticia::orderBy('created_at', 'desc')->take(3)->get();
+
+        return view('index',compact('empreendimentos','noticias'));
     }
 
     public function create()

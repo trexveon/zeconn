@@ -28,6 +28,30 @@ html {
 
 body{
     position:relative;
+    .modalll{
+        transition:all 500ms;
+        width:100%;
+        height:100vh;
+        position:fixed;
+        top:0;
+        right:0;
+        background-color:rgba(0,0,0,0.3);
+        z-index:5000;
+        display:none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .formContato{
+            width:620px;
+            height:0;
+            background-color:white;
+            border-radius:50px;
+            position:relative;
+            z-index:5001;
+            transition: all 200ms;
+            box-shadow: 3px 3px 3px black;
+        }
+    }
     .topHeader{
         position:fixed;
         top:0;
@@ -59,12 +83,12 @@ body{
                         a{
                             text-decoration:none;
                             font-family:firaSansSemiBold;
-                            
+                            transition:all 500ms;
                         }
                         .itens{
                             color:white;
                             &:hover{
-                                color:black;
+                                color:$cinza;
                             }
                         }
     
@@ -73,7 +97,9 @@ body{
                         padding:10px 40px;
                         font-size:16px;
                         display:inline;  
-                           
+                        &:hover{
+                            color:$cinza;
+                        }  
                    }
     
                 }
@@ -183,13 +209,14 @@ body{
                     position:relative;
                     z-index: 25;
                     a{
+                        transition:all 500ms;
                         padding:10px 20px;
                         font-family: FiraSansSemiBold;
                         margin-top: 60px;
                         position:relative;
                         z-index: 25;
                         font-size:16px;
-                        padding: 22px 50px;
+                        padding: 18px 48px;
                     }
                 }
             }
@@ -271,23 +298,28 @@ body{
             margin-bottom:30px;
         }
         a{
-            text-align: center;
-            width: 200px;
-            height: 40px;
-            font-family: FiraSansSemiBold;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            color:$cinza;
-            border-color: $cinza;
-            font-size:16px;
+            a{
+                text-align:center;
+                margin:0 auto;
+                width:200px;
+                height:50px;
+                padding-top:13px;
+                margin: 80px;
+                font-family: FiraSansSemiBold;
+                font-size:16px;
+                color:$cinza;
+                border-color: $cinza;
+                transition:all 500ms;
+                :hover{
+                        text-decoration: none;
+                }
+            }
+            transition:all 500ms;
             .esqemp{
                 position: absolute;
                 top:47%;
                 left:50px;
                 transform: rotate(180deg);
-                transition-duration: 3s 1s;
                 :hover{
                     transition: all 0.3s linear;
                     transform: scale(1.4);
@@ -480,6 +512,7 @@ body{
             font-size:16px;
             color:$cinza;
             border-color: $cinza;
+            transition:all 500ms;
             :hover{
                     text-decoration: none;
             }

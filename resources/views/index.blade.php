@@ -17,7 +17,9 @@
 </head>
 
 <body>
-
+    <div class="modalll">
+        <div class="formContato"></div>
+    </div>
     <div class="topHeader">
         <div class="container">
             <div class="esquerda">
@@ -120,18 +122,17 @@
             <h2>Conheça nossas obras realizadas, o que <br>estamos entregando e muito mais.</h2>
 
             <div class="empreendimentos anuncioss">
-
+                @foreach($empreendimentos as $e)
+                <!-- modelo principal -->
                 <div>
-                    <!-- modelo principal -->
-
-                <div class="fotoresidencial" style="background-image:url({{asset('img/Externa_Sol.png')}});" alt="Polaris">
-                        <div class="statusresidencial" style="color:#4e8a7f;">
-                            LANÇAMENTO
+                    <div class="fotoresidencial" style="background-image:url('{{Voyager::image( $e->foto )}}');" alt="Polaris">
+                        <div class="statusresidencial" style="color:{{$e->color}};">
+                            {{$e->status}}
                         </div>
                     </div>
                     <div class="descricaoresidencial">
-                        <h3>Residêncial <br> Polaris</h3>
-                        <p>Mais espaço no lugar certo Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste necessitatibus, quia molestiae fuga ad quibusdam eos praesentium ut adipisci sit. Alias enim inventore, nihil impedit pariatur nostrum suscipit aperiam magnam.</p>
+                        <h3>{{$e->residencial}}</h3>
+                        <p>{{$e->descricao}}</p>
                         <ul>
                             <li><a href="#" title="CLASS CURSUS">CLASS CURSUS</a></li>
                             <li><a href="#" title="METUS ALIQUET">METUS ALIQUET</a></li>
@@ -141,104 +142,15 @@
 
                 </div> 
                 <!-- modelo principal -->
+                @endforeach
+                
 
-                 <div>
+                
 
-                    <div class="fotoresidencial" style="background-image:url({{asset('img/tulipa.jpg')}});">
-                        <div class="statusresidencial" style="color:#7295b0;">
-                            EM OBRAS
-                        </div>
-                    </div>
-                    <div class="descricaoresidencial">
-                        <h3>Residêncial <br> Tulipa</h3>
-                        <p>Mais espaço no lugar certo</p>
-                        <ul>
-                            <li><a href="#">CLASS CURSUS</a></li>
-                            <li><a href="#">METUS ALIQUET</a></li>
-                            <li><a href="#">INNISI PHARETRA</a></li>
-                        </ul>
-                    </div>
+              
 
-                </div>
 
-                <div>
-
-                    <div class="fotoresidencial" style="background-image:url({{asset('img/jasmim.jpg')}});">
-                        <div class="statusresidencial" style="color:#a5b0b7;">
-                            ENTREGUE
-                        </div>
-                    </div>
-                    <div class="descricaoresidencial">
-                        <h3>Residêncial <br> Jasmim</h3>
-                        <p>Mais espaço no lugar certo </p>
-                        <ul>
-                            <li><a href="#">CLASS CURSUS</a></li>
-                            <li><a href="#">METUS ALIQUET</a></li>
-                            <li><a href="#">INNISI PHARETRA</a></li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-                <div>
-
-                    <div class="fotoresidencial" style="background-image:url({{asset('img/Externa_Sol.png')}});">
-                        <div class="statusresidencial" style="color:green;">
-                            c
-                        </div>
-                    </div>
-                    <div class="descricaoresidencial">
-                        <h3>Residêncial <br> Polaris</h3>
-                        <p>Mais espaço no lugar certo</p>
-                        <ul>
-                            <li><a href="#">CLASS CURSUS</a></li>
-                            <li><a href="#">METUS ALIQUET</a></li>
-                            <li><a href="#">INNISI PHARETRA</a></li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-                <div>
-
-                    <div class="fotoresidencial" style="background-image:url({{asset('img/Externa_Sol.png')}});">
-                        <div class="statusresidencial" style="color:green;">
-                            d
-                        </div>
-                    </div>
-                    <div class="descricaoresidencial">
-                        <h3>Residêncial <br> Polaris</h3>
-                        <p>Mais espaço no lugar certo</p>
-                        <ul>
-                            <li><a href="#">CLASS CURSUS</a></li>
-                            <li><a href="#">METUS ALIQUET</a></li>
-                            <li><a href="#">INNISI PHARETRA</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div>
-
-                    <div class="fotoresidencial" style="background-image:url({{asset('img/Externa_Sol.png')}});">
-                        <div class="statusresidencial" style="color:green;">
-                            e
-                        </div>
-                    </div>
-                    <div class="descricaoresidencial">
-                        <h3>Residêncial <br> Polaris</h3>
-                        <p>Mais espaço no lugar certo</p>
-                        <ul>
-                            <li><a href="#">CLASS CURSUS</a></li>
-                            <li><a href="#">METUS ALIQUET</a></li>
-                            <li><a href="#">INNISI PHARETRA</a></li>
-                        </ul>
-
-                    </div>
-
-                </div>
+                
 
             </div>
 
@@ -277,54 +189,25 @@
         <div>
 
             <div class="row noticia"> 
+                @foreach($noticias as $n)
                 <!-- modelo principal -->
                 <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12 noticia">
                     <a href="#" target="_blank" title="noticia">
-                        <div class="imagemnoticia" style="background-image: url({{asset('img/1351515183.jpg')}});">
+                        <div class="imagemnoticia" style="background-image: url('{{Voyager::image( $n->foto )}}');">
 
                         </div>
 
                         <div class="titulonoticia">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            {{$n->titulo}}
                         </div>
 
                         <div class="conteudonoticia">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni quas recusandae facilis facere, doloremque doloribus fugit perferendis animi obcaecati dicta! Odit et sunt nihil
+                        {{$n->conteudo}}
                         </div>
                     </a>
                 </div> 
                 <!-- modelo principal -->
-               <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12 noticia segunda">
-                    <a href="">
-                        <div class="imagemnoticia">
-
-                        </div>
-
-                        <div class="titulonoticia">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        </div>
-
-                        <div class="conteudonoticia">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni quas recusandae facilis facere, doloremque doloribus fugit perferendis animi obcaecati dicta! Odit et sunt nihil
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12 noticia segunda">
-                    <a href="">
-                        <div class="imagemnoticia">
-
-                        </div>
-
-                        <div class="titulonoticia">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        </div>
-
-                        <div class="conteudonoticia">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni quas recusandae facilis facere, doloremque doloribus fugit perferendis animi obcaecati dicta! Odit et sunt nihil
-                        </div>
-                    </a>
-                </div>
+                @endforeach
 
             </div>
 

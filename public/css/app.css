@@ -50,6 +50,32 @@ body {
   position: relative;
 }
 
+body .modalll {
+  transition: all 500ms;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 5000;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+body .modalll .formContato {
+  width: 620px;
+  height: 0;
+  background-color: white;
+  border-radius: 50px;
+  position: relative;
+  z-index: 5001;
+  transition: all 200ms;
+  box-shadow: 3px 3px 3px black;
+}
+
 body .topHeader {
   position: fixed;
   top: 0;
@@ -89,6 +115,7 @@ body .topHeader .container .direita ul li {
 body .topHeader .container .direita ul li a {
   text-decoration: none;
   font-family: firaSansSemiBold;
+  transition: all 500ms;
 }
 
 body .topHeader .container .direita ul li .itens {
@@ -96,13 +123,17 @@ body .topHeader .container .direita ul li .itens {
 }
 
 body .topHeader .container .direita ul li .itens:hover {
-  color: black;
+  color: #a5b0b7;
 }
 
 body .topHeader .container .direita ul :last-child {
   padding: 10px 40px;
   font-size: 16px;
   display: inline;
+}
+
+body .topHeader .container .direita ul :last-child:hover {
+  color: #a5b0b7;
 }
 
 body .scrolll {
@@ -213,13 +244,14 @@ body header .slidestop .a div {
 }
 
 body header .slidestop .a div a {
+  transition: all 500ms;
   padding: 10px 20px;
   font-family: FiraSansSemiBold;
   margin-top: 60px;
   position: relative;
   z-index: 25;
   font-size: 16px;
-  padding: 22px 50px;
+  padding: 18px 48px;
 }
 
 body header .slidestop .b {
@@ -303,17 +335,25 @@ body #empreendimentos h2 {
 }
 
 body #empreendimentos a {
+  transition: all 500ms;
+}
+
+body #empreendimentos a a {
   text-align: center;
+  margin: 0 auto;
   width: 200px;
-  height: 40px;
+  height: 50px;
+  padding-top: 13px;
+  margin: 80px;
   font-family: FiraSansSemiBold;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
   color: #a5b0b7;
   border-color: #a5b0b7;
-  font-size: 16px;
+  transition: all 500ms;
+}
+
+body #empreendimentos a a :hover {
+  text-decoration: none;
 }
 
 body #empreendimentos a .esqemp {
@@ -321,7 +361,6 @@ body #empreendimentos a .esqemp {
   top: 47%;
   left: 50px;
   transform: rotate(180deg);
-  transition-duration: 3s 1s;
 }
 
 body #empreendimentos a .esqemp :hover {
@@ -533,6 +572,7 @@ body #noticias a {
   font-size: 16px;
   color: #a5b0b7;
   border-color: #a5b0b7;
+  transition: all 500ms;
 }
 
 body #noticias a :hover {

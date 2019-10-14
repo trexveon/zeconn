@@ -65,11 +65,25 @@ $(document).ready(function(){
             scrollItem.classList.add('scrolll');
             bottom.classList.remove('btn-outline-light');
             bottom.classList.add('btn-outline-dark');
+            bottom.style.color='#a5b0b7';
+            bottom.style.borderColor = '#a5b0b7';
+            bottom.onmouseover = function(){
+              this.style.color = '#3f6f93';
+              this.style.borderColor = '#3f6f93';
+              this.style.backgroundColor = 'rgba(255,255,255,0.3)';
+            }
+            bottom.onmouseout = function(){
+              bottom.style.color='#a5b0b7';
+              bottom.style.borderColor = '#a5b0b7';
+              this.style.backgroundColor = 'null';
+            }
+
+
             logo.src = 'img/ZECONOriginal.png';
             itens.forEach((item)=>{
               item.style.color = '#a5b0b7';
               item.onmouseover = function() {
-                this.style.color = "black";
+                this.style.color = "#3f6f93";
               }
               item.onmouseout = function() {
                 this.style.color = "#a5b0b7";
@@ -77,10 +91,33 @@ $(document).ready(function(){
             });
 
 
+
+
+
+
+
+
+
+
           }else{
             scrollItem.classList.remove('scrolll');
             bottom.classList.add('btn-outline-light');
             bottom.classList.remove('btn-outline-dark');
+            bottom.style.backgroundColor = 'transparent';
+            bottom.style.color='white';
+            bottom.style.borderColor = 'white';
+            bottom.onmouseover = function(){
+              this.style.color = '#a5b0b7';
+              this.style.borderColor = 'none';
+              this.style.backgroundColor = 'white';
+            }
+            bottom.onmouseout = function(){
+              bottom.style.color='white';
+              bottom.style.borderColor = 'white';
+              this.style.backgroundColor = 'transparent';
+            }
+
+
             logo.src = 'img/ZECON.png';
             itens.forEach((item)=>{
               item.style.color = 'white';
@@ -95,6 +132,66 @@ $(document).ready(function(){
        }
 
        window.onscroll = scroll;
+
+
+
+
+      var modal = document.querySelector('.modalll');
+      var corpo = document.querySelector('body');
+      var formContato = document.querySelector('.formContato');
+
+      var topHeader = document.querySelector('.topHeader');
+      var cabeca = document.querySelector('#head');
+      var construtora = document.querySelector('#construtora');
+      var empreendimentos = document.querySelector('.empreendimentos');
+      var parallax = document.querySelector('#parallax');
+      var noticias = document.querySelector('#noticias');
+      var links = document.querySelector('.links');
+      var footer = document.querySelector('footer');
+      
+
+       bottom.addEventListener('click',function(e){
+         e.preventDefault();
+          modal.style.display = 'flex';
+          corpo.style.overflow = 'hidden';
+          modal.style.style = 'blur(0)';
+          cabeca.style.filter = 'blur(2px)';
+          construtora.style.filter = 'blur(2px)';
+          empreendimentos.style.filter = 'blur(2px)';
+          links.style.filter = 'blur(2px)';
+          noticias.style.filter = 'blur(2px)';
+          footer.style.filter = 'blur(2px)';
+          topHeader.style.filter = 'blur(2px)';
+          parallax.style.filter = 'blur(2px)';
+          $('.modalll').fadeIn();
+
+          setTimeout(function(){
+            formContato.style.height = '640px';
+          },200);
+
+       });
+
+
+       modal.addEventListener('click',function(){
+          modal.style.display = 'none';
+          corpo.style.overflow = 'auto';
+          cabeca.style.filter = 'blur(0)';
+          construtora.style.filter = 'blur(0)';
+          empreendimentos.style.filter = 'blur(0)';
+          links.style.filter = 'blur(0)';
+          noticias.style.filter = 'blur(0)';
+          footer.style.filter = 'blur(0)';
+          topHeader.style.filter = 'blur(0)';
+          parallax.style.filter = 'blur(0)';
+          $('.modalll').fadeOut();
+          formContato.style.height = '0';
+       });
+
+       formContato.addEventListener('click',function(e){
+         e.stopPropagation();
+       });
+
+
 
  });
 
