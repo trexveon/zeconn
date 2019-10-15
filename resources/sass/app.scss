@@ -52,6 +52,14 @@ body{
             box-shadow: 3px 3px 3px black;
         }
     }
+    .aviso{
+        width:300px;
+        position:fixed;
+        bottom:50px;
+        right:50px;
+        display:none;
+        z-index:20000000000000;
+    }
     .topHeader{
         position:fixed;
         top:0;
@@ -711,6 +719,258 @@ body{
         }
     }
     // footer
+
+
+
+
+
+    // formulario
+    #formulario{
+        padding-top: 100px;
+        padding-bottom: 80px;
+        .row{
+            form{
+                
+                width:80%;
+                margin: 0 auto;
+                
+                h1{
+                    font-size:30px;
+                }
+                h3{
+                    color:#6f7983;
+                    font-size:20px;
+                    font-family:'FiraSansLight';
+                }
+                .compra{
+                    width:100%;
+                    font-family:'FiraSansItalic';
+                    padding:10px;
+                    border-radius:4px;
+                    color:#bdbdbd;
+                    margin-top:20px;
+                    padding-bottom:50px;
+                }
+                 
+                  .form-group {
+                    position: relative;
+                    margin-top: 2.25rem;
+                    margin-bottom: 2.25rem;
+                    .Mensagem{
+                        height: 5.9rem;
+                        font-family:'FiraSansItalic';
+                      }
+                  }
+                  
+                  
+
+                  
+                  .form-group input{
+                    height: 1.9rem;
+                    font-family:'FiraSansItalic';
+                  }
+                  
+                  
+                  .form-group textarea{
+                    height: 3.9rem;
+                    font-family:'FiraSansItalic';
+
+                  }
+
+                  .form-group .control-label {
+                    position: absolute;
+                    top: 0.25rem;
+                    pointer-events: none;
+                    padding-left: 0.125rem;
+                    z-index: 1;
+                    color: #b3b3b3;
+                    font-size: 1rem;
+                    font-weight: normal;
+                    -webkit-transition: all 0.28s ease;
+                    transition: all 0.28s ease;
+                    font-family:'FiraSansItalic';
+                  }
+                  .form-group .bar {
+                    position: relative;
+                    border-bottom: 0.0625rem solid #999;
+                    display: block;
+                  }
+                  .form-group .bar::before {
+                    content: '';
+                    height: 0.125rem;
+                    width: 0;
+                    left: 50%;
+                    bottom: -0.0625rem;
+                    position: absolute;
+                    background: #337ab7;
+                    -webkit-transition: left 0.28s ease, width 0.28s ease;
+                    transition: left 0.28s ease, width 0.28s ease;
+                    z-index: 2;
+                  }
+                  .form-group input,
+                  .form-group textarea {
+                    display: block;
+                    background: none;
+                    padding: 0.125rem 0.125rem 0.0625rem;
+                    font-size: 1rem;
+                    border-width: 0;
+                    border-color: transparent;
+                    line-height: 1.9;
+                    width: 100%;
+                    color: transparent;
+                    -webkit-transition: all 0.28s ease;
+                    transition: all 0.28s ease;
+                    box-shadow: none;
+                  }
+                  
+                  .form-group select,
+                  .form-group input:focus,
+                  .form-group input:valid,
+                  .form-group input.form-file,
+                  .form-group input.has-value,
+                  .form-group textarea:focus,
+                  .form-group textarea:valid,
+                  .form-group textarea.form-file,
+                  .form-group textarea.has-value {
+                    color: #333;
+                  }
+                  .form-group select ~ .control-label,
+                  .form-group input:focus ~ .control-label,
+                  .form-group input:valid ~ .control-label,
+                  .form-group input.form-file ~ .control-label,
+                  .form-group input.has-value ~ .control-label,
+                  .form-group textarea:focus ~ .control-label,
+                  .form-group textarea:valid ~ .control-label,
+                  .form-group textarea.form-file ~ .control-label,
+                  .form-group textarea.has-value ~ .control-label {
+                    font-size: 0.8rem;
+                    color: gray;
+                    top: -1rem;
+                    left: 0;
+                  }
+                  .form-group select:focus,
+                  .form-group input:focus,
+                  .form-group textarea:focus {
+                    outline: none;
+                  }
+                  .form-group select:focus ~ .control-label,
+                  .form-group input:focus ~ .control-label,
+                  .form-group textarea:focus ~ .control-label {
+                    color: #337ab7;
+                  }
+                  .form-group select:focus ~ .bar::before,
+                  .form-group input:focus ~ .bar::before,
+                  .form-group textarea:focus ~ .bar::before {
+                    width: 100%;
+                    left: 0;
+                  }
+                  
+                  .checkbox label,
+                  .form-radio label {
+                    position: relative;
+                    cursor: pointer;
+                    padding-left: 2rem;
+                    text-align: left;
+                    color: #333;
+                    display: block;
+                  }
+                  .checkbox input,
+                  .form-radio input {
+                    width: auto;
+                    opacity: 0.00000001;
+                    position: absolute;
+                    left: 0;
+                  }
+                  
+                 
+                  
+                  
+                  .button {
+                    position: relative;
+                    background: currentColor;
+                    border: 1px solid currentColor;
+                    font-size: 1.1rem;
+                    color: #4f93ce;
+                    margin: 3rem 0;
+                    padding: 0.75rem 3rem;
+                    cursor: pointer;
+                    -webkit-transition: background-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
+                    transition: background-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
+                    overflow: hidden;
+                    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+                  }
+                  .button span {
+                    color: #fff;
+                    position: relative;
+                    z-index: 1;
+                  }
+                  .button::before {
+                    content: '';
+                    position: absolute;
+                    background: #071017;
+                    border: 50vh solid #1d4567;
+                    width: 30vh;
+                    height: 30vh;
+                    border-radius: 50%;
+                    display: block;
+                    top: 50%;
+                    left: 50%;
+                    z-index: 0;
+                    opacity: 1;
+                    -webkit-transform: translate(-50%, -50%) scale(0);
+                    transform: translate(-50%, -50%) scale(0);
+                  }
+                  .button:hover {
+                    color: #337ab7;
+                    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+                  }
+                  .button:active::before, .button:focus::before {
+                    -webkit-transition: opacity 0.28s ease 0.364s, -webkit-transform 1.12s ease;
+                    transition: opacity 0.28s ease 0.364s, -webkit-transform 1.12s ease;
+                    transition: transform 1.12s ease, opacity 0.28s ease 0.364s;
+                    transition: transform 1.12s ease, opacity 0.28s ease 0.364s, -webkit-transform 1.12s ease;
+                    -webkit-transform: translate(-50%, -50%) scale(1);
+                            transform: translate(-50%, -50%) scale(1);
+                    opacity: 0;
+                  }
+                  .button:focus {
+                    outline: none;
+                  }
+        
+                }
+            }
+                hr{
+                   color:$azlgt;
+                   background-color:$azlgt;
+                   height: 2px;
+                   width:35px;
+                   margin:0 auto;
+                   margin-bottom: 55px;
+                }
+                h1{
+                    color:$azlgt;
+                    font-family: FiraSansLight,sans-serif;
+                    font-size: 15pt;
+                    text-align: center;
+                    padding-bottom: 4px
+                }
+                .cem{
+                    margin-top: 30px;
+                    text-align: center;
+                    input[type='submit']{
+                        width:200px;
+                        text-align: center;
+                        font-family: FiraSansSemiBold,sans-serif;
+                        font-size: 12pt;
+                        color:#c1c1c1;
+                        border-color:#c1c1c1;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        transition:all 300ms;
+                }
+            }
+        }
+        // formulario
 }
 
 

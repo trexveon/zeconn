@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use Mail;
+use App\User;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -18,6 +20,16 @@ class polarisController extends Controller
 
         return view('index',compact('empreendimentos','noticias'));
     }
+
+    public function sendEmail(Request $request)
+    {
+        $data['nome'] = $request->get("nome");
+	    $data['email'] = $request->get("email");
+        $data['mensagem'] = $request->get("mensagem");
+        
+        // return $data;
+    }
+
 
     public function create()
     {
