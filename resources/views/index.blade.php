@@ -105,7 +105,7 @@
         </div>
 
         <a href="#" class="anterior" title="slide anterior"><img src="{{asset('img/arrow-ant.png')}}" alt="anterior"></a>
-        <a href="#" class="proximo" title="próximo slide"><img src="{{asset('img/arrow-pro.png')}}" alt="proximo"></a> -->
+        <a href="#" class="proximo" title="próximo slide"><img src="{{asset('img/arrow-pro.png')}}" alt="proximo"></a> 
 
         <!-- slider -->
         <div class="slidestop">
@@ -206,13 +206,16 @@
 
         <div class="filtro3"></div>
 
+        <div class="container">
+        
         <h1>CURTA A ZECON <br> NAS REDES SOCIAIS</h1>
 
         <p>e saiba tudo sobre nossos empreendimentos!</p>
 
         <div>
-            <a href="#" target="_blank" title="facebook da zecon"><img src="{{asset('img/face.png')}}" alt="facebook"></a>
-            <a href="#" target="_blank" class="last" title="instagram da zecon"><img src="{{asset('img/insta.png')}}" alt="instagram"></a>
+            <a href="https://www.facebook.com/zeconengenharia" target="_blank" title="facebook da zecon"><img src="{{asset('img/face.png')}}" alt="facebook"></a>
+            <a href="https://www.instagram.com/zeconengenharia/" target="_blank" class="last" title="instagram da zecon"><img src="{{asset('img/insta.png')}}" alt="instagram"></a>
+        </div>
         </div>
 
     </section>
@@ -227,7 +230,7 @@
             <div class="row noticia">
                 @foreach($noticias as $n)
                 <!-- modelo principal -->
-                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12 noticia">
+                <div class="col-lg-4 col-xl-4 col-md-12 col-sm-12 noticia">
                     <a href="#" target="_blank" title="noticia">
                         <div class="imagemnoticia" style="background-image: url('{{Voyager::image( $n->foto )}}');">
 
@@ -249,7 +252,7 @@
 
         </div>
         <a href="#" class="btn btn-outline-secondary " title="ir para o blog">IR PARA O BLOG</a>
-    </section> -->
+    </section> 
     <!-- -- noticias -- -->
 
     <section class="links">
@@ -258,11 +261,11 @@
 
             <div class="row">
 
-                <div class="col-lg-3 col-xl-3 col-md-12 col-sm-12 row1">
+                <div class="col-lg-3 col-xl-3 col-md-3 col-sm-12 row1">
                     <img src="{{asset('img/ESS.png')}}" alt="Zecon Essencial">
                 </div>
 
-                <div class="col-lg-3 col-xl-3 col-md-12 col-sm-12 row2">
+                <div class="col-lg-3 col-xl-3 col-md-3 col-sm-12 row2">
                     <hr>
                     <ul>
                         <li><a href="" title="">item 1</a></li>
@@ -272,11 +275,11 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-3 col-xl-3 col-md-12 col-sm-12 row3">
+                <div class="col-lg-3 col-xl-3 col-md-3 col-sm-12 row3">
                     <img src="{{asset('img/ELL.png')}}" alt="Zecon Elemental">
                 </div>
 
-                <div class="col-lg-3 col-xl-3 col-md-12 col-sm-12 row4">
+                <div class="col-lg-3 col-xl-3 col-md-3 col-sm-12 row4">
                     <hr>
                     <ul>
                         <li><a href="" title="">item 1</a></li>
@@ -317,7 +320,7 @@
                                 <a href="https://www.facebook.com/zeconengenharia" title="link do facebook da zecon" target="_blank"><img src="{{asset('img/face.png')}}" alt="link facebook"></a>
                             </li>
                             <li>
-                                <a href="#" title="link do instagram da zecon" target="_blank"><img src="{{asset('img/insta.png')}}" alt="link instagram"> </a>
+                                <a href="https://www.instagram.com/zeconengenharia/" title="link do instagram da zecon" target="_blank"><img src="{{asset('img/insta.png')}}" alt="link instagram"> </a>
                             </li>
                         </ul>
                     </div>

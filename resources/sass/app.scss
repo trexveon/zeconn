@@ -104,7 +104,8 @@ body{
                    :last-child{
                         padding:10px 40px;
                         font-size:16px;
-                        display:inline;  
+                        display:inline; 
+                        white-space: nowrap;
                         &:hover{
                             color:$cinza;
                         }  
@@ -305,14 +306,13 @@ body{
             font-size:18pt;
             margin-bottom:30px;
         }
-        a{
+        
             a{
                 text-align:center;
-                margin:0 auto;
+                margin:60px auto;
                 width:200px;
                 height:50px;
                 padding-top:13px;
-                margin: 80px;
                 font-family: FiraSansSemiBold;
                 font-size:16px;
                 color:$cinza;
@@ -321,7 +321,7 @@ body{
                 :hover{
                         text-decoration: none;
                 }
-            }
+            
             transition:all 500ms;
             .esqemp{
                 position: absolute;
@@ -441,7 +441,7 @@ body{
         align-items: left;
         flex-direction: column;
         justify-content: center;
-        padding-left:350px;
+        
         .filtro1{
             position:absolute;
             width:100%;

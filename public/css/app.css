@@ -139,6 +139,7 @@ body .topHeader .container .direita ul :last-child {
   padding: 10px 40px;
   font-size: 16px;
   display: inline;
+  white-space: nowrap;
 }
 
 body .topHeader .container .direita ul :last-child:hover {
@@ -344,24 +345,20 @@ body #empreendimentos h2 {
 }
 
 body #empreendimentos a {
-  transition: all 500ms;
-}
-
-body #empreendimentos a a {
   text-align: center;
-  margin: 0 auto;
+  margin: 60px auto;
   width: 200px;
   height: 50px;
   padding-top: 13px;
-  margin: 80px;
   font-family: FiraSansSemiBold;
   font-size: 16px;
   color: #a5b0b7;
   border-color: #a5b0b7;
   transition: all 500ms;
+  transition: all 500ms;
 }
 
-body #empreendimentos a a :hover {
+body #empreendimentos a :hover {
   text-decoration: none;
 }
 
@@ -495,7 +492,6 @@ body #parallax {
   align-items: left;
   flex-direction: column;
   justify-content: center;
-  padding-left: 350px;
 }
 
 body #parallax .filtro1 {
@@ -1116,6 +1112,88 @@ body #formulario .cem input[type=submit] {
     font-size: 16px;
     display: inline;
     margin: 0;
+    white-space: nowrap;
+  }
+
+  body #empreendimentos .empreendimentos {
+    margin: 0 auto;
+  }
+
+  body #empreendimentos a .esqemp {
+    left: 40px;
+  }
+
+  body #empreendimentos a .diremp {
+    right: 40px;
+  }
+
+  body #empreendimentos .fotoresidencial {
+    width: 70%;
+    height: 230px;
+  }
+
+  body #empreendimentos .descricaoresidencial {
+    width: 70%;
+    height: 240px;
+    background-color: white;
+    border: 1px solid #f8f8f8;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  body #empreendimentos .descricaoresidencial h3 {
+    font-size: 39px;
+  }
+
+  body #empreendimentos .descricaoresidencial p {
+    font-size: 20px;
+  }
+
+  body #empreendimentos .descricaoresidencial ul :first-child {
+    padding-left: 1px;
+  }
+
+  body #empreendimentos .descricaoresidencial ul :last-child {
+    padding-right: 1px;
+  }
+
+  body #parallax h1 {
+    font-size: 60px;
+  }
+
+  body #parallax p {
+    font-size: 26px;
+  }
+
+  body #parallax div a {
+    position: relative;
+    z-index: 50px;
+  }
+
+  body #parallax div .last {
+    margin-left: 60px;
+  }
+
+  body #noticias h1 {
+    margin-top: 120px;
+    margin-bottom: 60px;
+  }
+
+  body #noticias .noticia :hover {
+    text-decoration: none;
+  }
+
+  body #noticias .noticia .imagemnoticia {
+    height: 200px;
+  }
+
+  body #noticias .noticia .titulonoticia {
+    font-size: 24px;
+  }
+
+  body #noticias .noticia .conteudonoticia {
+    font-size: 16px;
   }
 }
 
@@ -1136,6 +1214,8 @@ body #formulario .cem input[type=submit] {
 
   body .topHeader .container .direita ul :last-child {
     display: inline;
+    width: 200px;
+    white-space: nowrap;
   }
 
   body header .anterior {
@@ -1154,11 +1234,187 @@ body #formulario .cem input[type=submit] {
     font-size: 16px;
     padding: 10px 50px;
   }
+
+  body #construtora h2 {
+    text-align: center;
+    font-family: FiraSansLight;
+    font-size: 30px;
+    color: #4c799a;
+    margin: 0;
+    padding: 0;
+  }
+
+  body #construtora h3 {
+    text-align: center;
+    font-family: FiraSansLightItalic;
+    font-size: 30pt;
+    color: #25355f;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  body #construtora .elemento .conteudodireita {
+    margin: 0;
+    padding: 0;
+  }
+
+  body #construtora .elemento .conteudodireita p {
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  body #construtora .elemento .conteudoesquerda {
+    margin: 0;
+    padding: 0;
+  }
+
+  body #construtora .elemento .conteudoesquerda p {
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+  }
+
+  body #empreendimentos .empreendimentos {
+    margin: 0 auto;
+  }
+
+  body #empreendimentos a .esqemp {
+    left: 40px;
+  }
+
+  body #empreendimentos a .diremp {
+    right: 40px;
+  }
+
+  body #empreendimentos .fotoresidencial {
+    width: 70%;
+    height: 200px;
+  }
+
+  body #empreendimentos .descricaoresidencial {
+    width: 70%;
+    height: 240px;
+    background-color: white;
+    border: 1px solid #f8f8f8;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  body #empreendimentos .descricaoresidencial h3 {
+    font-size: 30px;
+  }
+
+  body #empreendimentos .descricaoresidencial p {
+    font-size: 16px;
+  }
+
+  body #empreendimentos .descricaoresidencial ul li {
+    font-size: 5px;
+  }
+
+  body #empreendimentos .descricaoresidencial ul :first-child {
+    padding-left: 2px;
+    font-size: 5px;
+  }
+
+  body #empreendimentos .descricaoresidencial ul :last-child {
+    padding-right: 2px;
+    font-size: 7px;
+  }
+
+  body #parallax h1 {
+    font-size: 50px;
+  }
+
+  body #parallax p {
+    font-size: 24px;
+  }
+
+  body #parallax div a {
+    position: relative;
+    z-index: 50px;
+  }
+
+  body #parallax div .last {
+    margin-left: 60px;
+  }
+
+  body #noticias h1 {
+    margin-top: 120px;
+    margin-bottom: 60px;
+  }
+
+  body #noticias .noticia .imagemnoticia {
+    height: 250px;
+  }
+
+  body #noticias .noticia .titulonoticia {
+    font-size: 24px;
+  }
+
+  body #noticias .noticia .conteudonoticia {
+    font-size: 16px;
+  }
+
+  body .links .idatopo img {
+    width: 50px;
+  }
+
+  body footer .container {
+    padding-top: 20px;
+  }
+
+  body footer .container .end .icone {
+    padding-bottom: 20px;
+  }
+
+  body footer .container .end .icone img {
+    width: 97px;
+    height: 72px;
+  }
+
+  body footer .container .end .endereco {
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  body footer .container .end .endereco ul li {
+    font-size: 16px;
+  }
+
+  body footer .container .redes {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  body footer .container .redes ul img {
+    margin-bottom: 20px;
+    margin-top: 5px;
+  }
+
+  body footer .container .copyright {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  body .modalll .formContato {
+    width: 320px;
+    height: 600px;
+  }
+
   body .topHeader {
     width: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
   }
 
   body .topHeader .container .esquerda {
@@ -1199,7 +1455,7 @@ body #formulario .cem input[type=submit] {
   }
 
   body header .slidestop .a {
-    background-size: 170% 100%;
+    background-size: 200% 100%;
   }
 
   body header .slidestop .a div a {
@@ -1212,7 +1468,152 @@ body #formulario .cem input[type=submit] {
   }
 
   body header .slidestop .a img {
-    width: 200px;
+    width: 250px;
+  }
+
+  body #construtora h2 {
+    font-size: 25px;
+  }
+
+  body #construtora h3 {
+    font-size: 22pt;
+  }
+
+  body #construtora p {
+    font-size: 16px;
+  }
+
+  body #empreendimentos h3 {
+    font-size: 35px;
+  }
+
+  body #empreendimentos h2 {
+    font-size: 18px;
+  }
+
+  body #empreendimentos a {
+    margin: 30px auto;
+  }
+
+  body #empreendimentos a .esqemp {
+    top: 42%;
+    left: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 100%;
+    padding: 10px;
+  }
+
+  body #empreendimentos a .diremp {
+    top: 42%;
+    right: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 100%;
+    padding: 10px;
+  }
+
+  body #empreendimentos .fotoresidencial {
+    width: 90%;
+    height: 240px;
+  }
+
+  body #empreendimentos .descricaoresidencial {
+    width: 90%;
+    height: 220px;
+  }
+
+  body #parallax {
+    width: 100%;
+    height: 400px;
+  }
+
+  body #parallax h1 {
+    font-size: 25px;
+  }
+
+  body #parallax p {
+    font-size: 20px;
+  }
+
+  body #parallax div a {
+    position: relative;
+    z-index: 50px;
+  }
+
+  body #parallax div .last {
+    margin-left: 60px;
+  }
+
+  body #noticias {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  body #noticias h1 {
+    font-size: 30px;
+    margin: 30px;
+  }
+
+  body #noticias a {
+    margin: 20px;
+  }
+
+  body #noticias .noticia :hover {
+    text-decoration: none;
+  }
+
+  body #noticias .noticia .imagemnoticia {
+    height: 200px;
+  }
+
+  body #noticias .noticia .titulonoticia {
+    font-size: 20px;
+  }
+
+  body #noticias .noticia .conteudonoticia {
+    font-size: 16px;
+  }
+
+  body .links {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  body .links .idatopo {
+    bottom: 25px;
+    right: 25px;
+  }
+
+  body footer .container .end ul {
+    margin-left: 30px;
+  }
+
+  body footer .redes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 100%;
+  }
+
+  body footer .redes ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  body footer .redes ul li {
+    float: left;
+    margin-left: 20px;
+    margin-right: 45px;
+  }
+
+  body footer .redes ul li img {
+    margin-bottom: 20px;
+    margin-top: 5px;
   }
 }
 

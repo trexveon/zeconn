@@ -19263,8 +19263,7 @@ $(document).ready(function () {
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
-        infinite: true,
-        dots: true
+        infinite: true
       }
     }, {
       breakpoint: 600,

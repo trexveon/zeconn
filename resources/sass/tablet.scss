@@ -18,7 +18,8 @@
                        :last-child{
 
                             display:inline;  
-                               
+                             width:200px; 
+                             white-space: nowrap;
                        }
         
                     }
@@ -61,5 +62,208 @@
     
             }
         }
+
+        #construtora{
+
+            h2{
+    
+                text-align: center;
+                font-family:FiraSansLight;
+                font-size:30px;
+                color:$azul2;
+                margin:0;
+                padding:0;
+                
+            }
+            h3{
+                text-align: center;
+                font-family:FiraSansLightItalic;
+                font-size:30pt;
+                color:$azulEscuro2;
+                margin:0;
+                padding:0;
+                margin-bottom:30px;
+            }
+            .elemento{
+                .conteudodireita{
+                    margin:0;
+                    padding:0;
+                    p{
+                        margin:0;
+                        padding:0;
+                        padding-left:40px;
+                        padding-right:40px;
+                    }
+                }
+                .conteudoesquerda{
+                    margin:0;
+                    padding:0;
+                    p{
+                        margin:0;
+                        padding:0;
+                        padding-left:40px;
+                        padding-right:40px;
+                        padding-bottom: 50px;
+                    }
+                }
+            }
+            
+    
+        } //construtora
+
+        #empreendimentos{
+
+            .empreendimentos{
+                margin:0 auto;
+            }
+            
+                a{
+   
+                .esqemp{
+
+                    left:40px;
+                    
+                }
+                .diremp{
+
+                    right:40px;
+
+                }
+            }
+            .fotoresidencial{
+                width:70%;
+                height:200px;
+
+            }
+            .descricaoresidencial{
+                width:70%;
+                height:240px;
+                background-color: white;
+                border: 1px solid $border;
+                overflow: hidden;
+                position: relative;
+                margin:0 auto;
+                h3{
+                    font-size:30px;
+                }
+                p{
+
+                    font-size:16px;
+
+                }
+                ul{
+                    li{
+                        font-size:5px;
+                    }
+
+                    :first-child{
+                        padding-left:2px;
+                        font-size:5px;
+                    }
+                    :last-child{
+
+                        padding-right:2px;
+                        font-size:7px;
+                    }
+                }
+            }
+        }//empreendimentos
+
+        #parallax{
+            h1{
+                font-size:50px;
+            }
+            p{
+
+                font-size:24px;
+
+            }
+            div{
+                a{
+                    position:relative;
+                    z-index:50px;
+                }
+                .last{
+                    margin-left:60px;
+                }
+            }
+        }//parallax
+
+        #noticias{
+
+            h1{
+                margin-top:120px;
+                margin-bottom:60px;
+            }
+
+            .noticia{
+                    .imagemnoticia{
+ 
+                            height:250px;
+
+                        }
+                        .titulonoticia{
+ 
+                            font-size:24px;
+
+                        }
+                        .conteudonoticia{
+
+                            font-size:16px;
+
+    
+                        }
+    
+            }
+        }//noticias
+        .links{
+            .idatopo{
+                img{
+                    width:50px;
+                }
+            }
+        }
+
+        footer{
+            .container{
+                padding-top:20px;
+                .end{
+                    .icone{
+                        padding-bottom:20px;
+                        img{
+                            width:97px;
+                            height:72px;
+                        }
+                    }
+                    .endereco{
+                        padding-bottom:20px;
+                        padding-top:20px;
+                        ul{
+                             li{
+                                 font-size:16px;
+
+                             }
+                        }
+                    }
+                }
+                .redes{
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    ul{
+                        img{
+                            margin-bottom: 20px;
+                            margin-top:5px;
+                        }
+                    }
+                }
+                .copyright{
+                    padding-top:15px;
+                    padding-bottom:15px;
+                    font-size:14px;
+                }
+    
+            }
+        }
+        // footer
     }
 }
