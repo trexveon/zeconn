@@ -23,11 +23,23 @@ class polarisController extends Controller
 
     public function sendEmail(Request $request)
     {
-        $data['nome'] = $request->get("nome");
-	    $data['email'] = $request->get("email");
-        $data['mensagem'] = $request->get("mensagem");
+        $nome = $request->get("nome");
+	    $email = $request->get("email");
+        $mensagem = $request->get("mensagem");
         
-        // return $data;
+        Mail::send('email.email',['mensagem' => $mensagem,'email' => $email],function($message) use ($nome,$email){
+            $message->from($email, $nome);
+            $message->to('zecon.polaris@gmail.com');
+            $message->subject('Polaris - Tenho Interesse');
+        });
+
+
+        return 'Mensagem enviada com sucesso!';
+
+        
+
+        
+       
     }
 
 

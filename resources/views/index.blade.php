@@ -19,6 +19,7 @@
 <body>
     <div class="modalll">
         <div class="formContato">
+            <div class="close">X</div>
             <!-- formulario -->
             <section class="formulario" id="formulario">
 
@@ -331,7 +332,7 @@
                     <div class="row">
 
                         <div class="col-sm-11 col-md-11 col-lg-11 col-xl-11">
-                            Copyright &copy ZECON - LECHLINSKI ENGENHARIA E CONSTRUÇÃO.
+                            Copyright &copy ZECON - ZECHLINSKI ENGENHARIA E CONSTRUÇÃO.
                             <span>todos os direitos reservados</span>
                         </div>
 

@@ -11,8 +11,8 @@ return [
     | sending of e-mail. You may specify which one you're using throughout
     | your application here. By default, Laravel is setup for SMTP mail.
     |
-    | Supported: "smtp", "sendmail", "mailgun", "ses",
-    |            "postmark", "log", "array"
+    | Supported: "smtp", "sendmail", "mailgun", "mandrill", "ses",
+    |            "sparkpost", "postmark", "log", "array"
     |
     */
 
@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'zecon.polaris@gmail.com'),
-        'name' => env('Zecon', 'Interessado'),
+        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+        'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
     /*
@@ -84,9 +84,9 @@ return [
     |
     */
 
-    'username' => env('zecon.polaris@gmail.com	'),
+    'username' => env('MAIL_USERNAME'),
 
-    'password' => env('s3nh4n40s1mpl3s'),
+    'password' => env('MAIL_PASSWORD'),
 
     /*
     |--------------------------------------------------------------------------

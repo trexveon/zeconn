@@ -19239,14 +19239,20 @@ $(document).ready(function () {
   $('.slidestop').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 5000,
     prevArrow: $('.anterior'),
     nextArrow: $('.proximo'),
     infinite: true,
     speed: 500,
     fade: true,
-    cssEase: 'linear'
+    cssEase: 'linear',
+    responsive: [{
+      breakpoint: 480,
+      settings: {
+        arrows: false
+      }
+    }]
   });
   $('.anuncioss').slick({
     slidesToShow: 3,
@@ -19275,7 +19281,9 @@ $(document).ready(function () {
       breakpoint: 480,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        autoplaySpeed: 5000,
+        slidesToScroll: 1,
+        arrows: false
       }
     }]
   });
@@ -19363,6 +19371,7 @@ $(document).ready(function () {
   var noticias = document.querySelector('#noticias');
   var links = document.querySelector('.links');
   var footer = document.querySelector('footer');
+  var close = document.querySelector('.close');
   bottom.addEventListener('click', function (e) {
     e.preventDefault();
     modal.style.display = 'flex';
@@ -19381,7 +19390,8 @@ $(document).ready(function () {
       formContato.style.height = '640px';
     }, 1);
   });
-  modal.addEventListener('click', function () {
+
+  function eventomodal() {
     modal.style.display = 'none';
     corpo.style.overflow = 'auto';
     cabeca.style.filter = 'blur(0)';
@@ -19396,6 +19406,14 @@ $(document).ready(function () {
     setTimeout(function () {
       formContato.style.height = '0';
     }, 1);
+  }
+
+  modal.addEventListener('click', function () {
+    eventomodal();
+  });
+  close.addEventListener('click', function (e) {
+    e.stopPropagation();
+    eventomodal();
   });
   formContato.addEventListener('click', function (e) {
     e.stopPropagation();
@@ -19441,12 +19459,13 @@ $(document).ready(function () {
           aviso.classList.remove('alert-success');
           aviso.classList.remove('alert-primary');
           aviso.classList.add('alert-danger');
-          aviso.innerHTML = data;
+          aviso.innerHTML = 'Não foi possivel enviar a mensagem';
           $('.aviso').fadeIn();
           setTimeout(function () {
             $('.aviso').fadeOut();
           }, 5000);
         }, 500);
+        console.log(data);
       } //error
 
     }); //ajax
