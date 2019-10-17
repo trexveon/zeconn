@@ -24,6 +24,7 @@ html {
     padding:0;
     margin:0;
     box-sizing: border-box;
+    font-smooth: always;
 }
 
 body{
@@ -658,8 +659,8 @@ body{
 
     footer{
         width:100%;
-        background:$azulEscuro2;
-        color:white;
+        background:#153260;
+        color:#ffffff;
         .container{
             padding-top:70px;
             .end{
@@ -699,13 +700,17 @@ body{
             .redes{
                 text-align: right;
                 padding-top: 40px;
+                color:#3f6f93;
+                
                 ul{
                     list-style: none;
-                    img{
-                        width:20px;
+                    color:#3f6f93;
+                    i{
+                        font-size:30px;
                         margin-bottom: 20px;
                         margin-top:5px;
                         text-align: right;
+                        color:#3f6f93;
                     }
                 }
             }

@@ -44,6 +44,7 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-smooth: always;
 }
 
 body {
@@ -718,8 +719,8 @@ body .links .container .row .row4 ul li a :hover {
 
 body footer {
   width: 100%;
-  background: #25355f;
-  color: white;
+  background: #153260;
+  color: #ffffff;
 }
 
 body footer .container {
@@ -771,17 +772,20 @@ body footer .container .end .endereco ul li {
 body footer .container .redes {
   text-align: right;
   padding-top: 40px;
+  color: #3f6f93;
 }
 
 body footer .container .redes ul {
   list-style: none;
+  color: #3f6f93;
 }
 
-body footer .container .redes ul img {
-  width: 20px;
+body footer .container .redes ul i {
+  font-size: 30px;
   margin-bottom: 20px;
   margin-top: 5px;
   text-align: right;
+  color: #3f6f93;
 }
 
 body footer .container .copyright {
@@ -1051,8 +1055,8 @@ body #formulario .cem input[type=submit] {
 }
 
 #human2be {
-  fill: white;
-  max-width: 25px;
+  fill: #3f6f93;
+  max-width: 30px;
   float: right;
   width: 50px;
 }

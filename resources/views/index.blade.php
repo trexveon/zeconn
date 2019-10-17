@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="{{asset('css/slick/slick.css')}}">
     <link rel="stylesheet" href="{{asset('css/slick/slick-theme.css')}}">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-
+    <script src="https://use.fontawesome.com/d5d3d68e10.js"></script> 
+    <script src="https://kit.fontawesome.com/514916f486.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -318,10 +319,10 @@
                     <div class="redes  col-sm-1 col-md-1 col-lg-1 col-xl-1">
                         <ul>
                             <li>
-                                <a href="https://www.facebook.com/zeconengenharia" title="link do facebook da zecon" target="_blank"><img src="{{asset('img/face.png')}}" alt="link facebook"></a>
+                                <a href="https://www.facebook.com/zeconengenharia" title="link do facebook da zecon" target="_blank"><i class="fab fa-facebook-square"></i></a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/zeconengenharia/" title="link do instagram da zecon" target="_blank"><img src="{{asset('img/insta.png')}}" alt="link instagram"> </a>
+                                <a href="https://www.instagram.com/zeconengenharia/" title="link do instagram da zecon" target="_blank"><i class="fab fa-instagram"></i></a>
                             </li>
                         </ul>
                     </div>
