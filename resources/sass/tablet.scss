@@ -7,9 +7,13 @@
                     width:50%;
                 }
                 .direita{
+                    .hamburguer{
+                        display:block;
+                    }
                     width:50%;
                     padding-top:10px;
                     ul{
+                        display:none;
                        li{
                         margin-left:0;
                         display:none;

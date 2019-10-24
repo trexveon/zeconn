@@ -64,10 +64,28 @@ $(document).ready(function(){
   
 
 
-  var scrollItem = document.querySelector('.topHeader');
-  var bottom = document.querySelector('.bott');
-  var logo = document.querySelector('.iconz');
-  var itens = document.querySelectorAll('.itens');
+  let scrollItem = document.querySelector('.topHeader');
+  let bottom = document.querySelector('.bott');
+  let logo = document.querySelector('.iconz');
+  let itens = document.querySelectorAll('.itens');
+  let inputhamburguer = document.querySelector('.hamburguerr');
+  let menuprincipal = document.querySelector('.menuprincipal');
+  let modal = document.querySelector('.modalll');
+  let corpo = document.querySelector('body');
+  let formContato = document.querySelector('.formContato');
+  let topHeader = document.querySelector('.topHeader');
+  let cabeca = document.querySelector('#head');
+  let construtora = document.querySelector('#construtora');
+  let empreendimentos = document.querySelector('.empreendimentos');
+  let parallax = document.querySelector('#parallax');
+  let noticias = document.querySelector('#noticias');
+  let links = document.querySelector('.links');
+  let footer = document.querySelector('footer');
+  let close = document.querySelector('.close');
+  let aviso = document.querySelector('.aviso');
+  let enviar = document.querySelector('.enviar');
+  let a = document.querySelector('.a').style.display = 'flex';
+  let falle = document.querySelector('.falle');
 
       function scroll () {
           if(window.pageYOffset>100){
@@ -76,10 +94,12 @@ $(document).ready(function(){
             bottom.classList.add('btn-outline-dark');
             bottom.style.color='#a5b0b7';
             bottom.style.borderColor = '#a5b0b7';
+            inputhamburguer.style.color = '#25355f';
+            inputhamburguer.style.backgroundColor = '#25355f';
             bottom.onmouseover = function(){
               this.style.color = '#3f6f93';
               this.style.borderColor = '#3f6f93';
-              this.style.backgroundColor = 'rgba(255,255,255,0.3)';
+              this.style.backgroundColor = 'rgba(255,255,255,0.1)';
             }
             bottom.onmouseout = function(){
               bottom.style.color='#a5b0b7';
@@ -99,15 +119,6 @@ $(document).ready(function(){
               }
             });
 
-
-
-
-
-
-
-
-
-
           }else{
             scrollItem.classList.remove('scrolll');
             bottom.classList.add('btn-outline-light');
@@ -115,10 +126,12 @@ $(document).ready(function(){
             bottom.style.backgroundColor = 'transparent';
             bottom.style.color='white';
             bottom.style.borderColor = 'white';
+            inputhamburguer.style.color = 'white';
+            inputhamburguer.style.backgroundColor = 'white';
             bottom.onmouseover = function(){
-              this.style.color = '#a5b0b7';
-              this.style.borderColor = 'none';
-              this.style.backgroundColor = 'white';
+              this.style.color = 'white';
+              this.style.borderColor = '#25355f';
+              this.style.backgroundColor = '#25355f';
             }
             bottom.onmouseout = function(){
               bottom.style.color='white';
@@ -139,28 +152,9 @@ $(document).ready(function(){
             });
           }
        }
-
        window.onscroll = scroll;
 
-
-
-
-      var modal = document.querySelector('.modalll');
-      var corpo = document.querySelector('body');
-      var formContato = document.querySelector('.formContato');
-      var topHeader = document.querySelector('.topHeader');
-      var cabeca = document.querySelector('#head');
-      var construtora = document.querySelector('#construtora');
-      var empreendimentos = document.querySelector('.empreendimentos');
-      var parallax = document.querySelector('#parallax');
-      var noticias = document.querySelector('#noticias');
-      var links = document.querySelector('.links');
-      var footer = document.querySelector('footer');
-      var close = document.querySelector('.close');
-      
-
-       bottom.addEventListener('click',function(e){
-         e.preventDefault();
+       function modalin(){
           modal.style.display = 'flex';
           corpo.style.overflow = 'hidden';
           modal.style.style = 'blur(0)';
@@ -177,32 +171,50 @@ $(document).ready(function(){
           setTimeout(function(){
             formContato.style.height = '640px';
           },1);
+       }
+       bottom.addEventListener('click',function(e){
+         e.preventDefault();
+         modalin()
 
        });
 
-       function eventomodal(){
-        modal.style.display = 'none';
-        corpo.style.overflow = 'auto';
-        cabeca.style.filter = 'blur(0)';
-        construtora.style.filter = 'blur(0)';
-        empreendimentos.style.filter = 'blur(0)';
-        links.style.filter = 'blur(0)';
-        noticias.style.filter = 'blur(0)';
-        footer.style.filter = 'blur(0)';
-        topHeader.style.filter = 'blur(0)';
-        parallax.style.filter = 'blur(0)';
-        $('.modalll').fadeOut("slow");
-        setTimeout(function(){
+       function modalout(){
+          modal.style.display = 'none';
+          corpo.style.overflow = 'auto';
+          cabeca.style.filter = 'blur(0)';
+          construtora.style.filter = 'blur(0)';
+          empreendimentos.style.filter = 'blur(0)';
+          links.style.filter = 'blur(0)';
+          noticias.style.filter = 'blur(0)';
+          footer.style.filter = 'blur(0)';
+          topHeader.style.filter = 'blur(0)';
+          parallax.style.filter = 'blur(0)';
+          $('.modalll').fadeOut("slow");
+          setTimeout(function(){
           formContato.style.height = '0';
         },1);
        }
+       falle.addEventListener('click',function(e){
+          e.preventDefault();
+          modalin()
+       });
        modal.addEventListener('click',function(){
-          eventomodal();
+           modalout();
+           if(menuativo==true){
+             document.body.style.overflow = 'hidden';
+           }else{
+            document.body.style.overflow = 'auto';
+           }
        });
 
         close.addEventListener('click',function(e){
           e.stopPropagation();
-            eventomodal();
+            modalout();
+            if(menuativo==true){
+              document.body.style.overflow = 'hidden';
+            }else{
+             document.body.style.overflow = 'auto';
+            }
         });
 
        formContato.addEventListener('click',function(e){
@@ -210,15 +222,14 @@ $(document).ready(function(){
        });
 
 
-      let aviso = document.querySelector('.aviso');
-      let enviar = document.querySelector('.enviar');
+      
       
       enviar.addEventListener('click',function(e){
         e.preventDefault();
         aviso.classList.remove('alert-success');
         aviso.classList.remove('alert-danger');
         aviso.classList.add('alert-primary');
-        aviso.innerHTML = 'Caregando...';
+        aviso.innerHTML = 'Carregando...';
 
         var nome = document.querySelector('.nome');
         var email = document.querySelector('.email');
@@ -273,7 +284,39 @@ $(document).ready(function(){
       });//enviar
 
 
+      let menuativo = false;
+
+      function prevent(e){
+        e.preventDefault();
+      }
+
+
+      inputhamburguer.addEventListener('click',function(){
+        if(menuativo==false){
+          document.body.style.overflow = 'hidden';
+          menuprincipal.style.width = '100%';
+          inputhamburguer.style.color = '#25355f';
+          inputhamburguer.style.background = '#25355f';
+          scrollItem.classList.add('scrolll');
+          logo.src = 'img/ZECONOriginal.png';
+          logo.addEventListener('click',(e)=>{e.preventDefault();});
+          menuativo=true;
+        }else{
+          document.body.style.overflow = 'auto';
+          menuprincipal.style.width = '0';
+          inputhamburguer.style.color = 'white';
+          inputhamburguer.style.background = 'white';
+          scrollItem.classList.remove('scrolll');
+          logo.src = 'img/ZECON.png'; 
+          logo.removeEventListener('click',(e)=>{e.preventDefault();});
+          menuativo=false;
+        }
+      });
+
+      
+
+
  });//fim do document
 
 
-var a = document.querySelector('.a').style.display = 'flex';
+

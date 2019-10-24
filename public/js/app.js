@@ -19291,6 +19291,24 @@ $(document).ready(function () {
   var bottom = document.querySelector('.bott');
   var logo = document.querySelector('.iconz');
   var itens = document.querySelectorAll('.itens');
+  var inputhamburguer = document.querySelector('.hamburguerr');
+  var menuprincipal = document.querySelector('.menuprincipal');
+  var modal = document.querySelector('.modalll');
+  var corpo = document.querySelector('body');
+  var formContato = document.querySelector('.formContato');
+  var topHeader = document.querySelector('.topHeader');
+  var cabeca = document.querySelector('#head');
+  var construtora = document.querySelector('#construtora');
+  var empreendimentos = document.querySelector('.empreendimentos');
+  var parallax = document.querySelector('#parallax');
+  var noticias = document.querySelector('#noticias');
+  var links = document.querySelector('.links');
+  var footer = document.querySelector('footer');
+  var close = document.querySelector('.close');
+  var aviso = document.querySelector('.aviso');
+  var enviar = document.querySelector('.enviar');
+  var a = document.querySelector('.a').style.display = 'flex';
+  var falle = document.querySelector('.falle');
 
   function scroll() {
     if (window.pageYOffset > 100) {
@@ -19299,11 +19317,13 @@ $(document).ready(function () {
       bottom.classList.add('btn-outline-dark');
       bottom.style.color = '#a5b0b7';
       bottom.style.borderColor = '#a5b0b7';
+      inputhamburguer.style.color = '#25355f';
+      inputhamburguer.style.backgroundColor = '#25355f';
 
       bottom.onmouseover = function () {
         this.style.color = '#3f6f93';
         this.style.borderColor = '#3f6f93';
-        this.style.backgroundColor = 'rgba(255,255,255,0.3)';
+        this.style.backgroundColor = 'rgba(255,255,255,0.1)';
       };
 
       bottom.onmouseout = function () {
@@ -19331,11 +19351,13 @@ $(document).ready(function () {
       bottom.style.backgroundColor = 'transparent';
       bottom.style.color = 'white';
       bottom.style.borderColor = 'white';
+      inputhamburguer.style.color = 'white';
+      inputhamburguer.style.backgroundColor = 'white';
 
       bottom.onmouseover = function () {
-        this.style.color = '#a5b0b7';
-        this.style.borderColor = 'none';
-        this.style.backgroundColor = 'white';
+        this.style.color = 'white';
+        this.style.borderColor = '#25355f';
+        this.style.backgroundColor = '#25355f';
       };
 
       bottom.onmouseout = function () {
@@ -19360,20 +19382,8 @@ $(document).ready(function () {
   }
 
   window.onscroll = scroll;
-  var modal = document.querySelector('.modalll');
-  var corpo = document.querySelector('body');
-  var formContato = document.querySelector('.formContato');
-  var topHeader = document.querySelector('.topHeader');
-  var cabeca = document.querySelector('#head');
-  var construtora = document.querySelector('#construtora');
-  var empreendimentos = document.querySelector('.empreendimentos');
-  var parallax = document.querySelector('#parallax');
-  var noticias = document.querySelector('#noticias');
-  var links = document.querySelector('.links');
-  var footer = document.querySelector('footer');
-  var close = document.querySelector('.close');
-  bottom.addEventListener('click', function (e) {
-    e.preventDefault();
+
+  function modalin() {
     modal.style.display = 'flex';
     corpo.style.overflow = 'hidden';
     modal.style.style = 'blur(0)';
@@ -19389,9 +19399,14 @@ $(document).ready(function () {
     setTimeout(function () {
       formContato.style.height = '640px';
     }, 1);
+  }
+
+  bottom.addEventListener('click', function (e) {
+    e.preventDefault();
+    modalin();
   });
 
-  function eventomodal() {
+  function modalout() {
     modal.style.display = 'none';
     corpo.style.overflow = 'auto';
     cabeca.style.filter = 'blur(0)';
@@ -19408,24 +19423,38 @@ $(document).ready(function () {
     }, 1);
   }
 
+  falle.addEventListener('click', function (e) {
+    e.preventDefault();
+    modalin();
+  });
   modal.addEventListener('click', function () {
-    eventomodal();
+    modalout();
+
+    if (menuativo == true) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
   });
   close.addEventListener('click', function (e) {
     e.stopPropagation();
-    eventomodal();
+    modalout();
+
+    if (menuativo == true) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
   });
   formContato.addEventListener('click', function (e) {
     e.stopPropagation();
   });
-  var aviso = document.querySelector('.aviso');
-  var enviar = document.querySelector('.enviar');
   enviar.addEventListener('click', function (e) {
     e.preventDefault();
     aviso.classList.remove('alert-success');
     aviso.classList.remove('alert-danger');
     aviso.classList.add('alert-primary');
-    aviso.innerHTML = 'Caregando...';
+    aviso.innerHTML = 'Carregando...';
     var nome = document.querySelector('.nome');
     var email = document.querySelector('.email');
     var mensagem = document.querySelector('.Mensagem');
@@ -19470,9 +19499,39 @@ $(document).ready(function () {
 
     }); //ajax
   }); //enviar
-}); //fim do document
 
-var a = document.querySelector('.a').style.display = 'flex';
+  var menuativo = false;
+
+  function prevent(e) {
+    e.preventDefault();
+  }
+
+  inputhamburguer.addEventListener('click', function () {
+    if (menuativo == false) {
+      document.body.style.overflow = 'hidden';
+      menuprincipal.style.width = '100%';
+      inputhamburguer.style.color = '#25355f';
+      inputhamburguer.style.background = '#25355f';
+      scrollItem.classList.add('scrolll');
+      logo.src = 'img/ZECONOriginal.png';
+      logo.addEventListener('click', function (e) {
+        e.preventDefault();
+      });
+      menuativo = true;
+    } else {
+      document.body.style.overflow = 'auto';
+      menuprincipal.style.width = '0';
+      inputhamburguer.style.color = 'white';
+      inputhamburguer.style.background = 'white';
+      scrollItem.classList.remove('scrolll');
+      logo.src = 'img/ZECON.png';
+      logo.removeEventListener('click', function (e) {
+        e.preventDefault();
+      });
+      menuativo = false;
+    }
+  });
+}); //fim do document
 
 /***/ }),
 

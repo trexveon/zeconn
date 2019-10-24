@@ -48,7 +48,73 @@ html {
 }
 
 body {
-  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body .menuprincipal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #25355f;
+  width: 0;
+  height: 100vh;
+  transition: all 0.5s ease-in-out;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+body .menuprincipal .nave {
+  margin-top: 80px;
+  list-style: none;
+}
+
+body .menuprincipal .nave li {
+  margin: 15px;
+  text-align: center;
+  font-family: FiraSansSemiBold;
+}
+
+body .menuprincipal .nave li a {
+  color: white;
+  transition: 0.3s all ease-in-out;
+  font-size: 24px;
+}
+
+body .menuprincipal .nave li a:hover {
+  text-decoration: none;
+}
+
+body .menuprincipal .faleconosco {
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  font-family: FiraSansSemiBold;
+  border-radius: 5px;
+  color: #25355f;
+}
+
+body .menuprincipal .faleconosco:hover {
+  text-decoration: none;
+}
+
+body .menuprincipal .redessociais {
+  margin-top: 50px;
+}
+
+body .menuprincipal .redessociais li {
+  list-style: none;
+  float: left;
+  margin: 20px;
+}
+
+body .menuprincipal .redessociais li a i {
+  color: white;
+  font-size: 40px;
 }
 
 body .modalll {
@@ -59,7 +125,7 @@ body .modalll {
   top: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.3);
-  z-index: 5000;
+  z-index: 50000000;
   display: none;
   flex-direction: row;
   justify-content: center;
@@ -87,6 +153,12 @@ body .modalll .formContato .close {
   cursor: pointer;
 }
 
+body .modalll .formContato input[type=submit]:hover {
+  background-color: #25355f;
+  color: white;
+  border-color: #25355f;
+}
+
 body .aviso {
   width: 300px;
   position: fixed;
@@ -102,7 +174,7 @@ body .topHeader {
   left: 0;
   padding-top: 30px;
   padding-bottom: 30px;
-  z-index: 2000;
+  z-index: 2000000;
   width: 100%;
   transition: all 0.4s;
 }
@@ -120,7 +192,75 @@ body .topHeader .container .direita {
   padding-top: 10px;
 }
 
+body .topHeader .container .direita .hamburguer {
+  display: none;
+  width: 30px;
+  height: 30px;
+  margin-top: 7px;
+  float: right;
+  cursor: pointer;
+}
+
+body .topHeader .container .direita .hamburguer label {
+  width: 100%;
+}
+
+body .topHeader .container .direita .hamburguer label span {
+  color: white;
+  display: block;
+  content: "";
+  background-color: white;
+  position: relative;
+  width: 100%;
+  height: 4px;
+  transition: transform 0.3s ease-in-out;
+  z-index: 6000;
+}
+
+body .topHeader .container .direita .hamburguer label span::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+  top: -10px;
+  left: 0;
+  position: absolute;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+body .topHeader .container .direita .hamburguer label span::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+  bottom: -10px;
+  left: 0;
+  position: absolute;
+  transition: 0.3s ease-in-out, bottom 0.3s ease-in-out;
+}
+
+body .topHeader .container .direita .hamburguer input[type=checkbox] {
+  display: none;
+}
+
+body .topHeader .container .direita .hamburguer input[type=checkbox]:checked ~ label span {
+  transform: rotate(45deg);
+}
+
+body .topHeader .container .direita .hamburguer input[type=checkbox]:checked ~ label span::before {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+body .topHeader .container .direita .hamburguer input[type=checkbox]:checked ~ label span::after {
+  transform: rotate(90deg);
+  bottom: 0;
+}
+
 body .topHeader .container .direita ul {
+  display: block;
   text-decoration: none;
   list-style: none;
   font-size: 16px;
@@ -153,8 +293,10 @@ body .topHeader .container .direita ul :last-child {
   white-space: nowrap;
 }
 
-body .topHeader .container .direita ul :last-child:hover {
-  color: #a5b0b7;
+body .topHeader .container .direita ul :last-child a:hover {
+  color: white;
+  background-color: #25355f;
+  border-color: #25355f;
 }
 
 body .scrolll {
@@ -200,11 +342,14 @@ body header .seta {
   font-size: 12px;
   font-family: firaSansSemiBold;
   transition-duration: 3s 1s;
-  z-index: 2000;
+  z-index: 1994;
 }
 
-body header .seta a :hover {
-  transition: all 0.3s linear;
+body header .seta a img {
+  transition: all 0.3s ease-in-out;
+}
+
+body header .seta a img:hover {
   transform: scale(1.4);
 }
 
@@ -213,11 +358,14 @@ body header .anterior {
   top: 47%;
   left: 80px;
   z-index: 201;
-  transition: all 0.3s linear;
 }
 
-body header .anterior :hover {
-  transition: all 0.3s linear;
+body header .anterior img {
+  transition: all 0.3s ease-in-out;
+}
+
+body header .anterior img:hover {
+  transition: all 0.3s ease-in-out;
   transform: scale(1.4);
 }
 
@@ -225,12 +373,15 @@ body header .proximo {
   position: absolute;
   top: 47%;
   right: 80px;
-  transition: all 0.3s linear;
   z-index: 201;
 }
 
-body header .proximo :hover {
-  transition: all 0.3s linear;
+body header .proximo img {
+  transition: all 0.3s ease-in-out;
+}
+
+body header .proximo img:hover {
+  transition: all 0.3s ease-in;
   transform: scale(1.4);
 }
 
@@ -273,6 +424,12 @@ body header .slidestop .a div a {
   z-index: 25;
   font-size: 16px;
   padding: 18px 48px;
+}
+
+body header .slidestop .a div a:hover {
+  background-color: #25355f;
+  border-color: #25355f;
+  color: white;
 }
 
 body header .slidestop .b {
@@ -327,7 +484,7 @@ body #construtora p {
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 0;
-  margin-bottom: 130px;
+  margin-bottom: 110px;
 }
 
 body #empreendimentos {
@@ -369,8 +526,10 @@ body #empreendimentos a {
   transition: all 500ms;
 }
 
-body #empreendimentos a :hover {
-  text-decoration: none;
+body #empreendimentos a:hover {
+  color: white;
+  background-color: #25355f;
+  border-color: #25355f;
 }
 
 body #empreendimentos a .esqemp {
@@ -378,22 +537,21 @@ body #empreendimentos a .esqemp {
   top: 47%;
   left: 50px;
   transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
 }
 
-body #empreendimentos a .esqemp :hover {
-  transition: all 0.3s linear;
-  transform: scale(1.4);
+body #empreendimentos a .esqemp:hover {
+  transform: scale(1.4) rotate(180deg);
 }
 
 body #empreendimentos a .diremp {
   position: absolute;
   top: 47%;
   right: 50px;
-  transition-duration: 3s 1s;
+  transition: all 0.3s ease-in-out;
 }
 
-body #empreendimentos a .diremp :hover {
-  transition: all 0.3s linear;
+body #empreendimentos a .diremp:hover {
   transform: scale(1.4);
 }
 
@@ -478,6 +636,7 @@ body #empreendimentos .descricaoresidencial ul li a {
 body #empreendimentos .descricaoresidencial ul li a:hover {
   text-decoration: none;
   color: lightblue;
+  background-color: transparent;
 }
 
 body #empreendimentos .descricaoresidencial ul :first-child {
@@ -591,8 +750,10 @@ body #noticias a {
   transition: all 500ms;
 }
 
-body #noticias a :hover {
-  text-decoration: none;
+body #noticias a:hover {
+  color: white;
+  background-color: #25355f;
+  border-color: #25355f;
 }
 
 body #noticias .noticia :hover {
@@ -616,7 +777,7 @@ body #noticias .noticia .titulonoticia {
   font-family: FiraSansLight;
   font-size: 30px;
   color: #585c5f;
-  text-align: justify;
+  text-align: left;
   margin-top: 15px;
   margin-bottom: 15px;
 }
@@ -627,7 +788,7 @@ body #noticias .noticia .conteudonoticia {
   font-family: FiraSansLight;
   font-size: 20px;
   color: #959da4;
-  text-align: justify;
+  text-align: left;
   line-height: 26px;
 }
 
@@ -642,7 +803,13 @@ body .links {
 body .links .idatopo {
   position: absolute;
   bottom: 55px;
-  right: 25px;
+  right: 55px;
+  width: 80px;
+  transition: all 0.3s ease-in-out;
+}
+
+body .links .idatopo:hover {
+  transform: scale(1.2);
 }
 
 body .links .container .row .row1 {
@@ -1221,6 +1388,14 @@ body #formulario .cem input[type=submit] {
     padding-top: 10px;
   }
 
+  body .topHeader .container .direita .hamburguer {
+    display: block;
+  }
+
+  body .topHeader .container .direita ul {
+    display: none;
+  }
+
   body .topHeader .container .direita ul li {
     margin-left: 0;
     display: none;
@@ -1606,8 +1781,11 @@ body #formulario .cem input[type=submit] {
     right: 25px;
   }
 
-  body footer .container .end ul {
-    margin-left: 30px;
+  body footer .container .endereco {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
   body footer .redes {
@@ -1630,13 +1808,25 @@ body #formulario .cem input[type=submit] {
 
   body footer .redes ul li {
     float: left;
-    margin-left: 20px;
-    margin-right: 45px;
+    margin-left: 30px;
+    margin-right: 35px;
   }
 
   body footer .redes ul li img {
     margin-bottom: 20px;
     margin-top: 5px;
+  }
+
+  body footer .copyright .row div {
+    text-align: center;
+    font-size: 10px;
+  }
+
+  body footer .copyright .row :last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
 
