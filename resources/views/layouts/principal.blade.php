@@ -87,7 +87,7 @@
     
         <div class="container">
             <div class="esquerda">
-                <a href="#"><img src="{{asset('img/ZECON.png')}}" alt="zecon construtora" title="Zecon Construtora" class="iconz"></a>
+                <a href="/"><img src="{{asset('img/ZECON.png')}}" alt="zecon construtora" title="Zecon Construtora" class="iconz"></a>
             </div>
 
             <div class="direita">

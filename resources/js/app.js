@@ -84,7 +84,7 @@ $(document).ready(function(){
   let close = document.querySelector('.close');
   let aviso = document.querySelector('.aviso');
   let enviar = document.querySelector('.enviar');
-  let a = document.querySelector('.a').style.display = 'flex';
+  // let a = document.querySelector('.a').style.display = 'flex';
   let falle = document.querySelector('.falle');
 
       function scroll () {
@@ -299,7 +299,7 @@ $(document).ready(function(){
           inputhamburguer.style.background = '#25355f';
           scrollItem.classList.add('scrolll');
           logo.src = 'img/ZECONOriginal.png';
-          logo.addEventListener('click',(e)=>{e.preventDefault();});
+          
           menuativo=true;
         }else{
           document.body.style.overflow = 'auto';
@@ -308,7 +308,7 @@ $(document).ready(function(){
           inputhamburguer.style.background = 'white';
           scrollItem.classList.remove('scrolll');
           logo.src = 'img/ZECON.png'; 
-          logo.removeEventListener('click',(e)=>{e.preventDefault();});
+          
           menuativo=false;
         }
       });

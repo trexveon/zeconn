@@ -19306,8 +19306,8 @@ $(document).ready(function () {
   var footer = document.querySelector('footer');
   var close = document.querySelector('.close');
   var aviso = document.querySelector('.aviso');
-  var enviar = document.querySelector('.enviar');
-  var a = document.querySelector('.a').style.display = 'flex';
+  var enviar = document.querySelector('.enviar'); // let a = document.querySelector('.a').style.display = 'flex';
+
   var falle = document.querySelector('.falle');
 
   function scroll() {
@@ -19514,9 +19514,6 @@ $(document).ready(function () {
       inputhamburguer.style.background = '#25355f';
       scrollItem.classList.add('scrolll');
       logo.src = 'img/ZECONOriginal.png';
-      logo.addEventListener('click', function (e) {
-        e.preventDefault();
-      });
       menuativo = true;
     } else {
       document.body.style.overflow = 'auto';
@@ -19525,9 +19522,6 @@ $(document).ready(function () {
       inputhamburguer.style.background = 'white';
       scrollItem.classList.remove('scrolll');
       logo.src = 'img/ZECON.png';
-      logo.removeEventListener('click', function (e) {
-        e.preventDefault();
-      });
       menuativo = false;
     }
   });

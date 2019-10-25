@@ -13,6 +13,8 @@
 
 Route::get('/', 'polarisController@index');
 
+Route::get('/noticias', 'noticiasController@index');
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
