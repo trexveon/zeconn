@@ -144,7 +144,9 @@ return [
         ],
 
         'widgets' => [
-
+            'TCG\\Voyager\\Widgets\\UserDimmer',
+            'TCG\\Voyager\\Widgets\\PostDimmer',
+            'TCG\\Voyager\\Widgets\\PageDimmer',
         ],
 
     ],
@@ -181,7 +183,7 @@ return [
     |
     */
 
-    'primary_color' => '#2B50ED',
+    'primary_color' => '#22A7F0',
 
     'show_dev_tips' => true, // Show development tip "How To Use:" in Menu and Settings
 
@@ -202,21 +204,6 @@ return [
          ],
          'zoom' => env('GOOGLE_MAPS_DEFAULT_ZOOM', 11),
      ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Model specific settings
-    |--------------------------------------------------------------------------
-    |
-    | Here you change some model specific settings
-    |
-    */
-
-    'settings' => [
-        // Enables Laravel cache method for
-        // storing cache values between requests
-        'cache' => false,
-    ],
 
     // Activate compass when environment is NOT local
     'compass_in_production' => false,

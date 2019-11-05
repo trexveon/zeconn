@@ -3,6 +3,8 @@
 @section('titulo','Zecon - Inicio')
    
 @section('conteudo')
+@component('components.menu')
+@endcomponent
     <header id="head">
    
         <div class="container">
@@ -132,7 +134,7 @@
                 @foreach($noticias as $n)
                 <!-- modelo principal -->
                 <div class="col-lg-4 col-xl-4 col-md-12 col-sm-12 noticia">
-                    <a href="#" target="_blank" title="noticia">
+                <a href="/noticias/visualizar/{{$n->id}}" target="_blank" title="noticia">
                         <div class="imagemnoticia" style="background-image: url('{{Voyager::image( $n->foto )}}');">
 
                         </div>
@@ -142,7 +144,7 @@
                         </div>
 
                         <div class="conteudonoticia">
-                        {{$n->conteudo}}
+                        {!!$n->conteudo!!}
                         </div>
                     </a>
                 </div>
@@ -152,6 +154,6 @@
             </div>
 
         </div>
-        <a href="#" class="btn btn-outline-secondary " title="ir para o blog">IR PARA O BLOG</a>
+        <a href="/noticias" class="btn btn-outline-secondary " title="ir para o blog">IR PARA O BLOG</a>
     </section> 
     @endsection 

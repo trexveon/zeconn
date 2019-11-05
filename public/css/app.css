@@ -59,12 +59,18 @@ body .menuprincipal {
   background-color: #25355f;
   width: 0;
   height: 100vh;
+  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   z-index: 2000;
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   overflow: hidden;
 }
 
@@ -81,6 +87,7 @@ body .menuprincipal .nave li {
 
 body .menuprincipal .nave li a {
   color: white;
+  -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
   font-size: 24px;
 }
@@ -117,7 +124,80 @@ body .menuprincipal .redessociais li a i {
   font-size: 40px;
 }
 
+body .menuprincipal2 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #25355f;
+  width: 0;
+  height: 100vh;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  z-index: 2000;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+body .menuprincipal2 .nave {
+  margin-top: 80px;
+  list-style: none;
+}
+
+body .menuprincipal2 .nave li {
+  margin: 15px;
+  text-align: center;
+  font-family: FiraSansSemiBold;
+}
+
+body .menuprincipal2 .nave li a {
+  color: white;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  font-size: 24px;
+}
+
+body .menuprincipal2 .nave li a:hover {
+  text-decoration: none;
+}
+
+body .menuprincipal2 .faleconosco {
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  font-family: FiraSansSemiBold;
+  border-radius: 5px;
+  color: #25355f;
+}
+
+body .menuprincipal2 .faleconosco:hover {
+  text-decoration: none;
+}
+
+body .menuprincipal2 .redessociais {
+  margin-top: 50px;
+}
+
+body .menuprincipal2 .redessociais li {
+  list-style: none;
+  float: left;
+  margin: 20px;
+}
+
+body .menuprincipal2 .redessociais li a i {
+  color: white;
+  font-size: 40px;
+}
+
 body .modalll {
+  -webkit-transition: all 500ms;
   transition: all 500ms;
   width: 100%;
   height: 100vh;
@@ -127,9 +207,13 @@ body .modalll {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 50000000;
   display: none;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 body .modalll .formContato {
@@ -139,6 +223,7 @@ body .modalll .formContato {
   border-radius: 50px;
   position: relative;
   z-index: 5001;
+  -webkit-transition: all 200ms;
   transition: all 200ms;
   box-shadow: 3px 3px 3px black;
 }
@@ -176,6 +261,7 @@ body .topHeader {
   padding-bottom: 30px;
   z-index: 2000000;
   width: 100%;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
@@ -213,7 +299,10 @@ body .topHeader .container .direita .hamburguer label span {
   position: relative;
   width: 100%;
   height: 4px;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   z-index: 6000;
 }
 
@@ -226,7 +315,10 @@ body .topHeader .container .direita .hamburguer label span::before {
   top: -10px;
   left: 0;
   position: absolute;
+  -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 body .topHeader .container .direita .hamburguer label span::after {
@@ -238,6 +330,7 @@ body .topHeader .container .direita .hamburguer label span::after {
   bottom: -10px;
   left: 0;
   position: absolute;
+  -webkit-transition: 0.3s ease-in-out, bottom 0.3s ease-in-out;
   transition: 0.3s ease-in-out, bottom 0.3s ease-in-out;
 }
 
@@ -246,16 +339,19 @@ body .topHeader .container .direita .hamburguer input[type=checkbox] {
 }
 
 body .topHeader .container .direita .hamburguer input[type=checkbox]:checked ~ label span {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 body .topHeader .container .direita .hamburguer input[type=checkbox]:checked ~ label span::before {
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
   top: 0;
 }
 
 body .topHeader .container .direita .hamburguer input[type=checkbox]:checked ~ label span::after {
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
   bottom: 0;
 }
 
@@ -275,6 +371,7 @@ body .topHeader .container .direita ul li {
 body .topHeader .container .direita ul li a {
   text-decoration: none;
   font-family: firaSansSemiBold;
+  -webkit-transition: all 500ms;
   transition: all 500ms;
 }
 
@@ -304,6 +401,156 @@ body .scrolll {
   box-shadow: 0 6px 7.84px 0.16px rgba(33, 33, 33, 0.1);
 }
 
+body .topHeader2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  z-index: 2000000;
+  box-shadow: 0 6px 7.84px 0.16px rgba(33, 33, 33, 0.1);
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+body .topHeader2 .container .esquerda {
+  width: 20%;
+  float: left;
+  text-align: left;
+}
+
+body .topHeader2 .container .direita {
+  width: 80%;
+  float: left;
+  text-align: right;
+  padding-top: 10px;
+}
+
+body .topHeader2 .container .direita .hamburguer {
+  display: none;
+  width: 30px;
+  height: 30px;
+  margin-top: 7px;
+  float: right;
+  cursor: pointer;
+}
+
+body .topHeader2 .container .direita .hamburguer label {
+  width: 100%;
+}
+
+body .topHeader2 .container .direita .hamburguer label span {
+  color: white;
+  display: block;
+  content: "";
+  background-color: white;
+  position: relative;
+  width: 100%;
+  height: 4px;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  z-index: 6000;
+}
+
+body .topHeader2 .container .direita .hamburguer label span::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+  top: -10px;
+  left: 0;
+  position: absolute;
+  -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+body .topHeader2 .container .direita .hamburguer label span::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+  bottom: -10px;
+  left: 0;
+  position: absolute;
+  -webkit-transition: 0.3s ease-in-out, bottom 0.3s ease-in-out;
+  transition: 0.3s ease-in-out, bottom 0.3s ease-in-out;
+}
+
+body .topHeader2 .container .direita .hamburguer input[type=checkbox] {
+  display: none;
+}
+
+body .topHeader2 .container .direita .hamburguer input[type=checkbox]:checked ~ label span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+body .topHeader2 .container .direita .hamburguer input[type=checkbox]:checked ~ label span::before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: 0;
+}
+
+body .topHeader2 .container .direita .hamburguer input[type=checkbox]:checked ~ label span::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  bottom: 0;
+}
+
+body .topHeader2 .container .direita ul {
+  display: block;
+  text-decoration: none;
+  list-style: none;
+  font-size: 16px;
+}
+
+body .topHeader2 .container .direita ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+body .topHeader2 .container .direita ul li a {
+  text-decoration: none;
+  font-family: firaSansSemiBold;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+body .topHeader2 .container .direita ul li .itens {
+  color: #a5b0b7;
+}
+
+body .topHeader2 .container .direita ul li .itens:hover {
+  color: #25355f;
+}
+
+body .topHeader2 .container .direita ul :last-child {
+  border-color: #25355f;
+  padding: 10px 40px;
+  font-size: 16px;
+  display: inline;
+  white-space: nowrap;
+}
+
+body .topHeader2 .container .direita ul :last-child a {
+  border-color: #a5b0b7;
+  color: #a5b0b7;
+}
+
+body .topHeader2 .container .direita ul :last-child a:hover {
+  color: white;
+  background-color: #25355f;
+  border-color: #25355f;
+}
+
 body header {
   width: 100%;
   height: 100vh;
@@ -321,10 +568,15 @@ body header .container {
 
 body header .container .centro {
   height: 100vh;
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 body header .seta {
@@ -332,25 +584,33 @@ body header .seta {
   position: absolute;
   bottom: 0;
   left: 0;
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   color: white;
   height: 15vh;
   padding-bottom: 25px;
   font-size: 12px;
   font-family: firaSansSemiBold;
-  transition-duration: 3s 1s;
+  -webkit-transition-duration: 3s 1s;
+          transition-duration: 3s 1s;
   z-index: 1994;
 }
 
 body header .seta a img {
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 body header .seta a img:hover {
-  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 body header .anterior {
@@ -361,12 +621,15 @@ body header .anterior {
 }
 
 body header .anterior img {
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 body header .anterior img:hover {
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 body header .proximo {
@@ -377,12 +640,15 @@ body header .proximo {
 }
 
 body header .proximo img {
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 body header .proximo img:hover {
+  -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
-  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 body header .slidestop {
@@ -399,10 +665,15 @@ body header .slidestop .a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   width: 100%;
   height: 100vh;
   background-attachment: fixed;
@@ -416,6 +687,7 @@ body header .slidestop .a div {
 }
 
 body header .slidestop .a div a {
+  -webkit-transition: all 500ms;
   transition: all 500ms;
   padding: 10px 20px;
   font-family: FiraSansSemiBold;
@@ -498,6 +770,15 @@ body #empreendimentos .empreendimentos {
   margin: 0 auto;
 }
 
+body #empreendimentos .margembot {
+  margin-bottom: 50px;
+}
+
+body #empreendimentos .visual {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 body #empreendimentos h3 {
   font-family: FiraSansLight;
   color: #25355f;
@@ -522,6 +803,7 @@ body #empreendimentos a {
   font-size: 16px;
   color: #a5b0b7;
   border-color: #a5b0b7;
+  -webkit-transition: all 500ms;
   transition: all 500ms;
   transition: all 500ms;
 }
@@ -536,23 +818,28 @@ body #empreendimentos a .esqemp {
   position: absolute;
   top: 47%;
   left: 50px;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 body #empreendimentos a .esqemp:hover {
-  transform: scale(1.4) rotate(180deg);
+  -webkit-transform: scale(1.4) rotate(180deg);
+          transform: scale(1.4) rotate(180deg);
 }
 
 body #empreendimentos a .diremp {
   position: absolute;
   top: 47%;
   right: 50px;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 body #empreendimentos a .diremp:hover {
-  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 body #empreendimentos .fotoresidencial {
@@ -564,6 +851,8 @@ body #empreendimentos .fotoresidencial {
   position: relative;
   margin: 0 auto;
   border-top-left-radius: 20px;
+  -webkit-transition: background-size 0.3s ease-in-out !important;
+  transition: background-size 0.3s ease-in-out !important;
 }
 
 body #empreendimentos .fotoresidencial .statusresidencial {
@@ -576,6 +865,16 @@ body #empreendimentos .fotoresidencial .statusresidencial {
   left: 38px;
   position: absolute;
   font-family: FiraSansSemiBold;
+}
+
+body #empreendimentos .fotoresidencial2 {
+  width: 100%;
+  -webkit-transition: background-size 0.3s ease-in-out !important;
+  transition: background-size 0.3s ease-in-out !important;
+}
+
+body #empreendimentos .fotoresidencial2:hover {
+  background-size: 180% 120%;
 }
 
 body #empreendimentos .descricaoresidencial {
@@ -648,6 +947,10 @@ body #empreendimentos .descricaoresidencial ul :last-child {
   padding-right: 2px;
 }
 
+body #empreendimentos .descricaoresidencial2 {
+  width: 100%;
+}
+
 body #parallax {
   width: 100%;
   height: 600px;
@@ -658,10 +961,15 @@ body #parallax {
   background-repeat: no-repeat;
   position: relative;
   color: white;
+  display: -webkit-box;
   display: flex;
-  align-items: left;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-align: left;
+          align-items: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 body #parallax .filtro1 {
@@ -720,9 +1028,13 @@ body #parallax div .last {
 body #noticias {
   background-color: white;
   text-align: center;
+  display: -webkit-box;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   justify-content: space-around;
   text-align: center;
   width: 90%;
@@ -747,6 +1059,7 @@ body #noticias a {
   font-size: 16px;
   color: #a5b0b7;
   border-color: #a5b0b7;
+  -webkit-transition: all 500ms;
   transition: all 500ms;
 }
 
@@ -784,12 +1097,80 @@ body #noticias .noticia .titulonoticia {
 
 body #noticias .noticia .conteudonoticia {
   width: 80%;
+  height: 120px;
   margin: 0 auto;
-  font-family: FiraSansLight;
+  font-family: FiraSansLight !important;
   font-size: 20px;
   color: #959da4;
   text-align: left;
   line-height: 26px;
+}
+
+body #noticias .noticia .conteudonoticia p {
+  font-family: FiraSansLight !important;
+  color: #757575 !important;
+}
+
+body #noticias .paginador {
+  width: 100%;
+  margin-bottom: 100px;
+  margin-top: 30px;
+}
+
+body #noticias .paginador nav ul li {
+  font-family: FiraSansLight;
+  color: white;
+  border: none;
+  font-size: 20px;
+  margin: 0 15px;
+  display: inline;
+  float: left;
+  padding: 12px 0;
+  width: 45px;
+  height: 45px;
+}
+
+body #noticias .paginador nav ul li img {
+  width: 25px;
+}
+
+body #noticias .paginador nav ul li .last {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+body #noticias .paginador nav ul li a {
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+body #noticias .paginador nav ul li a img {
+  width: 25px;
+}
+
+body #noticias .paginador nav ul li a .last {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+body #noticias .paginador nav ul li a:hover {
+  background-color: transparent;
+  text-decoration: none;
+  color: #027096;
+}
+
+body #noticias .paginador nav ul .active {
+  border-radius: 10px;
+  background-color: #027096;
+  color: white;
+}
+
+body #noticias .paginador nav ul .active div {
+  padding: 10px 0;
 }
 
 body .links {
@@ -805,11 +1186,13 @@ body .links .idatopo {
   bottom: 55px;
   right: 55px;
   width: 80px;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 body .links .idatopo:hover {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 body .links .container .row .row1 {
@@ -899,10 +1282,15 @@ body footer .container .end {
 }
 
 body footer .container .end .icone {
+  display: -webkit-box;
   display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: center;
+          justify-content: center;
   padding-bottom: 80px;
 }
 
@@ -1034,6 +1422,7 @@ body #formulario .row form .form-group .control-label {
   color: #b3b3b3;
   font-size: 1rem;
   font-weight: normal;
+  -webkit-transition: all 0.28s ease;
   transition: all 0.28s ease;
   font-family: "FiraSansItalic";
 }
@@ -1052,6 +1441,7 @@ body #formulario .row form .form-group .bar::before {
   bottom: -0.0625rem;
   position: absolute;
   background: #337ab7;
+  -webkit-transition: left 0.28s ease, width 0.28s ease;
   transition: left 0.28s ease, width 0.28s ease;
   z-index: 2;
 }
@@ -1067,6 +1457,7 @@ body #formulario .row form .form-group textarea {
   line-height: 1.9;
   width: 100%;
   color: transparent;
+  -webkit-transition: all 0.28s ease;
   transition: all 0.28s ease;
   box-shadow: none;
 }
@@ -1144,6 +1535,7 @@ body #formulario .row form .button {
   margin: 3rem 0;
   padding: 0.75rem 3rem;
   cursor: pointer;
+  -webkit-transition: background-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
   transition: background-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
   overflow: hidden;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
@@ -1168,6 +1560,7 @@ body #formulario .row form .button::before {
   left: 50%;
   z-index: 0;
   opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(0);
   transform: translate(-50%, -50%) scale(0);
 }
 
@@ -1178,7 +1571,11 @@ body #formulario .row form .button:hover {
 
 body #formulario .row form .button:active::before,
 body #formulario .row form .button:focus::before {
+  -webkit-transition: opacity 0.28s ease 0.364s, -webkit-transform 1.12s ease;
+  transition: opacity 0.28s ease 0.364s, -webkit-transform 1.12s ease;
   transition: transform 1.12s ease, opacity 0.28s ease 0.364s;
+  transition: transform 1.12s ease, opacity 0.28s ease 0.364s, -webkit-transform 1.12s ease;
+  -webkit-transform: translate(-50%, -50%) scale(1);
   transform: translate(-50%, -50%) scale(1);
   opacity: 0;
 }
@@ -1218,7 +1615,242 @@ body #formulario .cem input[type=submit] {
   border-color: #c1c1c1;
   padding-top: 10px;
   padding-bottom: 10px;
+  -webkit-transition: all 300ms;
   transition: all 300ms;
+}
+
+body .cabecanoticias {
+  margin-bottom: 100px;
+  background-attachment: fixed;
+  background-image: url(/images/banner-NEWS.png?c25bea4cfc71ea857f4aa6fa84c4ee82);
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+  background-position: center;
+  position: relative;
+}
+
+body .cabecanoticias h1 {
+  color: white;
+  font-family: FiraSansLight;
+  position: relative;
+  z-index: 4;
+}
+
+body .cabecanoticias .filtro1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #25355f;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+body .cabecanoticias .filtro2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #25355f;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+body .cabecanoticias .filtro3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3f4043;
+  opacity: 0.15;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+body .visualisarnoticia {
+  padding-top: 150px;
+  background-color: #fff;
+  max-width: 870px;
+  margin: 0 auto;
+}
+
+body .visualisarnoticia .voltar a {
+  font-family: FiraSansSemiBold;
+  color: #cfd8dc;
+  font-size: 12pt;
+}
+
+body .visualisarnoticia .voltar a:hover {
+  text-decoration: none;
+}
+
+body .visualisarnoticia .voltar a img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-right: 20px;
+}
+
+body .visualisarnoticia .dados ul {
+  list-style: none;
+}
+
+body .visualisarnoticia .dados ul li {
+  float: left;
+  color: #cfd8dc;
+  width: 12px;
+  margin-right: 55px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  margin-right: 60px;
+}
+
+body .visualisarnoticia .dados ul li i {
+  color: #cfd8dc;
+  width: 12px;
+  display: inline;
+  margin-right: 15px;
+}
+
+body .visualisarnoticia .dados ul .ultimo {
+  margin-right: 17px;
+}
+
+body .visualisarnoticia h1 {
+  font-family: FiraSansLight;
+  color: #25355f;
+  font-size: 48pt;
+  margin-top: 60px;
+}
+
+body .visualisarnoticia hr {
+  background-color: #4f89c8;
+  height: 2px;
+  width: 35px;
+}
+
+body .visualisarnoticia h3 {
+  font-family: FiraSansItalic;
+  font-size: 12px;
+  color: #a5b0b7;
+}
+
+body .visualisarnoticia .imagemnoticia {
+  width: 100%;
+  height: 490px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 50px;
+}
+
+body .visualisarnoticia .compartilhar {
+  background-color: #cfd8dc;
+  height: 1px;
+  width: 150px;
+}
+
+body .visualisarnoticia .conteudo {
+  font-family: FiraSansLight !important;
+  font-size: 20px !important;
+  color: #757575 !important;
+  padding: 50px 0;
+}
+
+body .visualisarnoticia .conteudo p {
+  font-family: FiraSansLight !important;
+  color: #757575 !important;
+  font-size: 20px !important;
+}
+
+body .visualisarnoticia .compartilhe {
+  padding-bottom: 70px;
+}
+
+body .visualisarnoticia .compartilhe h4 {
+  font-family: FiraSansItalic;
+  font-size: 20px;
+  color: #a5b0b7;
+}
+
+body .visualisarnoticia .compartilhe ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+body .visualisarnoticia .compartilhe ul li {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+body .visualisarnoticia .compartilhe ul li i {
+  color: #cfd8dc;
+  font-size: 30px;
+}
+
+body .visualisarnoticia .compartilhe ul .first {
+  margin-left: 0;
+}
+
+body .cabecaempreendimentos {
+  margin-bottom: 100px;
+  background-attachment: fixed;
+  background-image: url(/images/banner-EMP.png?611468bcebe4824f412809f8d0089360);
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+  background-position: center;
+  position: relative;
+}
+
+body .cabecaempreendimentos h1 {
+  color: white;
+  font-family: FiraSansLight;
+  position: relative;
+  z-index: 4;
+}
+
+body .cabecaempreendimentos .filtro1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #25355f;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+body .cabecaempreendimentos .filtro2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #25355f;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+body .cabecaempreendimentos .filtro3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3f4043;
+  opacity: 0.15;
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
 
 #human2be {
@@ -1229,22 +1861,27 @@ body #formulario .cem input[type=submit] {
 }
 
 #human2be .h2be_h {
+  -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
 }
 
 #human2be .h2be_dot {
+  -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
 }
 
 #human2be .h2be_2 {
+  -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }
 
 #human2be .h2be_b {
+  -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
 }
 
 #human2be .h2be_circle {
+  -webkit-transition: all ease 0.7s;
   transition: all ease 0.7s;
 }
 
@@ -1782,17 +2419,27 @@ body #formulario .cem input[type=submit] {
   }
 
   body footer .container .endereco {
+    display: -webkit-box;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
   }
 
   body footer .redes {
+    display: -webkit-box;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
     padding: 0;
     margin: 0;
     height: 50px;
@@ -1823,10 +2470,15 @@ body #formulario .cem input[type=submit] {
   }
 
   body footer .copyright .row :last-child {
+    display: -webkit-box;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
   }
 }
 

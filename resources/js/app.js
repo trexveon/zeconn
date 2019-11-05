@@ -62,7 +62,10 @@ $(document).ready(function(){
   ]
   });
   
-
+  document.addEventListener("DOMContentLoaded", function() {            
+    //altera a URL do botão
+    document.getElementById("facebook-share-btt").href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href);
+}, false);
 
   let scrollItem = document.querySelector('.topHeader');
   let bottom = document.querySelector('.bott');
@@ -153,6 +156,8 @@ $(document).ready(function(){
           }
        }
        window.onscroll = scroll;
+
+       
 
        function modalin(){
           modal.style.display = 'flex';

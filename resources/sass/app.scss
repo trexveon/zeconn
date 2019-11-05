@@ -89,6 +89,67 @@ body{
             }
         }
     }
+
+    .menuprincipal2{
+        position:fixed;
+        bottom:0;
+        left:0;
+        background-color:#25355f;
+        width:0;
+        height:100vh;
+        transition:all 0.5s ease-in-out;
+        z-index: 2000;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow:hidden;
+        
+        .nave{
+            margin-top:80px;
+            list-style:none;
+            li{
+                margin:15px;
+                text-align:center;
+                font-family: FiraSansSemiBold;
+                a{
+                    color:white;
+                    transition:0.3s all ease-in-out;
+                    font-size:24px;
+                    
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .faleconosco{
+            padding:10px 20px;
+            background-color: white;
+            color:black;
+            font-family: FiraSansSemiBold;
+            border-radius:5px;
+            color:#25355f;
+            &:hover{
+                text-decoration:none;
+            }
+        }
+        .redessociais{
+            margin-top:50px;
+            li{
+                list-style:none;
+                float:left;
+                margin:20px;
+                a{
+                    i{
+                        color:white;
+                        font-size:40px;
+                    }
+                }
+            }
+        }
+    }
+    
     .modalll{
         transition:all 500ms;
         width:100%;
@@ -275,6 +336,139 @@ body{
         box-shadow: 0 6px 7.84px 0.16px rgba(33,33,33,.1);
     }
 
+    .topHeader2{
+        
+        position:fixed;
+        top:0;
+        left:0;
+        padding-top:30px;
+        padding-bottom:30px;
+        z-index:2000000;
+        box-shadow: 0 6px 7.84px 0.16px rgba(33,33,33,.1);
+        background-color: hsla(0,0%,100%,.95);
+        width:100%;
+        transition:all 0.4s;
+        .container{
+            .esquerda{
+                width:20%;
+                float:left;
+                text-align: left;
+            }
+            .direita{
+                width:80%;
+                float:left;
+                text-align: right;
+                padding-top:10px;
+                .hamburguer{
+                    display:none;
+                    width:30px;
+                    height:30px;
+                    margin-top: 7px;
+                    float:right;
+                    cursor:pointer;
+                    label{
+                        width:100%;
+                        span{
+                            color:white;
+                            display:block;
+                            content: '';
+                            background-color:white;
+                            position:relative;
+                            width: 100%;
+                            height:4px;
+                            transition:transform 0.3s ease-in-out;
+                            z-index:6000;
+                            &::before{
+                                display:block;
+                                content: '';
+                                width: 100%;
+                                height:100%;
+                                background-color:currentColor;
+                                top:-10px;
+                                left:0;
+                                position:absolute;
+                                transition: transform 0.3s ease-in-out,top 0.3s ease-in-out;
+                                
+                            }
+                            &::after{
+                                display:block;
+                                content: '';
+                                width: 100%;
+                                height:100%;
+                                background-color:currentColor;
+                                bottom:-10px;
+                                left:0;
+                                position:absolute;
+                                transition:  0.3s ease-in-out,bottom 0.3s ease-in-out;
+                                
+                            }
+                        }
+                    }
+                    input[type=checkbox]{
+                        display:none;
+                        &:checked{
+                             ~label{
+                                 span{
+                                     transform:rotate(45deg);
+                                     &::before{
+                                        transform:rotate(90deg);
+                                        top:0;
+                                     }
+                                     &::after{
+                                        transform:rotate(90deg);
+                                        bottom:0;
+                                     }
+                                 }
+                             }
+                        }
+                    }
+                }
+                ul{
+                    display:block;
+                    text-decoration: none;
+                    list-style: none;
+                    font-size:16px;
+                   li{
+                    display:inline;
+                    margin-left:20px;
+                    
+                        a{
+                            text-decoration:none;
+                            font-family:firaSansSemiBold;
+                            transition:all 500ms;
+                            
+                        }
+                        .itens{
+                            color:$cinza;
+                            &:hover{
+                                color:#25355f;
+                            }
+                        }
+    
+                   }
+                   :last-child{
+                       border-color:#25355f;
+                        padding:10px 40px;
+                        font-size:16px;
+                        display:inline; 
+                        white-space: nowrap;
+                        a{
+                            border-color:$cinza;
+                            color:$cinza;
+                            &:hover{
+                                color:white;
+                                background-color:#25355f;
+                                border-color:#25355f;
+                                
+                            } 
+                        } 
+                   }
+    
+                }
+                
+            }
+        }
+    }
 
 
     header{
@@ -461,6 +655,13 @@ body{
         .empreendimentos{
             margin:0 auto;
         }
+        .margembot{
+            margin-bottom:50px;
+        }
+        .visual{
+            margin-top:20px;
+            margin-bottom:20px;
+        }
         h3{
             font-family: FiraSansLight;
             color:$azulEscuro2;
@@ -526,6 +727,7 @@ body{
             position: relative;
             margin:0 auto;
             border-top-left-radius: 20px;
+            transition:background-size 0.3s ease-in-out !important;
             .statusresidencial{
                 padding:5px 15px;
                 background-color: white;
@@ -536,6 +738,13 @@ body{
                 left:38px;
                 position: absolute;
                 font-family: FiraSansSemiBold;
+            }
+        }
+        .fotoresidencial2{
+            width:100%;
+            transition:background-size 0.3s ease-in-out !important;
+            &:hover{
+                background-size:180% 120%;
             }
         }
         .descricaoresidencial{
@@ -598,6 +807,9 @@ body{
                     padding-right:2px;
                 }
             }
+        }
+        .descricaoresidencial2{
+            width:100%;
         }
     }//empreendimentos
 
@@ -730,17 +942,89 @@ body{
                     }
                     .conteudonoticia{
                         width:80%;
+                        height:120px;
                         margin: 0 auto;
-                        font-family:FiraSansLight;
+                        font-family:FiraSansLight !important;
                         font-size:20px;
                         color:$cinzafonte2;
                         text-align: left;
                         line-height: 26px;
-
+                        p{
+                            font-family: FiraSansLight !important;
+                            color:#757575 !important;
+                        }
                     }
 
         }
+        .paginador{
+            width:100%;
+            margin-bottom:100px;
+            margin-top:30px;
+            nav{
+                
+                ul{
+        
+                    li{
+                        
+                        font-family: FiraSansLight;
+                        color:white;
+                        border:none;
+                        font-size:20px;
+                        margin: 0 15px;
+                        display:inline;
+                        float:left;
+                        padding: 12px 0;
+                        width:45px;
+                        height:45px;
+                        img{
+                            width:25px;
+
+                        }
+                        .last{
+                            transform:rotate(180deg);
+
+                        }
+                        
+                        a{
+                            font-size:20px;
+                            padding:0;
+                            margin:0;
+                            border:none;
+                            border-radius:10px;
+                            padding:10px;
+                            img{
+                                width:25px;
+
+                            }
+                            .last{
+                                transform:rotate(180deg);
+
+                            }
+                            &:hover{
+                                background-color:transparent;
+                                text-decoration: none;
+                                color:#027096;
+                            }
+                        }
+                    }
+                    
+                    .active{
+                        border-radius: 10px;
+                        background-color:#027096;
+                        
+                        color:white;
+                        div{
+                            padding:10px 0;
+                        }
+
+                    }
+                    
+                }
+            }
+        }
     }//noticias
+
+    
 
     .links{
         width:100%;
@@ -1159,6 +1443,216 @@ body{
             }
         }
         // formulario
+
+        .cabecanoticias{
+            margin-bottom: 100px;
+            background-attachment: fixed;
+            background-image:url('../img/banner-NEWS.png');
+            background-size:cover;
+            width:100%;
+            height:600px;
+            background-position: center; 
+            position: relative;
+            h1{
+                color:white;
+                font-family: FiraSansLight;
+                position:relative;
+                z-index:4;
+            }
+            .filtro1{
+                position:absolute;
+                width:100%;
+                height:100%;
+                background-color: $azulEscuro2;
+                opacity:0.3;
+                top:0;
+                left:0;
+                z-index:3;
+            }
+            .filtro2{
+                position:absolute;
+                width:100%;
+                height:100%;
+                background-color: $azulEscuro2;
+                opacity:0.3;
+                top:0;
+                left:0;
+                z-index:3;
+            }
+            .filtro3{
+                position:absolute;
+                width:100%;
+                height:100%;
+                background-color: $filtropreto;
+                opacity:0.15;
+                top:0;
+                left:0;
+                z-index:3;
+            }
+        }
+
+
+        .visualisarnoticia{
+            padding-top:150px;
+            background-color:#fff;
+            max-width: 870px;
+            margin:0 auto;
+            .voltar{
+                a{
+                    font-family:FiraSansSemiBold;
+                    color:#cfd8dc;
+                    font-size:12pt;
+                    &:hover{
+                        text-decoration:none;
+                    }
+    
+                    img{
+                        transform:rotate(180deg);
+                        margin-right:20px;
+                    }
+                }
+            }
+            .dados{
+                ul{
+                    list-style:none;
+                    li{
+                        float:left;
+                        color:#cfd8dc;
+                        width:12px;
+                        margin-right: 55px;
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        flex-direction:row;
+                        margin-right:60px;
+                        i{
+                            color:#cfd8dc;
+                            width:12px;
+                            display:inline;
+                            margin-right:15px;
+                        }
+                    }
+                    .ultimo{
+                        margin-right:17px;
+                    }
+                }
+               
+            }
+            h1{
+                font-family: FiraSansLight;
+                color:#25355f;
+                font-size:48pt;
+                margin-top: 60px;
+            }
+            hr{
+                background-color:#4f89c8;
+                height:2px;
+                width:35px;
+            }
+            h3{
+                font-family:FiraSansItalic;
+                font-size:12px;
+                color:#a5b0b7;
+            }
+            .imagemnoticia{
+                width:100%;
+                height:490px;
+                background-repeat: no-repeat;
+                background-size:cover;
+                background-position: center;
+                margin-top:50px;
+            }
+            .compartilhar{
+                background-color:#cfd8dc;
+                height:1px;
+                width:150px;
+            }
+            .conteudo{
+                font-family: FiraSansLight !important;
+                font-size:20px !important;
+                color:#757575 !important;
+                padding:50px 0;
+                p{
+                    font-family: FiraSansLight !important;
+                    color:#757575 !important;
+                    font-size:20px !important;
+                }
+            }
+            .compartilhe{
+                padding-bottom:70px;
+                h4{
+                    font-family: FiraSansItalic;
+                    font-size:20px;
+                    color: #a5b0b7;
+                }
+                ul{
+                    list-style:none;
+                    margin-top:20px;
+                    li{
+                        float:left;
+                        margin-left:10px;
+                        margin-right:10px;
+                       i{
+                            color:#cfd8dc;
+                            font-size:30px;
+                       }
+                    }
+                    .first{
+                        margin-left:0;
+                    }
+                }
+            }
+        }
+
+        .cabecaempreendimentos{
+            margin-bottom: 100px;
+            background-attachment: fixed;
+            background-image:url('../img/banner-EMP.png');
+            background-size:cover;
+            width:100%;
+            height:600px;
+            background-position: center; 
+            position: relative;
+            h1{
+                color:white;
+                font-family: FiraSansLight;
+                position:relative;
+                z-index:4;
+            }
+            .filtro1{
+                position:absolute;
+                width:100%;
+                height:100%;
+                background-color: $azulEscuro2;
+                opacity:0.3;
+                top:0;
+                left:0;
+                z-index:3;
+            }
+            .filtro2{
+                position:absolute;
+                width:100%;
+                height:100%;
+                background-color: $azulEscuro2;
+                opacity:0.3;
+                top:0;
+                left:0;
+                z-index:3;
+            }
+            .filtro3{
+                position:absolute;
+                width:100%;
+                height:100%;
+                background-color: $filtropreto;
+                opacity:0.15;
+                top:0;
+                left:0;
+                z-index:3;
+            }
+        }
+
+
+        
 }
 
 

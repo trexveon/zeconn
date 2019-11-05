@@ -19287,6 +19287,10 @@ $(document).ready(function () {
       }
     }]
   });
+  document.addEventListener("DOMContentLoaded", function () {
+    //altera a URL do botão
+    document.getElementById("facebook-share-btt").href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href);
+  }, false);
   var scrollItem = document.querySelector('.topHeader');
   var bottom = document.querySelector('.bott');
   var logo = document.querySelector('.iconz');
