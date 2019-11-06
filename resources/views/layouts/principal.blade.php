@@ -19,8 +19,9 @@
 </head>
 
 <body>
-        
-
+    @component('components.formulario')  
+    @endcomponent
+    
     @yield('conteudo')
 
 

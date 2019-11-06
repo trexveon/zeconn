@@ -1,6 +1,6 @@
 @media  screen and (max-width:768px){
     body{
-        .topHeader{
+        .topHeader,.topHeader2{
 
             .container{
                 .esquerda{
@@ -26,6 +26,15 @@
                              white-space: nowrap;
                        }
         
+                    }
+                }
+            }
+        }
+        .topHeader2{
+            .container{
+                .direita{
+                    .hamburguer{
+                        
                     }
                 }
             }
@@ -134,6 +143,7 @@
 
                 }
             }
+            
             .fotoresidencial{
                 width:70%;
                 height:200px;
@@ -173,6 +183,39 @@
             }
         }//empreendimentos
 
+        .visual{
+            .fotoresidencial{
+                width:90% !important;
+            }  
+            .descricaoresidencial{
+                width:90% !important;
+                ul{
+                    li{
+                        a{
+                            font-size:10px !important;
+                        }
+                    }
+
+                    :first-child{
+                        padding-left:0;
+
+                    }
+                    :last-child{
+
+                        padding-right:0;
+ 
+                    }
+                }
+            }
+        }
+
+        .cabecaempreendimentos{
+            height:400px;
+        }
+        .cabecanoticias{
+            height:400px;
+        }
+        
         #parallax{
             h1{
                 font-size:50px;
@@ -269,5 +312,36 @@
             }
         }
         // footer
+
+
+        .visualisarnoticia{
+            .voltar{
+                a{
+                    margin-left: 50px;
+                }
+            }
+            h1,.compartilhe{
+                margin-left: 50px;
+            }
+            hr{
+                margin-left: 50px;
+            }
+            h3{
+                margin-left: 50px;
+            }
+            .dados{
+                ul{
+                    margin-right: 50px;
+                }
+
+            }
+            .imaagemnoticia{
+                width:90%;
+                margin:0 auto;
+            }
+            .conteudo{
+                padding: 50px;
+            }
+        }
     }
 }

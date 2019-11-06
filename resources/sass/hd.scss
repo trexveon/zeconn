@@ -1,6 +1,6 @@
 @media  screen and (max-width:1024px){
     body{
-        .topHeader{
+        .topHeader,.topHeader2{
 
             .container{
                 .esquerda{
@@ -20,12 +20,10 @@
                                 margin:0;
                             }
                             .itens{
-                                color:white;
+                                
                                 padding:0;
                                 margin-right:20px;
-                                &:hover{
-                                    color:black;
-                                }
+                                
                             }
         
                        }
@@ -63,12 +61,12 @@
                 }
             }
             .fotoresidencial{
-                width:70%;
+                width:75%;
                 height:230px;
 
             }
             .descricaoresidencial{
-                width:70%;
+                width:75%;
                 height:240px;
                 background-color: white;
                 border: 1px solid $border;
@@ -126,6 +124,9 @@
             }
 
             .noticia{
+                .midd{
+                    width:130px;
+                }
                 :hover{
                         text-decoration: none;
                     }
@@ -148,6 +149,16 @@
     
             }
         }//noticias
+
+        .cabecanoticias{
+            
+        }
+        .cabecaempreendimentos{
+
+        }
     }
+
+
+    
     
 }

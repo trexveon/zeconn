@@ -46,7 +46,7 @@
         </ul>
     </div>
 </section>
-<section id="noticias" style="background-color:#fafafa">
+<section id="noticias" style="background-color:#fafafa" class="listag">
 
     <h1>Leia também</h1>
 
@@ -54,7 +54,7 @@
 
         <div class="row noticia">
             @foreach($noticias as $n)
-            <!-- modelo principal -->
+
             <div class="col-lg-4 col-xl-4 col-md-12 col-sm-12 noticia">
            
                     <div class="imagemnoticia" style="background-image: url('{{Voyager::image( $n->foto )}}');">
@@ -68,9 +68,9 @@
                     <div class="conteudonoticia">
                     {!! $n->conteudo !!}
                     </div>
-                    <a href="/noticias/visualizar/{{$n->id}}" class="btn btn-outline-secondary " title="ir para o blog">SAIBA MAIS</a>
+                    <a href="/noticias/visualizar/{{$n->id}}" class="btn btn-outline-secondary midd" title="ir para o blog">SAIBA MAIS</a>
             </div>
-            <!-- modelo principal -->
+
             @endforeach
 
         </div>

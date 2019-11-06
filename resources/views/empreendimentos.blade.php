@@ -11,12 +11,12 @@
     <div class="filtro2"></div>
     <div class="filtro3"></div>
 </header>
-<section id="empreendimentos">
+<section id="empreendimentos" class="vis">
     <div class="container margembot">
     <div class="empreendimentos row">
                 @foreach($empreendimentos as $e)
 
-                <div class="col-4 visual">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 visual">
                     <div class="fotoresidencial fotoresidencial2" style="background-image:url('{{Voyager::image( $e->foto )}}');" alt="Polaris">
                         <div class="statusresidencial" style="color:{{$e->color}};">
                             {{$e->status}}
@@ -39,7 +39,7 @@
             </div>
 
     <div class="paginador d-flex align-items-center justify-content-center flex-row">
-            {{$empreendimentos->onEachSide(3)->links()}}
+            {{$empreendimentos->onEachSide(1)->links()}}
     </div>
         </div>
 

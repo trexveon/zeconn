@@ -30,6 +30,49 @@ html {
 body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    .modalll{
+        transition:all 500ms;
+        width:100%;
+        height:100vh;
+        position:fixed;
+        top:0;
+        right:0;
+        background-color:rgba(0,0,0,0.3);
+        z-index:50000000;
+        display:none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+       
+        .formContato{
+            width:620px;
+            height:0;
+            background-color:white;
+            border-radius:50px;
+            position:relative;
+            z-index:5001;
+            transition: all 200ms;
+            box-shadow: 3px 3px 3px black;
+            .close{
+                top:25px;
+                right:25px;
+                position: absolute;
+                border:1px solid black;
+                padding:5px 10px;
+                 border-radius: 3px;
+                 cursor:pointer;
+            }
+            input[type=submit]{
+                &:hover{
+                    background-color:#25355f;
+                    color:white;
+                    border-color: #25355f;
+                }
+            }
+        }
+    }
+
     .menuprincipal{
         position:fixed;
         bottom:0;
@@ -150,47 +193,7 @@ body{
         }
     }
     
-    .modalll{
-        transition:all 500ms;
-        width:100%;
-        height:100vh;
-        position:fixed;
-        top:0;
-        right:0;
-        background-color:rgba(0,0,0,0.3);
-        z-index:50000000;
-        display:none;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-       
-        .formContato{
-            width:620px;
-            height:0;
-            background-color:white;
-            border-radius:50px;
-            position:relative;
-            z-index:5001;
-            transition: all 200ms;
-            box-shadow: 3px 3px 3px black;
-            .close{
-                top:25px;
-                right:25px;
-                position: absolute;
-                border:1px solid black;
-                padding:5px 10px;
-                 border-radius: 3px;
-                 cursor:pointer;
-            }
-            input[type=submit]{
-                &:hover{
-                    background-color:#25355f;
-                    color:white;
-                    border-color: #25355f;
-                }
-            }
-        }
-    }
+    
 
     
     .aviso{
@@ -369,10 +372,10 @@ body{
                     label{
                         width:100%;
                         span{
-                            color:white;
+                            color:#25355f;
                             display:block;
                             content: '';
-                            background-color:white;
+                            background-color:#25355f;
                             position:relative;
                             width: 100%;
                             height:4px;
@@ -878,7 +881,7 @@ body{
         }
     }//parallax
 
-
+    
     #noticias{
         background-color: white;
         text-align:center;
@@ -956,26 +959,51 @@ body{
                     }
 
         }
-        .paginador{
-            width:100%;
-            margin-bottom:100px;
-            margin-top:30px;
-            nav{
-                
-                ul{
         
-                    li{
-                        
-                        font-family: FiraSansLight;
-                        color:white;
-                        border:none;
+    }//noticias
+
+    .listag{
+        width:100% !important;
+        padding: 0 5% !important;
+        margin:0 !important;
+    }
+
+    .paginador{
+        width:100%;
+        margin-bottom:100px;
+        margin-top:80px;
+        nav{
+            
+            ul{
+    
+                li{
+                    
+                    font-family: FiraSansLight;
+                    color:white;
+                    border:none;
+                    font-size:20px;
+                    margin: 0 15px;
+                    display:inline;
+                    float:left;
+                    padding: 12px 0;
+                    width:45px;
+                    height:45px;
+                    img{
+                        width:25px;
+
+                    }
+                    .last{
+                        transform:rotate(180deg);
+
+                    }
+                    
+                    a{
                         font-size:20px;
-                        margin: 0 15px;
-                        display:inline;
-                        float:left;
-                        padding: 12px 0;
-                        width:45px;
-                        height:45px;
+                        padding:0;
+                        margin:0;
+                        border:none;
+                        border-radius:10px;
+                        padding:10px;
                         img{
                             width:25px;
 
@@ -984,45 +1012,28 @@ body{
                             transform:rotate(180deg);
 
                         }
-                        
-                        a{
-                            font-size:20px;
-                            padding:0;
-                            margin:0;
-                            border:none;
-                            border-radius:10px;
-                            padding:10px;
-                            img{
-                                width:25px;
-
-                            }
-                            .last{
-                                transform:rotate(180deg);
-
-                            }
-                            &:hover{
-                                background-color:transparent;
-                                text-decoration: none;
-                                color:#027096;
-                            }
+                        &:hover{
+                            background-color:transparent;
+                            text-decoration: none;
+                            color:#027096;
                         }
                     }
-                    
-                    .active{
-                        border-radius: 10px;
-                        background-color:#027096;
-                        
-                        color:white;
-                        div{
-                            padding:10px 0;
-                        }
-
-                    }
-                    
                 }
+                
+                .active{
+                    border-radius: 10px;
+                    background-color:#027096;
+                    
+                    color:white;
+                    div{
+                        padding:10px 0;
+                    }
+
+                }
+                
             }
         }
-    }//noticias
+    }
 
     
 
@@ -1603,9 +1614,11 @@ body{
                 }
             }
         }
-
+        .vis{
+            padding-top:100px;
+        }
         .cabecaempreendimentos{
-            margin-bottom: 100px;
+            ;
             background-attachment: fixed;
             background-image:url('../img/banner-EMP.png');
             background-size:cover;

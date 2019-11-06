@@ -52,6 +52,54 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body .modalll {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 50000000;
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+body .modalll .formContato {
+  width: 620px;
+  height: 0;
+  background-color: white;
+  border-radius: 50px;
+  position: relative;
+  z-index: 5001;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  box-shadow: 3px 3px 3px black;
+}
+
+body .modalll .formContato .close {
+  top: 25px;
+  right: 25px;
+  position: absolute;
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+body .modalll .formContato input[type=submit]:hover {
+  background-color: #25355f;
+  color: white;
+  border-color: #25355f;
+}
+
 body .menuprincipal {
   position: fixed;
   bottom: 0;
@@ -194,54 +242,6 @@ body .menuprincipal2 .redessociais li {
 body .menuprincipal2 .redessociais li a i {
   color: white;
   font-size: 40px;
-}
-
-body .modalll {
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 50000000;
-  display: none;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
-}
-
-body .modalll .formContato {
-  width: 620px;
-  height: 0;
-  background-color: white;
-  border-radius: 50px;
-  position: relative;
-  z-index: 5001;
-  -webkit-transition: all 200ms;
-  transition: all 200ms;
-  box-shadow: 3px 3px 3px black;
-}
-
-body .modalll .formContato .close {
-  top: 25px;
-  right: 25px;
-  position: absolute;
-  border: 1px solid black;
-  padding: 5px 10px;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-body .modalll .formContato input[type=submit]:hover {
-  background-color: #25355f;
-  color: white;
-  border-color: #25355f;
 }
 
 body .aviso {
@@ -442,10 +442,10 @@ body .topHeader2 .container .direita .hamburguer label {
 }
 
 body .topHeader2 .container .direita .hamburguer label span {
-  color: white;
+  color: #25355f;
   display: block;
   content: "";
-  background-color: white;
+  background-color: #25355f;
   position: relative;
   width: 100%;
   height: 4px;
@@ -1111,13 +1111,19 @@ body #noticias .noticia .conteudonoticia p {
   color: #757575 !important;
 }
 
-body #noticias .paginador {
-  width: 100%;
-  margin-bottom: 100px;
-  margin-top: 30px;
+body .listag {
+  width: 100% !important;
+  padding: 0 5% !important;
+  margin: 0 !important;
 }
 
-body #noticias .paginador nav ul li {
+body .paginador {
+  width: 100%;
+  margin-bottom: 100px;
+  margin-top: 80px;
+}
+
+body .paginador nav ul li {
   font-family: FiraSansLight;
   color: white;
   border: none;
@@ -1130,16 +1136,16 @@ body #noticias .paginador nav ul li {
   height: 45px;
 }
 
-body #noticias .paginador nav ul li img {
+body .paginador nav ul li img {
   width: 25px;
 }
 
-body #noticias .paginador nav ul li .last {
+body .paginador nav ul li .last {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-body #noticias .paginador nav ul li a {
+body .paginador nav ul li a {
   font-size: 20px;
   padding: 0;
   margin: 0;
@@ -1148,28 +1154,28 @@ body #noticias .paginador nav ul li a {
   padding: 10px;
 }
 
-body #noticias .paginador nav ul li a img {
+body .paginador nav ul li a img {
   width: 25px;
 }
 
-body #noticias .paginador nav ul li a .last {
+body .paginador nav ul li a .last {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-body #noticias .paginador nav ul li a:hover {
+body .paginador nav ul li a:hover {
   background-color: transparent;
   text-decoration: none;
   color: #027096;
 }
 
-body #noticias .paginador nav ul .active {
+body .paginador nav ul .active {
   border-radius: 10px;
   background-color: #027096;
   color: white;
 }
 
-body #noticias .paginador nav ul .active div {
+body .paginador nav ul .active div {
   padding: 10px 0;
 }
 
@@ -1802,8 +1808,11 @@ body .visualisarnoticia .compartilhe ul .first {
   margin-left: 0;
 }
 
+body .vis {
+  padding-top: 100px;
+}
+
 body .cabecaempreendimentos {
-  margin-bottom: 100px;
   background-attachment: fixed;
   background-image: url(/images/banner-EMP.png?611468bcebe4824f412809f8d0089360);
   background-size: cover;
@@ -1900,32 +1909,32 @@ body .cabecaempreendimentos .filtro3 {
 }
 
 @media screen and (max-width: 1024px) {
-  body .topHeader .container .direita {
+  body .topHeader .container .direita,
+  body .topHeader2 .container .direita {
     display: block;
   }
 
-  body .topHeader .container .direita ul li {
+  body .topHeader .container .direita ul li,
+  body .topHeader2 .container .direita ul li {
     display: inline-block;
     margin: 0;
     padding: 0;
   }
 
-  body .topHeader .container .direita ul li a {
+  body .topHeader .container .direita ul li a,
+  body .topHeader2 .container .direita ul li a {
     padding: 0;
     margin: 0;
   }
 
-  body .topHeader .container .direita ul li .itens {
-    color: white;
+  body .topHeader .container .direita ul li .itens,
+  body .topHeader2 .container .direita ul li .itens {
     padding: 0;
     margin-right: 20px;
   }
 
-  body .topHeader .container .direita ul li .itens:hover {
-    color: black;
-  }
-
-  body .topHeader .container .direita ul :last-child {
+  body .topHeader .container .direita ul :last-child,
+  body .topHeader2 .container .direita ul :last-child {
     padding: 10px 40px;
     font-size: 16px;
     display: inline;
@@ -1946,12 +1955,12 @@ body .cabecaempreendimentos .filtro3 {
   }
 
   body #empreendimentos .fotoresidencial {
-    width: 70%;
+    width: 75%;
     height: 230px;
   }
 
   body #empreendimentos .descricaoresidencial {
-    width: 70%;
+    width: 75%;
     height: 240px;
     background-color: white;
     border: 1px solid #f8f8f8;
@@ -1998,6 +2007,10 @@ body .cabecaempreendimentos .filtro3 {
     margin-bottom: 60px;
   }
 
+  body #noticias .noticia .midd {
+    width: 130px;
+  }
+
   body #noticias .noticia :hover {
     text-decoration: none;
   }
@@ -2016,29 +2029,35 @@ body .cabecaempreendimentos .filtro3 {
 }
 
 @media screen and (max-width: 768px) {
-  body .topHeader .container .esquerda {
+  body .topHeader .container .esquerda,
+  body .topHeader2 .container .esquerda {
     width: 50%;
   }
 
-  body .topHeader .container .direita {
+  body .topHeader .container .direita,
+  body .topHeader2 .container .direita {
     width: 50%;
     padding-top: 10px;
   }
 
-  body .topHeader .container .direita .hamburguer {
+  body .topHeader .container .direita .hamburguer,
+  body .topHeader2 .container .direita .hamburguer {
     display: block;
   }
 
-  body .topHeader .container .direita ul {
+  body .topHeader .container .direita ul,
+  body .topHeader2 .container .direita ul {
     display: none;
   }
 
-  body .topHeader .container .direita ul li {
+  body .topHeader .container .direita ul li,
+  body .topHeader2 .container .direita ul li {
     margin-left: 0;
     display: none;
   }
 
-  body .topHeader .container .direita ul :last-child {
+  body .topHeader .container .direita ul :last-child,
+  body .topHeader2 .container .direita ul :last-child {
     display: inline;
     width: 200px;
     white-space: nowrap;
@@ -2154,6 +2173,34 @@ body .cabecaempreendimentos .filtro3 {
     font-size: 7px;
   }
 
+  body .visual .fotoresidencial {
+    width: 90% !important;
+  }
+
+  body .visual .descricaoresidencial {
+    width: 90% !important;
+  }
+
+  body .visual .descricaoresidencial ul li a {
+    font-size: 10px !important;
+  }
+
+  body .visual .descricaoresidencial ul :first-child {
+    padding-left: 0;
+  }
+
+  body .visual .descricaoresidencial ul :last-child {
+    padding-right: 0;
+  }
+
+  body .cabecaempreendimentos {
+    height: 400px;
+  }
+
+  body .cabecanoticias {
+    height: 400px;
+  }
+
   body #parallax h1 {
     font-size: 50px;
   }
@@ -2229,6 +2276,36 @@ body .cabecaempreendimentos .filtro3 {
     padding-bottom: 15px;
     font-size: 14px;
   }
+
+  body .visualisarnoticia .voltar a {
+    margin-left: 50px;
+  }
+
+  body .visualisarnoticia h1,
+  body .visualisarnoticia .compartilhe {
+    margin-left: 50px;
+  }
+
+  body .visualisarnoticia hr {
+    margin-left: 50px;
+  }
+
+  body .visualisarnoticia h3 {
+    margin-left: 50px;
+  }
+
+  body .visualisarnoticia .dados ul {
+    margin-right: 50px;
+  }
+
+  body .visualisarnoticia .imaagemnoticia {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  body .visualisarnoticia .conteudo {
+    padding: 50px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -2242,32 +2319,38 @@ body .cabecaempreendimentos .filtro3 {
     right: 10px;
   }
 
-  body .topHeader {
+  body .topHeader,
+  body .topHeader2 {
     width: 100%;
     padding-top: 20px;
     padding-bottom: 10px;
   }
 
-  body .topHeader .container .esquerda {
+  body .topHeader .container .esquerda,
+  body .topHeader2 .container .esquerda {
     width: 40%;
   }
 
-  body .topHeader .container .esquerda img {
+  body .topHeader .container .esquerda img,
+  body .topHeader2 .container .esquerda img {
     width: 130px;
     margin: 0;
   }
 
-  body .topHeader .container .direita {
+  body .topHeader .container .direita,
+  body .topHeader2 .container .direita {
     width: 60%;
     padding-top: 0;
   }
 
-  body .topHeader .container .direita ul li {
+  body .topHeader .container .direita ul li,
+  body .topHeader2 .container .direita ul li {
     margin-left: 0;
     display: none;
   }
 
-  body .topHeader .container .direita ul :last-child {
+  body .topHeader .container .direita ul :last-child,
+  body .topHeader2 .container .direita ul :last-child {
     margin: 0;
     display: inline;
     padding: 0;

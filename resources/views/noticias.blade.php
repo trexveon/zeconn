@@ -39,7 +39,7 @@
             
         </div>
         <div class="paginador d-flex align-items-center justify-content-center flex-row">
-            {{$noticias->onEachSide(3)->links()}}
+            {{$noticias->onEachSide(1)->links()}}
         </div>
     </div>
 
