@@ -873,10 +873,6 @@ body #empreendimentos .fotoresidencial2 {
   transition: background-size 0.3s ease-in-out !important;
 }
 
-body #empreendimentos .fotoresidencial2:hover {
-  background-size: 180% 120%;
-}
-
 body #empreendimentos .descricaoresidencial {
   width: 90%;
   height: 240px;
@@ -1115,68 +1111,6 @@ body .listag {
   width: 100% !important;
   padding: 0 5% !important;
   margin: 0 !important;
-}
-
-body .paginador {
-  width: 100%;
-  margin-bottom: 100px;
-  margin-top: 80px;
-}
-
-body .paginador nav ul li {
-  font-family: FiraSansLight;
-  color: white;
-  border: none;
-  font-size: 20px;
-  margin: 0 15px;
-  display: inline;
-  float: left;
-  padding: 12px 0;
-  width: 45px;
-  height: 45px;
-}
-
-body .paginador nav ul li img {
-  width: 25px;
-}
-
-body .paginador nav ul li .last {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-body .paginador nav ul li a {
-  font-size: 20px;
-  padding: 0;
-  margin: 0;
-  border: none;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-body .paginador nav ul li a img {
-  width: 25px;
-}
-
-body .paginador nav ul li a .last {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-body .paginador nav ul li a:hover {
-  background-color: transparent;
-  text-decoration: none;
-  color: #027096;
-}
-
-body .paginador nav ul .active {
-  border-radius: 10px;
-  background-color: #027096;
-  color: white;
-}
-
-body .paginador nav ul .active div {
-  padding: 10px 0;
 }
 
 body .links {
@@ -1862,6 +1796,83 @@ body .cabecaempreendimentos .filtro3 {
   z-index: 3;
 }
 
+body .paginador {
+  width: 100%;
+  margin-bottom: 100px;
+  margin-top: 80px;
+}
+
+body .paginador nav ul li {
+  font-family: FiraSansLight;
+  color: white;
+  border: none;
+  font-size: 20px;
+  margin: 0 15px;
+  display: inline;
+  float: left;
+  padding: 12px 0;
+  width: 45px;
+  height: 45px;
+}
+
+body .paginador nav ul li img {
+  width: 25px;
+}
+
+body .paginador nav ul li .last {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+body .paginador nav ul li a {
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+body .paginador nav ul li a img {
+  width: 25px;
+}
+
+body .paginador nav ul li a .last {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+body .paginador nav ul li a:hover {
+  background-color: transparent !important;
+  text-decoration: none;
+  color: #027096 !important;
+}
+
+body .paginador nav ul .active {
+  border-radius: 10px;
+  background-color: #027096;
+  color: white;
+}
+
+body .paginador nav ul .active div {
+  padding: 10px 0;
+}
+
+body .traco {
+  position: relative;
+}
+
+body .traco::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 45px;
+  left: 40px;
+  background: #3f6f93;
+  width: 35px;
+  height: 2px;
+}
+
 #human2be {
   fill: #3f6f93;
   max-width: 30px;
@@ -2312,6 +2323,23 @@ body .cabecaempreendimentos .filtro3 {
   body .modalll .formContato {
     width: 300px;
     height: 600px;
+  }
+
+  body .visualisarnoticia {
+    padding-top: 100px;
+  }
+
+  body .visualisarnoticia h1 {
+    font-size: 25px;
+    margin-right: 50px;
+  }
+
+  body .visualisarnoticia .imagemnoticia {
+    height: 250px;
+  }
+
+  body .visualisarnoticia .conteudo p {
+    font-size: 16px !important;
   }
 
   body .aviso {

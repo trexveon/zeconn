@@ -2,13 +2,20 @@
 
 @section('titulo','Zecon - '.$noticia->titulo)
 
+@section('titulonoticia',$noticia->titulo)
+@section('imagemnoticia',Voyager::image( $noticia->foto ))
+@section('descricaonoticia',$noticia->conteudo)
+@section('dt',\Carbon\Carbon::parse($noticia->created_at)->format('d/m/Y')) 
+
+
+
 @section('conteudo')
 @component('components.menu2')
 @endcomponent
 
 <section  id="#visualizarnoticias" class="visualisarnoticia">
     <div class="voltar float-left">
-        <a href="/noticias"><img src="{{asset('img/arrowempdireitadeactivate.png')}}" alt="">VOLTAR</a>
+        <a href="{{ url()->previous() }}"><img src="{{asset('img/arrowempdireitadeactivate.png')}}" alt="">VOLTAR</a>
     </div>
     
     <h1 class="text-left">
@@ -36,13 +43,10 @@
     <div class="compartilhe"> 
         <h4>Compartilhe</h4>
         <ul>
-            <li class="first"><a href="http://www.facebook.com/share.php?u={{url()->full()}}&t={{$noticia->titulo}}" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+            <li class="first"><a href="https://www.facebook.com/sharer.php?u={{Request::url()}}" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
             <li><a href=""><i class="fab fa-instagram"></i></a></li>
-            <li><a href="whatsapp://send?text={{$noticia->titulo}} - {{url()->current()}}" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-            <li><a href=""><i class="fas fa-share-alt"></i></a></li>
-            <li class="d-none">
-                <div class="fb-share-button" data-href="{{url()->current()}}" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{url()->current()}}&t={{$noticia->titulo}}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartilhar</a></div>
-            </li>
+            <li><a href="whatsapp://send?text={{Request::url()}}" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+            
         </ul>
     </div>
 </section>

@@ -7,6 +7,22 @@
             }
         }
 
+        .visualisarnoticia{
+            padding-top:100px;
+            h1{
+                font-size:25px;
+                margin-right:50px;
+            }
+            .imagemnoticia{
+                height:250px;
+            }
+            .conteudo{
+                p{
+                    font-size:16px !important;
+                }
+            }
+        }
+
         .aviso{
 
             bottom:10px;
@@ -284,4 +300,5 @@
             }
         }
         // footer
+
     }

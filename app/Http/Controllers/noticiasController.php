@@ -13,7 +13,7 @@ class noticiasController extends Controller
     public function index()
     {
         $route =  Route::currentRouteName();
-        $noticias = Noticia::orderBy('created_at', 'desc')->paginate(1);
+        $noticias = Noticia::orderBy('created_at', 'desc')->paginate(9);
         return view('noticias',compact('noticias','route'));
     }
 

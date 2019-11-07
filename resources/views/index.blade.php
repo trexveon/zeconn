@@ -134,7 +134,7 @@
                 @foreach($noticias as $n)
                 <!-- modelo principal -->
                 <div class="col-lg-4 col-xl-4 col-md-12 col-sm-12 noticia">
-                <a href="/noticias/visualizar/{{$n->id}}" target="_blank" title="noticia">
+                <a href="/noticias/visualizar/{{$n->id}}"  title="noticia">
                         <div class="imagemnoticia" style="background-image: url('{{Voyager::image( $n->foto )}}');">
 
                         </div>

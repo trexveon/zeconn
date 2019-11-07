@@ -39,7 +39,8 @@
             </div>
 
     <div class="paginador d-flex align-items-center justify-content-center flex-row">
-            {{$empreendimentos->onEachSide(1)->links()}}
+            {{$empreendimentos->links()}}
+            
     </div>
         </div>
 

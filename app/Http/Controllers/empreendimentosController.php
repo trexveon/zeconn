@@ -13,7 +13,8 @@ class empreendimentosController extends Controller
 
     public function index()
     {
-        $empreendimentos = Empreendimento::orderBy('created_at', 'desc')->paginate(1);
+        
+        $empreendimentos = Empreendimento::orderBy('created_at', 'desc')->paginate(9);
         return view('empreendimentos',compact('empreendimentos'));
     }
 

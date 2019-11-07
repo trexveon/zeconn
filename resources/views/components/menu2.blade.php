@@ -27,13 +27,31 @@
             <div class="direita">
                 <ul>
                     <li>
-                        <a href="/zecon " title="A zecon" class="itens @if(route::has('zecon')) traco @endif">A ZECON</a>
+                        <a href="/zecon " title="A zecon" class="itens 
+                        @if(isset(explode('/',Request::url())[3]) ) 
+                            @if(explode('/',Request::url())[3] == 'zecon')
+                                traco
+                            @endif
+                        @endif
+                        ">A ZECON</a>
                     </li>
                     <li>
-                        <a href="/empreendimentos" title="empreendimentos" class="itens @if(route::has('empreendimentos')) traco @endif" >EMPREENDIMENTOS</a>
+                        <a href="/empreendimentos " title="A zecon" class="itens 
+                        @if(isset(explode('/',Request::url())[3]) ) 
+                            @if(explode('/',Request::url())[3] == 'empreendimentos')
+                                traco
+                            @endif
+                        @endif
+                        ">EMPREENDIMENTOS</a>
                     </li>
                     <li>
-                        <a href="/noticias" title="noticias" class="itens @if(route::has('noticias')) traco @endif">NOTÍCIAS</a>
+                        <a href="/noticias " title="A zecon" class="itens 
+                        @if(isset(explode('/',Request::url())[3]) ) 
+                            @if(explode('/',Request::url())[3] == 'noticias')
+                                traco
+                            @endif
+                        @endif
+                        ">NOTICIAS</a>
                     </li>
                     <li>
                         <a href="#" class="btn btn-outline-light bott" title="fale conosco">FALE CONOSCO</a>

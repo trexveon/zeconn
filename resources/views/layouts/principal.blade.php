@@ -13,6 +13,36 @@
     <link rel="stylesheet" href="{{asset('css/slick/slick.css')}}">
     <link rel="stylesheet" href="{{asset('css/slick/slick-theme.css')}}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
+    
+    <!-- SEO tags  -->
+    <meta name="description" content="@yield('descricaonoticia')">
+    <meta name="author" content="Zecon Construtora">
+    <meta name="title" content="@yield('titulonoticia')">
+    <meta name="dtnoticia" content="@yield('dt')">
+    <!-- end SEO tags  -->
+
+    <!-- facebook tags -->
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Zecon Construtora" >
+    <meta property="og:title" content="@yield('titulonoticia')" >
+    <meta property="og:type" content="website" >
+    <meta property="og:url" content="{{Request::url()}}" >
+    <meta property="og:image" content="@yield('imagemnoticia')" >
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:description" content="@yield('descricaonoticia')" >
+    <!-- end facebook tags  -->
+
+    <!-- twitter tags -->
+    <meta name="twitter:card" content="@yield('imagemnoticia')">
+    <!-- <meta name="twitter:site" content="Conta do Twitter do site (incluindo arroba)"> -->
+    <meta name="twitter:title" content="@yield('titulonoticia')">
+    <meta name="twitter:description" content="@yield('descricaonoticia')">
+    <!-- <meta name="twitter:creator" content="Conta do Twitter do autor do texto (incluindo arroba)"> -->
+    <meta name="twitter:image" content="@yield('imagemnoticia')">
+    <!-- end twitter tags  --> 
+
+
     <script src="https://use.fontawesome.com/d5d3d68e10.js"></script> 
     <script src="https://kit.fontawesome.com/514916f486.js" crossorigin="anonymous"></script>
     

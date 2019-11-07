@@ -746,9 +746,7 @@ body{
         .fotoresidencial2{
             width:100%;
             transition:background-size 0.3s ease-in-out !important;
-            &:hover{
-                background-size:180% 120%;
-            }
+            
         }
         .descricaoresidencial{
             width:90%;
@@ -968,72 +966,7 @@ body{
         margin:0 !important;
     }
 
-    .paginador{
-        width:100%;
-        margin-bottom:100px;
-        margin-top:80px;
-        nav{
-            
-            ul{
     
-                li{
-                    
-                    font-family: FiraSansLight;
-                    color:white;
-                    border:none;
-                    font-size:20px;
-                    margin: 0 15px;
-                    display:inline;
-                    float:left;
-                    padding: 12px 0;
-                    width:45px;
-                    height:45px;
-                    img{
-                        width:25px;
-
-                    }
-                    .last{
-                        transform:rotate(180deg);
-
-                    }
-                    
-                    a{
-                        font-size:20px;
-                        padding:0;
-                        margin:0;
-                        border:none;
-                        border-radius:10px;
-                        padding:10px;
-                        img{
-                            width:25px;
-
-                        }
-                        .last{
-                            transform:rotate(180deg);
-
-                        }
-                        &:hover{
-                            background-color:transparent;
-                            text-decoration: none;
-                            color:#027096;
-                        }
-                    }
-                }
-                
-                .active{
-                    border-radius: 10px;
-                    background-color:#027096;
-                    
-                    color:white;
-                    div{
-                        padding:10px 0;
-                    }
-
-                }
-                
-            }
-        }
-    }
 
     
 
@@ -1665,7 +1598,88 @@ body{
         }
 
 
+        .paginador{
+            width:100%;
+            margin-bottom:100px;
+            margin-top:80px;
+            nav{
+                
+                ul{
         
+                    li{
+                        
+                        font-family: FiraSansLight;
+                        color:white;
+                        border:none;
+                        font-size:20px;
+                        margin: 0 15px;
+                        display:inline;
+                        float:left;
+                        padding: 12px 0;
+                        width:45px;
+                        height:45px;
+                        img{
+                            width:25px;
+    
+                        }
+                        .last{
+                            transform:rotate(180deg);
+    
+                        }
+                        
+                        a{
+                            font-size:20px;
+                            padding:0;
+                            margin:0;
+                            border:none;
+                            border-radius:10px;
+                            padding:10px;
+                            img{
+                                width:25px;
+    
+                            }
+                            .last{
+                                transform:rotate(180deg);
+    
+                            }
+                            &:hover{
+                                background-color:transparent !important;
+                                text-decoration: none;
+                                color:#027096 !important;
+                            }
+                        }
+                    }
+                    
+                    .active{
+                        border-radius: 10px;
+                        background-color:#027096;
+                        
+                        color:white;
+                        div{
+                            padding:10px 0;
+                        }
+    
+                    }
+                    
+                }
+            }
+        }
+        
+        
+        .traco{
+            // border-bottom:1px solid #3f6f93;
+            position:relative;
+            &::before{
+                content : '';
+                display: block;
+                position:absolute;
+                top:45px;
+                left:40px;
+                background:#3f6f93;
+                width:35px;
+                height:2px;
+            }
+        }
 }
 
 
