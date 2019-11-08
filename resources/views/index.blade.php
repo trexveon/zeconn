@@ -92,6 +92,7 @@
                 @foreach($empreendimentos as $e)
                 <!-- modelo principal -->
                 <div>
+                <a href="/empreendimentos/visualizar/{{$e->id}}">
                     <div class="fotoresidencial" style="background-image:url('{{Voyager::image( $e->foto )}}');" alt="Polaris">
                         <div class="statusresidencial" style="color:{{$e->color}};">
                             {{$e->status}}
@@ -106,7 +107,7 @@
                             <li><a href="#" title="INNISI PHARETRA">INNISI PHARETRA</a></li>
                         </ul>
                     </div>
-
+                    </a>
                 </div>
                 <!-- modelo principal -->
                 @endforeach

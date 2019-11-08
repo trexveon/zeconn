@@ -18,6 +18,17 @@ class empreendimentosController extends Controller
         return view('empreendimentos',compact('empreendimentos'));
     }
 
+    public function show($id)
+    {
+        $empreendimento = Empreendimento::find($id);
+
+        if ($empreendimento['tipo_id']=='1'){
+            return view('essencial');
+        }else{
+            return view('elemental');
+        }
+    }
+
 
     public function create()
     {
@@ -31,10 +42,7 @@ class empreendimentosController extends Controller
     }
 
 
-    public function show($id)
-    {
-        
-    }
+    
 
 
     public function edit($id)

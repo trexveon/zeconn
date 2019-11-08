@@ -104,14 +104,14 @@ $(document).ready(function(){
             inputhamburguer.style.color = '#25355f';
             inputhamburguer.style.backgroundColor = '#25355f';
             bottom.onmouseover = function(){
-              this.style.color = '#3f6f93';
-              this.style.borderColor = '#3f6f93';
-              this.style.backgroundColor = 'rgba(255,255,255,0.1)';
+              this.style.color = 'white';
+              this.style.borderColor = '#25355f';
+              this.style.backgroundColor = '#25355f';
             }
             bottom.onmouseout = function(){
-              bottom.style.color='#a5b0b7';
-              bottom.style.borderColor = '#a5b0b7';
-              this.style.backgroundColor = 'null';
+              this.style.color='#a5b0b7';
+              this.style.borderColor = '#a5b0b7';
+              this.style.backgroundColor = 'transparent';
             }
 
 

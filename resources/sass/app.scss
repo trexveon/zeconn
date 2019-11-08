@@ -227,6 +227,12 @@ body{
                 float:left;
                 text-align: right;
                 padding-top:10px;
+                .bott{
+                    border-width:2px;
+                    &:active{
+                        border-width:0;
+                    }
+                }
                 .hamburguer{
                     display:none;
                     width:30px;
@@ -362,6 +368,12 @@ body{
                 float:left;
                 text-align: right;
                 padding-top:10px;
+                .bott{
+                    border-width:2px;
+                    &:active{
+                        border-width:0;
+                    }
+                }
                 .hamburguer{
                     display:none;
                     width:30px;

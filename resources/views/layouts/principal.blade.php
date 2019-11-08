@@ -16,6 +16,7 @@
     
     
     <!-- SEO tags  -->
+    <meta name="viewport" content="width=device-width">
     <meta name="description" content="@yield('descricaonoticia')">
     <meta name="author" content="Zecon Construtora">
     <meta name="title" content="@yield('titulonoticia')">

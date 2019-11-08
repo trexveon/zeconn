@@ -278,6 +278,14 @@ body .topHeader .container .direita {
   padding-top: 10px;
 }
 
+body .topHeader .container .direita .bott {
+  border-width: 2px;
+}
+
+body .topHeader .container .direita .bott:active {
+  border-width: 0;
+}
+
 body .topHeader .container .direita .hamburguer {
   display: none;
   width: 30px;
@@ -426,6 +434,14 @@ body .topHeader2 .container .direita {
   float: left;
   text-align: right;
   padding-top: 10px;
+}
+
+body .topHeader2 .container .direita .bott {
+  border-width: 2px;
+}
+
+body .topHeader2 .container .direita .bott:active {
+  border-width: 0;
 }
 
 body .topHeader2 .container .direita .hamburguer {
