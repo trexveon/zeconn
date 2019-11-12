@@ -174,6 +174,7 @@
     </footer>
     <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
     <script src="{{ asset('js/jQuery-3.4.1.js') }}"></script>
+    <script src="{{ asset('js/jquery.mask.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/slick/slick.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>

@@ -40,6 +40,10 @@ html {
   display: none;
 }
 
+.erro {
+  color: red;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -98,6 +102,62 @@ body .modalll .formContato input[type=submit]:hover {
   background-color: #25355f;
   color: white;
   border-color: #25355f;
+}
+
+body .avisoemail {
+  width: 80%;
+  max-width: 1140px;
+  margin: 0 auto;
+  margin-top: 160px;
+  position: relative;
+}
+
+body .contato {
+  width: 540px;
+  margin: 0 auto;
+  padding-top: 200px;
+}
+
+body .contato h1 {
+  color: #3f6f93;
+  font-size: 30px;
+  font-family: FiraSansLight;
+}
+
+body .contato h2 {
+  color: #25355f;
+  font-family: FiraSansLightItalic;
+  font-size: 48px;
+}
+
+body .contato p {
+  color: #757575;
+  font-family: FiraSansLight;
+  font-size: 20px;
+  margin-top: 60px;
+}
+
+body .contato .formContato .formulario .container .row .form-group h3 {
+  color: #6f7983;
+  font-family: FiraSansLight;
+  font-size: 20px;
+}
+
+body .contato .formContato .formulario .container .row .form-group select {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #c1c1c1;
+  font-family: FiraSansItalic;
+  font-size: 14px;
+  color: #c1c1c1;
+  padding-left: 20px;
+}
+
+body .contato .formContato .formulario .container .row .form-group select option {
+  color: #c1c1c1;
+  padding-left: 20px;
 }
 
 body .menuprincipal {
@@ -1887,6 +1947,269 @@ body .traco::before {
   background: #3f6f93;
   width: 35px;
   height: 2px;
+}
+
+body .essencial,
+body .elemental {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+body .essencial img,
+body .elemental img {
+  position: relative;
+  z-index: 4;
+}
+
+body .essencial .filtro1,
+body .elemental .filtro1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(33, 33, 33, 0.15);
+}
+
+body .essencial .filtro2,
+body .elemental .filtro2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+body .essencial .prev,
+body .elemental .prev {
+  position: absolute;
+  top: 45%;
+  left: 70px;
+}
+
+body .essencial .prev P,
+body .elemental .prev P {
+  color: white;
+  font-family: FiraSansSemiBold;
+  font-size: 12px;
+  -webkit-transform: translate(20px, 25px);
+          transform: translate(20px, 25px);
+  width: 50px;
+  text-align: left;
+}
+
+body .essencial .prev img,
+body .elemental .prev img {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .essencial .prev img:hover,
+body .elemental .prev img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+body .essencial .prox,
+body .elemental .prox {
+  position: absolute;
+  top: 45%;
+  right: 70px;
+}
+
+body .essencial .prox img,
+body .elemental .prox img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .essencial .prox img:hover,
+body .elemental .prox img:hover {
+  -webkit-transform: rotate(180deg) scale(1.2);
+          transform: rotate(180deg) scale(1.2);
+}
+
+body .essencial .prox p,
+body .elemental .prox p {
+  color: white;
+  font-family: FiraSansSemiBold;
+  font-size: 12px;
+  width: 20px;
+  text-align: right;
+  -webkit-transform: translate(-60px, 25px);
+          transform: translate(-60px, 25px);
+}
+
+body .essencial .conheca,
+body .elemental .conheca {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 110px;
+}
+
+body .essencial .conheca a,
+body .elemental .conheca a {
+  width: 150px !important;
+  color: white;
+  font-family: FiraSansSemiBold;
+  font-size: 12px;
+  width: 20px;
+  text-align: center;
+}
+
+body .essencial .conheca a:hover,
+body .elemental .conheca a:hover {
+  text-decoration: none;
+}
+
+body .essencial .conheca a img,
+body .elemental .conheca a img {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  margin-top: 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .essencial .conheca a img:hover,
+body .elemental .conheca a img:hover {
+  -webkit-transform: rotate(270deg) scale(1.2);
+          transform: rotate(270deg) scale(1.2);
+}
+
+body .essencial h2,
+body .elemental h2 {
+  position: relative;
+  z-index: 5;
+  color: white;
+  font-family: FiraSansLight;
+  font-size: 30px;
+}
+
+body .essencial h1,
+body .elemental h1 {
+  position: relative;
+  z-index: 5;
+  color: white;
+  font-family: FiraSansLight;
+  font-size: 72px;
+  margin-bottom: 40px;
+}
+
+body .essencial h3,
+body .elemental h3 {
+  position: relative;
+  z-index: 5;
+  color: white;
+  font-family: FiraSansLight;
+  font-size: 30px;
+}
+
+body .essencial button,
+body .elemental button {
+  margin-top: 40px;
+  position: relative;
+  z-index: 5;
+  color: white;
+  margin: 2px solid white;
+  padding: 10px 40px;
+  font-family: FiraSansSemiBold;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+body .essencial button:hover,
+body .elemental button:hover {
+  color: white;
+  background-color: #153260;
+  border-color: #153260;
+}
+
+body .espaco {
+  background-attachment: fixed;
+  height: 600px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+body .espaco .filter1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(37, 53, 95, 0.3);
+}
+
+body .espaco .filter2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(63, 64, 67, 0.15);
+}
+
+body .espaco h1 {
+  color: white;
+  font-family: FiraSansItalic;
+  font-size: 48px;
+  position: relative;
+  z-index: 4;
+  margin-right: 70px;
+  text-shadow: 1px 1px 1px black;
+}
+
+body .espaco button {
+  position: relative;
+  z-index: 4;
+  color: #2b4262;
+  font-family: FiraSansSemiBold;
+  font-size: 16px;
+  padding: 15px 40px;
+}
+
+body .espaco h2 {
+  color: white;
+  font-size: 72px;
+  font-family: FiraSansLight;
+  position: relative;
+  z-index: 4;
+}
+
+body .espaco h3 {
+  color: white;
+  font-size: 30px;
+  font-family: FiraSansRegular;
+  position: relative;
+  z-index: 4;
+}
+
+body .espaco ul {
+  list-style: none;
+  margin-top: 30px;
+  position: relative;
+  z-index: 4;
+}
+
+body .espaco ul li {
+  margin-right: 50px;
+  float: left;
+}
+
+body .espaco ul li i {
+  color: white;
+  font-size: 62px;
 }
 
 #human2be {

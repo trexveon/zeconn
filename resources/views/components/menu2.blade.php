@@ -54,7 +54,7 @@
                         ">NOTICIAS</a>
                     </li>
                     <li>
-                        <a href="#" class="btn btn-outline-light bott" title="fale conosco">FALE CONOSCO</a>
+                        <a href="/contato" class="btn btn-outline-light bott" title="fale conosco">FALE CONOSCO</a>
                     </li>
                     
                 </ul>

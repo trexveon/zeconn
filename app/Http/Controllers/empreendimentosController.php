@@ -23,9 +23,9 @@ class empreendimentosController extends Controller
         $empreendimento = Empreendimento::find($id);
 
         if ($empreendimento['tipo_id']=='1'){
-            return view('essencial');
+            return view('elemental',compact('empreendimento'));
         }else{
-            return view('elemental');
+            return view('essencial',compact('empreendimento'));
         }
     }
 

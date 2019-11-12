@@ -24,9 +24,9 @@ class noticiasController extends Controller
         return view('visualizarnoticia',compact('noticia','noticias'));
     }
 
-    public function create()
+    public function contato()
     {
-        //
+        return view('contato');
     }
 
 

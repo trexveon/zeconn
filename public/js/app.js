@@ -19311,8 +19311,14 @@ $(document).ready(function () {
   var visualizarnoticias = document.querySelector('#visualizarnoticias');
   var close = document.querySelector('.close');
   var aviso = document.querySelector('.aviso');
-  var enviar = document.querySelector('.enviar');
   var falle = document.querySelector('.falle');
+  var avisoemail = document.querySelector('.avisoemail');
+
+  if (avisoemail) {
+    setTimeout(function () {
+      $('.avisoemail').fadeOut();
+    }, 5000);
+  }
 
   function scroll() {
     if (window.pageYOffset > 100) {
@@ -19336,7 +19342,7 @@ $(document).ready(function () {
         this.style.backgroundColor = 'transparent';
       };
 
-      logo.src = 'img/ZECONOriginal.png';
+      logo.src = 'http://localhost:8000/img/ZECONOriginal.png';
       itens.forEach(function (item) {
         item.style.color = '#a5b0b7';
 
@@ -19370,7 +19376,7 @@ $(document).ready(function () {
         this.style.backgroundColor = 'transparent';
       };
 
-      logo.src = 'img/ZECON.png';
+      logo.src = 'http://localhost:8000/img/ZECON.png';
       itens.forEach(function (item) {
         item.style.color = 'white';
 
@@ -19383,214 +19389,178 @@ $(document).ready(function () {
         };
       });
     }
-  }
+  } //  function modalin(){
+  //     modal.style.display = 'flex';
+  //     corpo.style.overflow = 'hidden';
+  //     modal.style.style = 'blur(0)';
+  //     if(cabeca){
+  //       cabeca.style.filter = 'blur(2px)';
+  //     }
+  //     if(construtora){
+  //       construtora.style.filter = 'blur(2px)';
+  //     }
+  //     if(empreendimentos){
+  //       empreendimentos.style.filter = 'blur(2px)';
+  //     }
+  //     if(links){
+  //       links.style.filter = 'blur(2px)';
+  //     }
+  //     if(noticias){
+  //       noticias.style.filter = 'blur(2px)';
+  //     }
+  //     if(footer){
+  //       footer.style.filter = 'blur(2px)';
+  //     }
+  //     if(topHeader){
+  //       topHeader.style.filter = 'blur(2px)';
+  //     }
+  //     if(parallax){
+  //       parallax.style.filter = 'blur(2px)';
+  //     }
+  //     if(menuprincipal){
+  //       menuprincipal.style.filter = 'blur(2px)';
+  //     }
+  //     if(menuprincipal2){
+  //       menuprincipal2.style.filter = 'blur(2px)';
+  //     }
+  //     if(cabecaempreendimentos){
+  //       cabecaempreendimentos.style.filter = 'blur(2px)';
+  //     }
+  //     if(cabecanoticias){
+  //       cabecanoticias.style.filter = 'blur(2px)';
+  //     }
+  //     if(visualizarnoticias){
+  //       visualizarnoticias.style.filter = 'blur(2px)';
+  //     }
+  //     $('.modalll').fadeIn("slow");
+  //     setTimeout(function(){
+  //       formContato.style.height = '640px';
+  //     },1);
+  //  }
+  //  bottom.addEventListener('click',function(e){
+  //    e.preventDefault();
+  //    modalin()
+  //  });
+  //  function modalout(){
+  //     modal.style.display = 'none';
+  //     corpo.style.overflow = 'auto';
+  //     if(cabeca){
+  //       cabeca.style.filter = 'blur(0)';
+  //     }
+  //     if(construtora){
+  //       construtora.style.filter = 'blur(0)';
+  //     }
+  //     if(empreendimentos){
+  //       empreendimentos.style.filter = 'blur(0)';
+  //     }
+  //     if(links){
+  //       links.style.filter = 'blur(0)';
+  //     }
+  //     if(noticias){
+  //       noticias.style.filter = 'blur(0)';
+  //     }
+  //     if(footer){
+  //       footer.style.filter = 'blur(0)';
+  //     }
+  //     if(topHeader){
+  //       topHeader.style.filter = 'blur(0)';
+  //     }
+  //     if(parallax){
+  //       parallax.style.filter = 'blur(0)';
+  //     }
+  //     if(menuprincipal){
+  //       menuprincipal.style.filter = 'blur(0)';
+  //     }
+  //     if(menuprincipal2){
+  //       menuprincipal2.style.filter = 'blur(0)';
+  //     }
+  //     if(cabecaempreendimentos){
+  //       cabecaempreendimentos.style.filter = 'blur(0)';
+  //     }
+  //     if(cabecanoticias){
+  //       cabecanoticias.style.filter = 'blur(0)';
+  //     }
+  //     if(visualizarnoticias){
+  //       visualizarnoticias.style.filter = 'blur(0)';
+  //     }
+  //     $('.modalll').fadeOut("slow");
+  //     setTimeout(function(){
+  //     formContato.style.height = '0';
+  //   },1);
+  //  }
+  //  falle.addEventListener('click',function(e){
+  //     e.preventDefault();
+  //     modalin()
+  //  });
+  //  modal.addEventListener('click',function(){
+  //      modalout();
+  //      if(menuativo==true){
+  //        document.body.style.overflow = 'hidden';
+  //      }else{
+  //       document.body.style.overflow = 'auto';
+  //      }
+  //  });
+  //   close.addEventListener('click',function(e){
+  //     e.stopPropagation();
+  //       modalout();
+  //       if(menuativo==true){
+  //         document.body.style.overflow = 'hidden';
+  //       }else{
+  //        document.body.style.overflow = 'auto';
+  //       }
+  //   });
+  //  formContato.addEventListener('click',function(e){
+  //    e.stopPropagation();
+  //  });
+  // enviar.addEventListener('click',function(e){
+  //   e.preventDefault();
+  //   aviso.classList.remove('alert-success');
+  //   aviso.classList.remove('alert-danger');
+  //   aviso.classList.add('alert-primary');
+  //   aviso.innerHTML = 'Carregando...';
+  //   var nome = document.querySelector('.nome');
+  //   var email = document.querySelector('.email');
+  //   var mensagem = document.querySelector('.Mensagem');
+  //   $('.aviso').fadeIn();
+  //   $.ajax({
+  //     type: "GET", 
+  //     url: "api/email", 
+  //     async: true,
+  //     data: 'nome='+nome.value+'&email='+email.value+'&mensagem='+mensagem.value, 
+  //     success: function(data) { 
+  //       nome.value = '';
+  //       email.value = '';
+  //       mensagem.value = '';
+  //       console.log(data);
+  //       $('.aviso').fadeOut();
+  //         setTimeout(function(){
+  //           aviso.classList.remove('alert-primary');
+  //           aviso.classList.remove('alert-danger');
+  //           aviso.classList.add('alert-success');
+  //           aviso.innerHTML = data;
+  //           $('.aviso').fadeIn();
+  //           setTimeout(function(){
+  //           $('.aviso').fadeOut();
+  //           },5000);
+  //         },500);
+  //       },//sucesso
+  //       error: function(data){
+  //         $('.aviso').fadeOut();
+  //         setTimeout(function(){
+  //           aviso.classList.remove('alert-success');
+  //           aviso.classList.remove('alert-primary');
+  //           aviso.classList.add('alert-danger');
+  //           aviso.innerHTML = 'Não foi possivel enviar a mensagem';
+  //           $('.aviso').fadeIn();
+  //           setTimeout(function(){
+  //           $('.aviso').fadeOut();
+  //           },5000);
+  //         },500);
+  //         console.log(data);
+  //     }//error
+  //   });//ajax
+  // });//enviar
 
-  function modalin() {
-    modal.style.display = 'flex';
-    corpo.style.overflow = 'hidden';
-    modal.style.style = 'blur(0)';
-
-    if (cabeca) {
-      cabeca.style.filter = 'blur(2px)';
-    }
-
-    if (construtora) {
-      construtora.style.filter = 'blur(2px)';
-    }
-
-    if (empreendimentos) {
-      empreendimentos.style.filter = 'blur(2px)';
-    }
-
-    if (links) {
-      links.style.filter = 'blur(2px)';
-    }
-
-    if (noticias) {
-      noticias.style.filter = 'blur(2px)';
-    }
-
-    if (footer) {
-      footer.style.filter = 'blur(2px)';
-    }
-
-    if (topHeader) {
-      topHeader.style.filter = 'blur(2px)';
-    }
-
-    if (parallax) {
-      parallax.style.filter = 'blur(2px)';
-    }
-
-    if (menuprincipal) {
-      menuprincipal.style.filter = 'blur(2px)';
-    }
-
-    if (menuprincipal2) {
-      menuprincipal2.style.filter = 'blur(2px)';
-    }
-
-    if (cabecaempreendimentos) {
-      cabecaempreendimentos.style.filter = 'blur(2px)';
-    }
-
-    if (cabecanoticias) {
-      cabecanoticias.style.filter = 'blur(2px)';
-    }
-
-    if (visualizarnoticias) {
-      visualizarnoticias.style.filter = 'blur(2px)';
-    }
-
-    $('.modalll').fadeIn("slow");
-    setTimeout(function () {
-      formContato.style.height = '640px';
-    }, 1);
-  }
-
-  bottom.addEventListener('click', function (e) {
-    e.preventDefault();
-    modalin();
-  });
-
-  function modalout() {
-    modal.style.display = 'none';
-    corpo.style.overflow = 'auto';
-
-    if (cabeca) {
-      cabeca.style.filter = 'blur(0)';
-    }
-
-    if (construtora) {
-      construtora.style.filter = 'blur(0)';
-    }
-
-    if (empreendimentos) {
-      empreendimentos.style.filter = 'blur(0)';
-    }
-
-    if (links) {
-      links.style.filter = 'blur(0)';
-    }
-
-    if (noticias) {
-      noticias.style.filter = 'blur(0)';
-    }
-
-    if (footer) {
-      footer.style.filter = 'blur(0)';
-    }
-
-    if (topHeader) {
-      topHeader.style.filter = 'blur(0)';
-    }
-
-    if (parallax) {
-      parallax.style.filter = 'blur(0)';
-    }
-
-    if (menuprincipal) {
-      menuprincipal.style.filter = 'blur(0)';
-    }
-
-    if (menuprincipal2) {
-      menuprincipal2.style.filter = 'blur(0)';
-    }
-
-    if (cabecaempreendimentos) {
-      cabecaempreendimentos.style.filter = 'blur(0)';
-    }
-
-    if (cabecanoticias) {
-      cabecanoticias.style.filter = 'blur(0)';
-    }
-
-    if (visualizarnoticias) {
-      visualizarnoticias.style.filter = 'blur(0)';
-    }
-
-    $('.modalll').fadeOut("slow");
-    setTimeout(function () {
-      formContato.style.height = '0';
-    }, 1);
-  }
-
-  falle.addEventListener('click', function (e) {
-    e.preventDefault();
-    modalin();
-  });
-  modal.addEventListener('click', function () {
-    modalout();
-
-    if (menuativo == true) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-  });
-  close.addEventListener('click', function (e) {
-    e.stopPropagation();
-    modalout();
-
-    if (menuativo == true) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-  });
-  formContato.addEventListener('click', function (e) {
-    e.stopPropagation();
-  });
-  enviar.addEventListener('click', function (e) {
-    e.preventDefault();
-    aviso.classList.remove('alert-success');
-    aviso.classList.remove('alert-danger');
-    aviso.classList.add('alert-primary');
-    aviso.innerHTML = 'Carregando...';
-    var nome = document.querySelector('.nome');
-    var email = document.querySelector('.email');
-    var mensagem = document.querySelector('.Mensagem');
-    $('.aviso').fadeIn();
-    $.ajax({
-      type: "GET",
-      url: "api/email",
-      async: true,
-      data: 'nome=' + nome.value + '&email=' + email.value + '&mensagem=' + mensagem.value,
-      success: function success(data) {
-        nome.value = '';
-        email.value = '';
-        mensagem.value = '';
-        console.log(data);
-        $('.aviso').fadeOut();
-        setTimeout(function () {
-          aviso.classList.remove('alert-primary');
-          aviso.classList.remove('alert-danger');
-          aviso.classList.add('alert-success');
-          aviso.innerHTML = data;
-          $('.aviso').fadeIn();
-          setTimeout(function () {
-            $('.aviso').fadeOut();
-          }, 5000);
-        }, 500);
-      },
-      //sucesso
-      error: function error(data) {
-        $('.aviso').fadeOut();
-        setTimeout(function () {
-          aviso.classList.remove('alert-success');
-          aviso.classList.remove('alert-primary');
-          aviso.classList.add('alert-danger');
-          aviso.innerHTML = 'Não foi possivel enviar a mensagem';
-          $('.aviso').fadeIn();
-          setTimeout(function () {
-            $('.aviso').fadeOut();
-          }, 5000);
-        }, 500);
-        console.log(data);
-      } //error
-
-    }); //ajax
-  }); //enviar
 
   var menuativo = false;
 
@@ -19607,7 +19577,7 @@ $(document).ready(function () {
         inputhamburguer.style.color = '#25355f';
         inputhamburguer.style.background = '#25355f';
         scrollItem.classList.add('scrolll');
-        logo.src = 'img/ZECONOriginal.png';
+        logo.src = 'http://localhost:8000/img/ZECONOriginal.png';
         menuativo = true;
       } else {
         document.body.style.overflow = 'auto';
@@ -19615,7 +19585,7 @@ $(document).ready(function () {
         inputhamburguer.style.color = 'white';
         inputhamburguer.style.background = 'white';
         scrollItem.classList.remove('scrolll');
-        logo.src = 'img/ZECON.png';
+        logo.src = 'http://localhost:8000/img/ZECON.png';
         menuativo = false;
       }
     });
@@ -19632,6 +19602,8 @@ $(document).ready(function () {
       }
     });
   }
+
+  $('.whatsapp').mask('(99) 99999-9999');
 }); //fim do document
 
 /***/ }),

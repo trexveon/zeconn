@@ -34,12 +34,25 @@ class polarisController extends Controller
         });
 
 
-        return 'Mensagem enviada com sucesso!';
+        return 'Mensagem enviada com sucesso!';  
+    }
 
+    public function email(Request $request)
+    {
+        $nome = $request->input('nome');
+        $email = $request->input('email');
+        $whatsapp = $request->input('whatsapp');
+        $mensagem = $request->input('Mensagem');
+        $compra = $request->input('imovel');
         
+        Mail::send('email.email',['mensagem' => $mensagem,'email' => $email, 'whatsapp' => $whatsapp, 'compra' => $compra, 'nome' => $nome],function($message) use ($nome,$email,$whatsapp,$compra,$mensagem){
+            $message->from($email, $nome);
+            $message->to('zecon.polaris@gmail.com');
+            $message->subject('Polaris - Tenho Interesse');
+        });
 
-        
-       
+        $msg = 'Mensagem enviada com sucesso';
+        return view('contato',compact('msg'));  
     }
 
 

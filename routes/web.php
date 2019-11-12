@@ -15,12 +15,15 @@ Route::get('/', 'polarisController@index');
 
 Route::get('/noticias', 'noticiasController@index');
 
+Route::get('/contato', 'noticiasController@contato');
+
 Route::get('/noticias/visualizar/{id}', 'noticiasController@show');
 
 Route::get('/empreendimentos', 'empreendimentosController@index');
 
 Route::get('/empreendimentos/visualizar/{id}', 'empreendimentosController@show');
 
+Route::post('/email','polarisController@email');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
