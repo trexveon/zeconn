@@ -21,7 +21,52 @@ $(document).ready(function(){
           arrows:false
         }
       }]
-	});
+  });
+  
+  $('.slid').slick({
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  autoplay: true,
+	  autoplaySpeed: 5000,
+	  prevArrow:$('.prev'),
+	  nextArrow:$('.prox'),
+	  infinite: true,
+	  speed: 500,
+    cssEase: 'linear',
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+
+          arrows:false
+        }
+      }]
+  });
+  
+  $('.itenss').slick({
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: true,
+    prevArrow: $('.prevtempo'),
+    nextArrow: $('.proxtempo'),
+
+    responsive: [{
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          arrows: false
+        }
+      }
+      ]
+  });
   
 
     $('.anuncioss').slick({

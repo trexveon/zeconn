@@ -1,2 +1,5 @@
 [1011/175634.680:ERROR:process_info.cc(359)] UncheckedAllocate
 [1011/175634.760:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name metrics_client_id, discarding value c1702720f8e64afa830645ad431aa2e6
+[1111/231322.716:ERROR:process_info.cc(359)] UncheckedAllocate
+[1111/231322.809:ERROR:process_info.cc(359)] UncheckedAllocate
+[1111/231322.851:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name metrics_client_id, discarding value c1702720f8e64afa830645ad431aa2e6

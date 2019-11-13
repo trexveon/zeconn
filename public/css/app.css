@@ -855,6 +855,10 @@ body #empreendimentos .visual {
   margin-bottom: 20px;
 }
 
+body #empreendimentos .visual a:hover {
+  text-decoration: none;
+}
+
 body #empreendimentos h3 {
   font-family: FiraSansLight;
   color: #25355f;
@@ -2210,6 +2214,374 @@ body .espaco ul li {
 body .espaco ul li i {
   color: white;
   font-size: 62px;
+}
+
+body .espaco-empreendimento {
+  width: 100%;
+  background-color: #fff;
+}
+
+body .espaco-empreendimento h4 {
+  font-family: FiraSansLight;
+  font-size: 30px;
+  color: #3f6f93;
+  padding-bottom: 60px;
+  padding-top: 100px;
+}
+
+body .espaco-empreendimento h3 {
+  font-family: FiraSansLightItalic;
+  font-size: 48px;
+  color: #25355f;
+  padding-bottom: 60px;
+  width: 420px;
+}
+
+body .espaco-empreendimento .row {
+  padding-bottom: 120px;
+}
+
+body .espaco-empreendimento .row .direita {
+  padding-left: 100px;
+}
+
+body .espaco-empreendimento .row .direita ul {
+  list-style: none;
+}
+
+body .espaco-empreendimento .row .direita ul li {
+  margin-bottom: 35px;
+}
+
+body .espaco-empreendimento .row .direita ul li .numero {
+  color: #3f6f93;
+  font-size: 30px;
+  font-family: FiraSansLight;
+  padding-right: 20px;
+  padding-top: 4px;
+  padding-bottom: 5px;
+  border-right: 2px solid #4b8bc9;
+  float: left;
+}
+
+body .espaco-empreendimento .row .direita ul li .msg {
+  color: #757575;
+  font-size: 20px;
+  font-family: FiraSansLight;
+  clear: right;
+  padding-left: 70px;
+}
+
+body .espaco-empreendimento .row .direita ul li:last-child .numero {
+  padding-left: 15px;
+}
+
+body .espaco-empreendimento .row .direita .c1 {
+  color: #4f89c8;
+  font-size: 16px;
+  font-family: FiraSansSemiBold;
+}
+
+body .espaco-empreendimento .row .direita .c2 {
+  color: #757575;
+  font-size: 20px;
+  font-family: FiraSansLight;
+}
+
+body .espaco-empreendimento .row .esquerda p {
+  color: #757575;
+  font-size: 20px;
+  font-family: FiraSansLight;
+  padding-right: 70px;
+}
+
+body .slides {
+  width: 100%;
+  background-color: #fafafa;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+body .slides h4 {
+  font-family: FiraSansLight;
+  font-size: 30px;
+  color: #3f6f93;
+  padding-bottom: 60px;
+  padding-top: 100px;
+}
+
+body .slides .container .slid {
+  width: 100%;
+  height: 600px;
+}
+
+body .slides .container .slid .item {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 600px;
+}
+
+body .slides .prev {
+  position: absolute;
+  top: 52%;
+  left: 70px;
+}
+
+body .slides .prev img {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+body .slides .prev img:hover {
+  -webkit-transform: scale(1.2) rotate(180deg);
+          transform: scale(1.2) rotate(180deg);
+}
+
+body .slides .prox {
+  position: absolute;
+  top: 52%;
+  right: 70px;
+}
+
+body .slides .prox img {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .slides .prox img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+body .plantas .link {
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+body .plantas .link a {
+  color: #b1bbbf;
+  border-color: currentColor;
+  font-family: FiraSansSemiBold;
+  padding: 15px 45px;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+body .plantas .link a:hover {
+  color: #fff;
+  border-color: #153260;
+  background-color: #153260;
+}
+
+body .plantas h4 {
+  font-family: FiraSansLight;
+  font-size: 30px;
+  color: #3f6f93;
+  padding-bottom: 60px;
+  padding-top: 100px;
+}
+
+body .plantas .row {
+  text-align: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+body .plantas .row .planta1 {
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+
+body .plantas .row ul {
+  margin-top: 25px;
+  margin-right: 50px;
+  margin-left: 50px;
+  text-align: left;
+}
+
+body .plantas .row ul li {
+  list-style: none;
+}
+
+body .plantas .row ul li .numero {
+  color: #3f6f93;
+  font-size: 30px;
+  font-family: FiraSansLight;
+  padding-right: 20px;
+  padding-top: 4px;
+  padding-bottom: 5px;
+  border-right: 2px solid #4b8bc9;
+  float: left;
+}
+
+body .plantas .row ul li .msg {
+  color: #757575;
+  font-size: 20px;
+  font-family: FiraSansLight;
+  clear: right;
+  padding-left: 70px;
+}
+
+body .plantas .row ul .item {
+  color: #4f89c8;
+  font-family: FiraSansSemiBold;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+body .plantas .row ul .descricao {
+  color: #757575;
+  font-family: FiraSansLight;
+  font-size: 20px;
+}
+
+body .localizacao {
+  width: 100%;
+  background-color: #fafafa;
+  padding-top: 100px;
+}
+
+body .localizacao .mapa {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+}
+
+body .localizacao .ende {
+  padding-left: 100px;
+  padding-top: 35px;
+  padding-right: 150px;
+}
+
+body .localizacao .ende h4 {
+  color: #3f6f93;
+  font-size: 30px;
+  font-family: FiraSansLight;
+  margin-bottom: 30px;
+}
+
+body .localizacao .ende h3 {
+  color: #25355f;
+  font-size: 48px;
+  font-family: FiraSansLightItalic;
+  margin-bottom: 30px;
+}
+
+body .localizacao .ende p {
+  color: #6f7983;
+  font-size: 20px;
+  font-family: FiraSansLight;
+  margin-bottom: 50px;
+}
+
+body .localizacao .ende h5 {
+  color: #3f6f93;
+  font-size: 16px;
+  font-family: FiraSansSemiBold;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+body .localizacao .ende h5:after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #3f6f93;
+  width: 40px;
+  position: absolute;
+  left: 0;
+  top: 30px;
+}
+
+body .localizacao .ende .end {
+  float: left;
+  color: #a5b0b7;
+  font-size: 20px;
+  font-family: FiraSansLight;
+}
+
+body .localizacao .ende .end img {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+body #tempo {
+  width: 100%;
+  background-color: #fafafa;
+  position: relative;
+}
+
+body #tempo .prevtempo {
+  position: absolute;
+  top: 45%;
+  left: 60px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+body #tempo .prevtempo img {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+body #tempo .prevtempo img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+body #tempo .proxtempo {
+  position: absolute;
+  top: 45%;
+  right: 60px;
+}
+
+body #tempo .proxtempo img {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+body #tempo .proxtempo img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+body #tempo .container {
+  border-top: 1px solid #cfd8dc;
+  padding: 85px 0;
+}
+
+body #tempo .container .itens {
+  width: 100%;
+}
+
+body #tempo .container .itens .item .imagem {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+body #tempo .container .itens .item .tempo {
+  color: #4f89c8;
+  font-family: "FiraSansSemiBold";
+  font-size: 18px;
+}
+
+body #tempo .container .itens .item .bairro {
+  font-family: "FiraSansLight";
+  font-size: 20px;
 }
 
 #human2be {
