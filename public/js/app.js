@@ -19303,7 +19303,7 @@ $(document).ready(function () {
     speed: 500,
     lazyLoad: 'ondemand',
     responsive: [{
-      breakpoint: 1025,
+      breakpoint: 1100,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,

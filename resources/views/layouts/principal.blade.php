@@ -62,7 +62,7 @@
 
     <section class="links">
         <a href="#head" class="idatopo"><img src="{{asset('img/topo-btn.png')}}" alt="topo"> </a>
-        <div class="container">
+        <div class="container" style="border-top:1px solid #cfd8dc; padding-top:100px;">
 
             <div class="row">
 

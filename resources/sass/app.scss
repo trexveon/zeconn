@@ -1053,11 +1053,7 @@ body{
 
     .links{
         width:100%;
-        // display:flex;
-        // flex-direction: row;
-        // align-items: flex-start;
-        // justify-content: center;
-        padding-top:100px;
+        
         padding-bottom:100px;
         position: relative;
         background-color: $brancofundo;
@@ -1769,6 +1765,7 @@ body{
         background-position:center;
         background-attachment: fixed;
         position:relative;
+
         img{
             position:relative;
             z-index:4;
@@ -1894,6 +1891,30 @@ body{
             }
         }
     } 
+
+    .apres{
+        padding:100px 0;
+        .row{
+            h4{
+                color:#ce5a2a;
+                font-size:30px;
+                font-family:FiraSansLight;
+                margin-bottom:20px;
+            }
+            h3{
+                color:#25355f;
+                font-size:48px;
+                font-family:FiraSansLightItalic;
+            }
+            p{
+                color:#757575;
+                font-size:20px;
+                font-family:FiraSansLight;
+                margin-top:20px;
+            }
+        }
+    }
+    
     .espaco{
         background-attachment: fixed;
         height:600px;
@@ -2045,7 +2066,7 @@ body{
         h4{
             font-family: FiraSansLight;
                 font-size:30px;
-                color: #3f6f93;
+                color: #ce5a2a;
                 padding-bottom: 60px;
                 padding-top:100px;
         }
@@ -2106,7 +2127,7 @@ body{
         h4{
             font-family: FiraSansLight;
                 font-size:30px;
-                color: #3f6f93;
+                color: #ce5a2a;
                 padding-bottom: 60px;
                 padding-top:100px;
         }
@@ -2131,7 +2152,7 @@ body{
                 li{
                     list-style: none;
                     .numero{
-                        color:#3f6f93;
+                        color:#ce5a2a;
                         font-size:30px;
                         font-family:FiraSansLight;
                         padding-right:20px;
@@ -2167,7 +2188,7 @@ body{
     .localizacao{
         width:100%;
         background-color:#fafafa;
-        padding-top:100px;
+        
         .mapa{
             background-size:cover;
             background-position: center;
@@ -2177,9 +2198,9 @@ body{
         .ende{
             padding-left:100px;
             padding-top:35px;
-            padding-right:150px;
+            padding-right:100px;
             h4{
-                color:#3f6f93;
+                color:#ce5a2a;
                 font-size:30px;
                 font-family: FiraSansLight;
                 margin-bottom:30px;
@@ -2206,7 +2227,7 @@ body{
                     content: '';
                     display:block;
                     height:2px;
-                    background-color:#3f6f93;
+                    background-color:#ce5a2a;
                     width:40px;
                     position:absolute;
                     left:0;

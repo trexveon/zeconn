@@ -81,7 +81,7 @@ $(document).ready(function(){
 	  lazyLoad: 'ondemand',
 	   responsive: [
     {
-      breakpoint: 1025,
+      breakpoint: 1100,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,

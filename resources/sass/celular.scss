@@ -1,5 +1,43 @@
 @media  screen and (max-width:480px){
     body{
+        .slid{
+            height:400px;
+            .item{
+                height:100%;
+            }
+        }
+        .localizacao{
+            .ende{
+                padding:30px;
+               h4{
+                font-size:20px;
+               } 
+               h3{
+                font-size:18px;
+               }
+               p{
+                   font-size:16px;
+               }
+            }
+        }
+        .espaco{
+            height:300px;
+            
+            text-align:center;
+            h2{
+                font-size:20px;
+            }
+            h3{
+                font-size:16px;
+            }
+            ul{
+                padding:0;
+                width:300px;
+                margin-left: 120px;
+            }
+        }
+
+
         .modalll{
             .formContato{
                 width:300px;
@@ -298,7 +336,37 @@
                 
     
             }
+
+
+            .plantas{
+                .row{
+                    margin:0;
+                    .planta1{
+                        width:100%;
+                        margin:0;
+                        margin-bottom:20px;
+                    }
+                    ul{
+                        margin-bottom:60px; 
+                    }
+                }
+            }
+            .localizacao{
+                .row{
+                    margin:0;
+                    .mapa{
+                        height:450px;
+                    }
+                }
+            }
+            .apres{
+                h3{
+                    text-align: center;
+                }
+            }
+            
         }
-        // footer
+        
+
 
     }

@@ -1195,7 +1195,6 @@ body .listag {
 
 body .links {
   width: 100%;
-  padding-top: 100px;
   padding-bottom: 100px;
   position: relative;
   background-color: #fafafa;
@@ -2137,6 +2136,30 @@ body .elemental button:hover {
   border-color: #153260;
 }
 
+body .apres {
+  padding: 100px 0;
+}
+
+body .apres .row h4 {
+  color: #ce5a2a;
+  font-size: 30px;
+  font-family: FiraSansLight;
+  margin-bottom: 20px;
+}
+
+body .apres .row h3 {
+  color: #25355f;
+  font-size: 48px;
+  font-family: FiraSansLightItalic;
+}
+
+body .apres .row p {
+  color: #757575;
+  font-size: 20px;
+  font-family: FiraSansLight;
+  margin-top: 20px;
+}
+
 body .espaco {
   background-attachment: fixed;
   height: 600px;
@@ -2305,7 +2328,7 @@ body .slides {
 body .slides h4 {
   font-family: FiraSansLight;
   font-size: 30px;
-  color: #3f6f93;
+  color: #ce5a2a;
   padding-bottom: 60px;
   padding-top: 100px;
 }
@@ -2380,7 +2403,7 @@ body .plantas .link a:hover {
 body .plantas h4 {
   font-family: FiraSansLight;
   font-size: 30px;
-  color: #3f6f93;
+  color: #ce5a2a;
   padding-bottom: 60px;
   padding-top: 100px;
 }
@@ -2416,7 +2439,7 @@ body .plantas .row ul li {
 }
 
 body .plantas .row ul li .numero {
-  color: #3f6f93;
+  color: #ce5a2a;
   font-size: 30px;
   font-family: FiraSansLight;
   padding-right: 20px;
@@ -2450,7 +2473,6 @@ body .plantas .row ul .descricao {
 body .localizacao {
   width: 100%;
   background-color: #fafafa;
-  padding-top: 100px;
 }
 
 body .localizacao .mapa {
@@ -2463,11 +2485,11 @@ body .localizacao .mapa {
 body .localizacao .ende {
   padding-left: 100px;
   padding-top: 35px;
-  padding-right: 150px;
+  padding-right: 100px;
 }
 
 body .localizacao .ende h4 {
-  color: #3f6f93;
+  color: #ce5a2a;
   font-size: 30px;
   font-family: FiraSansLight;
   margin-bottom: 30px;
@@ -2499,7 +2521,7 @@ body .localizacao .ende h5:after {
   content: "";
   display: block;
   height: 2px;
-  background-color: #3f6f93;
+  background-color: #ce5a2a;
   width: 40px;
   position: absolute;
   left: 0;
@@ -2747,6 +2769,21 @@ body #tempo .container .itens .item .bairro {
 
   body #noticias .noticia .conteudonoticia {
     font-size: 16px;
+  }
+
+  body .plantas .row .planta1 {
+    width: 700px;
+    margin-bottom: 20px;
+  }
+
+  body .plantas .row ul {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  body .localizacao .row .ende {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 
@@ -3028,9 +3065,70 @@ body #tempo .container .itens .item .bairro {
   body .visualisarnoticia .conteudo {
     padding: 50px;
   }
+
+  body .plantas .row {
+    margin: 0;
+  }
+
+  body .plantas .row .planta1 {
+    width: 700px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  body .plantas .row ul {
+    margin-bottom: 60px;
+  }
+
+  body .apres img {
+    padding: 50px;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  body .slid {
+    height: 400px;
+  }
+
+  body .slid .item {
+    height: 100%;
+  }
+
+  body .localizacao .ende {
+    padding: 30px;
+  }
+
+  body .localizacao .ende h4 {
+    font-size: 20px;
+  }
+
+  body .localizacao .ende h3 {
+    font-size: 18px;
+  }
+
+  body .localizacao .ende p {
+    font-size: 16px;
+  }
+
+  body .espaco {
+    height: 300px;
+    text-align: center;
+  }
+
+  body .espaco h2 {
+    font-size: 20px;
+  }
+
+  body .espaco h3 {
+    font-size: 16px;
+  }
+
+  body .espaco ul {
+    padding: 0;
+    width: 300px;
+    margin-left: 120px;
+  }
+
   body .modalll .formContato {
     width: 300px;
     height: 600px;
@@ -3301,6 +3399,32 @@ body #tempo .container .itens .item .bairro {
             justify-content: center;
     -webkit-box-align: center;
             align-items: center;
+  }
+
+  body .plantas .row {
+    margin: 0;
+  }
+
+  body .plantas .row .planta1 {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  body .plantas .row ul {
+    margin-bottom: 60px;
+  }
+
+  body .localizacao .row {
+    margin: 0;
+  }
+
+  body .localizacao .row .mapa {
+    height: 450px;
+  }
+
+  body .apres h3 {
+    text-align: center;
   }
 }
 
