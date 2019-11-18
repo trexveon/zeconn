@@ -1987,15 +1987,15 @@ body .elemental .filtro2 {
   height: 100vh;
 }
 
-body .essencial .prev,
-body .elemental .prev {
+body .essencial .prevv,
+body .elemental .prevv {
   position: absolute;
   top: 45%;
   left: 70px;
 }
 
-body .essencial .prev P,
-body .elemental .prev P {
+body .essencial .prevv P,
+body .elemental .prevv P {
   color: white;
   font-family: FiraSansSemiBold;
   font-size: 12px;
@@ -2003,43 +2003,66 @@ body .elemental .prev P {
           transform: translate(20px, 25px);
   width: 50px;
   text-align: left;
+  text-decoration: none;
 }
 
-body .essencial .prev img,
-body .elemental .prev img {
+body .essencial .prevv P a,
+body .elemental .prevv P a {
+  text-decoration: none;
+}
+
+body .essencial .prevv P:hover,
+body .elemental .prevv P:hover {
+  text-decoration: none;
+}
+
+body .essencial .prevv img,
+body .elemental .prevv img {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-body .essencial .prev img:hover,
-body .elemental .prev img:hover {
+body .essencial .prevv img:hover,
+body .elemental .prevv img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  text-decoration: none;
 }
 
-body .essencial .prox,
-body .elemental .prox {
+body .essencial .prevv img:hover a,
+body .elemental .prevv img:hover a {
+  text-decoration: none;
+}
+
+body .essencial .proxx,
+body .elemental .proxx {
   position: absolute;
   top: 45%;
   right: 70px;
 }
 
-body .essencial .prox img,
-body .elemental .prox img {
+body .essencial .proxx img,
+body .elemental .proxx img {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-body .essencial .prox img:hover,
-body .elemental .prox img:hover {
+body .essencial .proxx img:hover,
+body .elemental .proxx img:hover {
   -webkit-transform: rotate(180deg) scale(1.2);
           transform: rotate(180deg) scale(1.2);
+  text-decoration: none;
 }
 
-body .essencial .prox p,
-body .elemental .prox p {
+body .essencial .proxx img:hover a,
+body .elemental .proxx img:hover a {
+  text-decoration: none;
+}
+
+body .essencial .proxx p,
+body .elemental .proxx p {
   color: white;
   font-family: FiraSansSemiBold;
   font-size: 12px;
@@ -2047,6 +2070,21 @@ body .elemental .prox p {
   text-align: right;
   -webkit-transform: translate(-60px, 25px);
           transform: translate(-60px, 25px);
+}
+
+body .essencial .proxx p:hover,
+body .elemental .proxx p:hover {
+  text-decoration: none;
+}
+
+body .essencial .proxx p:hover a,
+body .elemental .proxx p:hover a {
+  text-decoration: none;
+}
+
+body .essencial .proxx a:hover,
+body .elemental .proxx a:hover {
+  text-decoration: none;
 }
 
 body .essencial .conheca,

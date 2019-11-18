@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Empreendimento;
+use App\EmpreendimentosDado;
+use App\Slide;
+use App\Planta;
 
 use Illuminate\Support\Facades\Route;
 
@@ -20,41 +23,11 @@ class empreendimentosController extends Controller
 
     public function show($id)
     {
-        $empreendimento = Empreendimento::find($id);
+        
+        $empreendimento = Empreendimento::with(['EmpreendimentosDado'],['Slide'],['Planta'])->find($id);
 
         return view('essencial',compact('empreendimento'));
         
     }
 
-
-    public function create()
-    {
-        
-    }
-
-
-    public function store(Request $request)
-    {
-        
-    }
-
-
-    
-
-
-    public function edit($id)
-    {
-        
-    }
-
-
-    public function update(Request $request, $id)
-    {
-        
-    }
-
-    public function destroy($id)
-    {
-        
-    }
 }

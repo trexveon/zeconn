@@ -6,12 +6,20 @@
 @section('conteudo')
 @component('components.menu')
 @endcomponent
-<section class="essencial d-flex justify-content-center align-items-center flex-column" style="background-image:url('{{asset('img/img JASMIM.png')}}');">
+
+@php
+use App\Empreendimento;
+$empreendimentoprev = Empreendimento::find($empreendimento->id-1);
+$empreendimentoprox = Empreendimento::find($empreendimento->id+1);
+
+@endphp
+
+<section class="essencial d-flex justify-content-center align-items-center flex-column" style="background-image:url('{{Voyager::image( $empreendimento->empreendimentosDado->bg_imagem )}}');">
 
 <h2>RESIDENCIAL</h2>
-<h1>JASMIM</h1>
-<h3>A sua grande chance</h3>
-<h3>CHEGOU!</h3>
+<h1>{{$empreendimento->empreendimentosDado->residencial_nome}}</h1>
+<h3>{{$empreendimento->empreendimentosDado->frase_inicio}}</h3>
+<!-- <h3>CHEGOU!</h3> -->
 <button class="btn btn-outline-light">TENHO INTERESSE</button>
 
 
@@ -19,19 +27,26 @@
 <div class="filtro1"></div>
 <div class="filtro1"></div>
 
-<a href="" class="prev d-none d-sm-none d-md-block d-lg-block d-xl-block">
-<p>VIOLETA RESIDENCIAL</p>
+
+
+@if($empreendimentoprev)
+<a href="{{$empreendimento->id - 1}}" class="prevv d-none d-sm-none d-md-block d-lg-block d-xl-block">
+<p class="text-uppercase">{{$empreendimentoprev->residencial}}</p>
     <img src="{{asset('img/arrow-ant.png')}}" alt="">
     
 </a>
-<a href="" class="prox d-none d-sm-none d-md-block d-lg-block d-xl-block">
-<p> RESIDENCIAL TULIPA</p>
+@endif
+@if($empreendimentoprox)
+<a href="{{$empreendimento->id + 1}}" class="proxx d-none d-sm-none d-md-block d-lg-block d-xl-block">
+<p class="text-uppercase"> {{$empreendimentoprox->residencial}}</p>
     <img src="{{asset('img/arrow-ant.png')}}" alt="">
     
 </a>
+@endif
+
 <div class="conheca d-flex align-items-center justify-content-center flex-row">
-    <a href="#apres">
-        CONHECA O JASMIM <br>
+    <a href="#apres" class="text-uppercase">
+        CONHECA O {{$empreendimento->empreendimentosDado->residencial_nome}} <br>
         <img src="{{asset('img/arrow-ant.png')}}" alt="">    
     </a>
 </div>
@@ -41,24 +56,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center flex-row">
-                <img src="{{asset('img/Jasmim.png')}}" alt="">
+                <img src="{{Voyager::image($empreendimento->empreendimentosDado->simbolo_imagem)}}" alt="">
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 text-left">
                 <h4 class="text-uppercase">sobre</h4>
-                <h3>Garanta o futuro <br>
-                    de sua família!</h3>
-                <p>Cubilia quis sapien est phasellus platea 
-                mus velit vel eget id blandit pulvinar a ad 
-                vestibulum vestibulum netus. Sit et consectetur 
-                amet dignissim nullam tempus at a scelerisque 
-                a bibendum adipiscing commodo.</p>
-                <p>
-                Scelerisque pharetra vestibulum quis euismod 
-                ac mattis condimentum eros vestibulum urna scelerisque 
-                amet cras duis consectetur in tempus himenaeos 
-                suspendisse dui lacus eleifend inceptos nunc adipiscing 
-                porttitor phasellus.
-                </p>
+                <h3>{{$empreendimento->empreendimentosDado->apresentacao_titulo}}</h3>
+                {!!$empreendimento->empreendimentosDado->apresentacao_conteudo!!}
             </div>
         </div>
     </div>
@@ -68,15 +71,11 @@
     <h4 class="text-uppercase text-center">galeria de imagens</h4>
     <div class="container">
         <div class="slid">
-            <div class="item" style="background-image:url('{{asset('img/Interna_Living 01.jpg')}}');">
-
-            </div>
-            <div class="item" style="background-image:url('{{asset('img/JASMIM_INTERNA_APTO 3D_02.09.2016_02.09.2016.png')}}');">
+            @foreach($empreendimento->Slide as $slide)
+            <div class="item" style="background-image:url('{{Voyager::image($slide->imagem)}}');">
                 
             </div>
-            <div class="item" style="background-image:url('{{asset('img/Interna_Living 01.jpg')}}');">
-                
-            </div>
+            @endforeach     
         </div>
        
     </div>
@@ -86,61 +85,65 @@
 </section>
 
 <section class="plantas">
-    <h4 class="text-uppercase text-center">São 2 opções de plantas</h4>
-    <div class="row m-0">
-        <img src="{{asset('img/legendas.png')}}" alt="" class="planta1" >
+    <h4 class="text-uppercase text-center">São {{$empreendimento->Planta->count()}} opções de plantas</h4>
+    @php
+        $valor = 0;
+    @endphp
+
+    @foreach($empreendimento->Planta as $planta)
+        @if($valor%2 == 0)
+        <div class="row m-0">
+        <img src="{{Voyager::image($planta->planta_imagem)}}" alt="" class="planta1" >
         <ul>
-            <li><div class="numero d-inline">2</div><div class="msg ">dormitórios, com <br>
-            1 vaga de garagem</div></li>
+            <li><div class="numero d-inline">{{$planta->dormitorios}}</div><div class="msg ">dormitórios, com <br>
+            {{$planta->garagem}} vaga de garagem</div></li>
             <li class="item text-uppercase">
             Apto. tipo
             </li>
             <li class="descricao ">
-            Final 02. 03. 06. 07
+            {{$planta->apto_tipo}}
             </li>
             <li class="item text-uppercase">
             área privativa
             </li>
             <li class="descricao">
-            83.09m²
+            {{$planta->privativa}}
             </li>
             <li class="item text-uppercase">
             área total
             </li>
             <li class="descricao">
-            95.95m²
+            {{$planta->total}}
             </li>
         </ul>
-    </div>
-
-
-
-    <div class="row  m-0">
-    <ul class="d-xl-block d-lg-none d-md-none d-sm-none d-none">
-            <li><div class="numero d-inline">3</div><div class="msg ">dormitórios, com <br>
-            2 vaga de garagem</div></li>
+        </div>
+        @else
+        <div class="row  m-0">
+        <ul class="d-xl-block d-lg-none d-md-none d-sm-none d-none">
+            <li><div class="numero d-inline">{{$planta->dormitorios}}</div><div class="msg ">dormitórios, com <br>
+            {{$planta->garagem}} vaga de garagem</div></li>
             <li class="item text-uppercase">
             Apto. tipo
             </li>
             <li class="descricao">
-            Final 01. 04. 05. 08
+            {{$planta->apto_tipo}}
             </li>
             <li class="item text-uppercase">
             área privativa
             </li>
             <li class="descricao">
-            100.11m²
+            {{$planta->privativa}}
             </li>
             <li class="item text-uppercase">
             área total
             </li>
             <li class="descricao">
-            124.11m²
+            {{$planta->total}}
             </li>
         </ul>
 
 
-        <img src="{{asset('img/legendas2.png')}}" alt="" class="planta1 secundaria" >
+        <img src="{{Voyager::image($planta->planta_imagem)}}" alt="" class="planta1 secundaria" >
 
 
 
@@ -168,6 +171,19 @@
             </li>
         </ul>
     </div>
+        @endif
+
+
+    @php
+        $valor++;
+    @endphp
+
+    @endforeach
+
+
+
+
+    
     <div class="link text-center"><a href="{{asset('catalogo/catalogo.png')}}" download class="text-center btn btn-outline-light">BAIXAR CATÁLOGO</a></div>
 </section>
 
@@ -177,31 +193,23 @@
 
 <section class="localizacao">
     <div class="row px-md-0 mx-md-0">
-    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 mapa " style="background-image:url('{{asset('img/Gmaps.png')}}');">
+    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 mapa " style="background-image:url('{{Voyager::image($empreendimento->empreendimentosDado->local_imagem)}}');">
 
 </div>
 <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12  ende">
     <h4>LOCALIZAÇÃO</h4>
-    <h3>Quando tudo está mais
-    próximo, o tempo corre
-    a seu favor.
+    <h3>{{$empreendimento->empreendimentosDado->localizacao_titulo}}
     </h3>
-    <p>Localizado próximo ao Novo Centro - um espaço que apresenta 
-        novas vias de acesso, ciclo faixa, Parque Urbano - 
-        e ao Centro Histórico, com diversas opções 
-        de comércio, serviços e 
-        lazer.
-    </p>
+    {!!$empreendimento->empreendimentosDado->localizacao_descricao!!}
     <h5>ENDEREÇO</h5>
     <div class="end">
         <img src="{{asset('img/position.png')}}" alt="">
     </div>
-    <div class="end">
-    Marcílio Dias, 3329 - Centro <br>
-Pelotas - RS - CEP 96.020-480 
+    <div class="end" style="max-width:270px">
+    {{$empreendimento->empreendimentosDado->localizacao_dados}} 
     </div>
     <div class="end">
-        <a href="https://www.google.com.br/maps/place/Residencial+Tulipa/@-31.7350267,-52.3146493,17z/data=!4m5!3m4!1s0x9511b51d4f964c33:0x5eeb651637f2e2fe!8m2!3d-31.7351225!4d-52.3124123?hl=pt-BR')}}" alt="" target="_blank"><img src="{{asset('img/arrows.png')}}" alt=""></a>
+        <a href="{{$empreendimento->empreendimentosDado->google}}" alt="" target="_blank"><img src="{{asset('img/arrows.png')}}" alt=""></a>
     </div>
 </div>
     </div>

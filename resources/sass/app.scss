@@ -1786,7 +1786,7 @@ body{
             height:100vh;
             // background-color:rgba();
         }
-        .prev{
+        .prevv{
             position:absolute;
             top:45%;
             left:70px;
@@ -1797,15 +1797,26 @@ body{
                 transform:translate(20px,25px);
                 width:50px;
                 text-align:left;
+                text-decoration:none;
+                    a{
+                        text-decoration:none;
+                    }
+                    &:hover{
+                        text-decoration:none;
+                    }
             }
             img{
                 transition:all 0.3s ease-in-out;
                 &:hover{
                     transform: scale(1.2);
+                    text-decoration:none;
+                    a{
+                        text-decoration:none;
+                    }
                 }
             }
         }
-        .prox{
+        .proxx{
             position:absolute;
             top:45%;
             right:70px;
@@ -1814,6 +1825,10 @@ body{
                 transition:all 0.3s ease-in-out;
                 &:hover{
                     transform:rotate(180deg) scale(1.2);
+                    text-decoration:none;
+                    a{
+                        text-decoration:none;
+                    }
                 }
             }
             p{
@@ -1823,6 +1838,17 @@ body{
                 width:20px;
                 text-align:right;
                 transform:translate(-60px,25px);
+                &:hover{
+                    text-decoration:none;
+                    a{
+                        text-decoration:none;
+                    }
+                }
+            }
+            a{
+                &:hover{
+                    text-decoration: none;
+                }
             }
         }
         .conheca{
@@ -1922,6 +1948,7 @@ body{
         background-size: cover;
         background-position: center;
         position:relative;
+        
         .filter1{
             position:absolute;
             top:0;
