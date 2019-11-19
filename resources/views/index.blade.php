@@ -16,8 +16,8 @@
         </div>
 
         <div class="seta">
-            <p id="conhecazecon">CONHEÇA A ZECON</p>
-            <a href="#conhecazecon" title="conheça a zecon"><img src="{{asset('img/arrow.png')}}" alt="Conheça a zecon"></a>
+            <p id="conheca">CONHEÇA A ZECON</p>
+            <a href="#conheca" title="conheça a zecon"><img src="{{asset('img/arrow.png')}}" alt="Conheça a zecon"></a>
         </div>
 
         <a href="#" class="anterior" title="slide anterior"><img src="{{asset('img/arrow-ant.png')}}" alt="anterior"></a>
@@ -92,8 +92,8 @@
                 @foreach($empreendimentos as $e)
                 <!-- modelo principal -->
                 <div>
-                <a href="/empreendimentos/visualizar/{{$e->id}}">
-                    <div class="fotoresidencial" style="background-image:url('{{Voyager::image( $e->foto )}}');" alt="Polaris">
+                <a href="/empreendimentos/visualizar/{{$e->id}}" title="{{$e->residencial}}">
+                    <div class="fotoresidencial" style="background-image:url('{{Voyager::image( $e->foto )}}');" alt="{{$e->residencial}}" title="{{$e->residencial}}">
                         <div class="statusresidencial" style="color:{{$e->color}};">
                             {{$e->status}}
                         </div>
@@ -114,11 +114,11 @@
 
             </div>
 
-            <a href="#" class="btn btn-outline-secondary ">QUERO SABER MAIS</a>
+            <a href="/empreendimentos" class="btn btn-outline-secondary ">QUERO SABER MAIS</a>
 
         </div>
-        <a href="#a"><img src="{{asset('img/arrowempdireita.png')}}" alt="" class="esqemp"></a>
-        <a href="#b"><img src="{{asset('img/arrowempdireita.png')}}" alt="" class="diremp"></a>
+        <a href="#a" alt="empreendimento prévio"><img src="{{asset('img/arrowempdireita.png')}}"  class="esqemp"></a>
+        <a href="#b" alt="próximo empreendimento"><img src="{{asset('img/arrowempdireita.png')}}"  class="diremp"></a>
     </section>
     <!--empreendimentos -->
 

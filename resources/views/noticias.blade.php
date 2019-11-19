@@ -5,7 +5,7 @@
 @section('conteudo')
 @component('components.menu')
 @endcomponent
-<header class="cabecanoticias d-flex justify-content-center align-items-center flex-row">
+<header id="head" class="cabecanoticias d-flex justify-content-center align-items-center flex-row">
     <h1>Noticias</h1>
     <div class="filtro1"></div>
     <div class="filtro2"></div>

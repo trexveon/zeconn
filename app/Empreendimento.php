@@ -21,4 +21,9 @@ class Empreendimento extends Model
     {
         return $this->hasMany('App\Slide');
     }
+    public function EmpreendimentosTipo()
+    {
+        return $this->belongsTo('App\EmpreendimentosTipo');
+    }
+    
 }

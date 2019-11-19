@@ -16,8 +16,8 @@ $empreendimentos = empreendimento::all();
                 @foreach($empreendimentos as $e)
                 
                 <div>
-                <a href="/empreendimentos/visualizar/{{$e->id}}">
-                    <div class="fotoresidencial" style="background-image:url('{{Voyager::image( $e->foto )}}');" alt="Polaris">
+                <a href="/empreendimentos/visualizar/{{$e->id}}" title="{{$e->residencial}}">
+                    <div class="fotoresidencial" style="background-image:url('{{Voyager::image( $e->foto )}}');" alt="{{$e->residencial}}">
                         <div class="statusresidencial" style="color:{{$e->color}};">
                             {{$e->status}}
                         </div>
@@ -38,10 +38,10 @@ $empreendimentos = empreendimento::all();
 
             </div>
 
-            <a href="#" class="btn btn-outline-secondary ">QUERO SABER MAIS</a>
+            <a href="/empreendimentos" class="btn btn-outline-secondary ">QUERO SABER MAIS</a>
 
         </div>
-        <a href="#a"><img src="{{asset('img/arrowempdireita.png')}}" alt="" class="esqemp"></a>
-        <a href="#b"><img src="{{asset('img/arrowempdireita.png')}}" alt="" class="diremp"></a>
+        <a href="#a" alt="empreendimento prévio"><img src="{{asset('img/arrowempdireita.png')}}"  class="esqemp"></a>
+        <a href="#b" alt="próximo empreendimento"><img src="{{asset('img/arrowempdireita.png')}}"  class="diremp"></a>
     </section>
     <!--empreendimentos -->

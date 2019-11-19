@@ -63,20 +63,28 @@
     <section class="links">
         <a href="#head" class="idatopo"><img src="{{asset('img/topo-btn.png')}}" alt="topo"> </a>
         <div class="container" style="border-top:1px solid #cfd8dc; padding-top:100px;">
-
+                   
+                       @php
+                            use App\Empreendimento;
+                            $empreendimentos = Empreendimento::all();
+                        @endphp
+                    
             <div class="row">
 
                 <div class="col-lg-3 col-xl-3 col-md-3 col-sm-12 row1">
                     <img src="{{asset('img/ESS.png')}}" alt="Zecon Essencial">
                 </div>
-
+                
                 <div class="col-lg-3 col-xl-3 col-md-3 col-sm-12 row2">
                     <hr>
                     <ul>
-                        <li><a href="" title="">item 1</a></li>
-                        <li><a href="" title="">item 2</a></li>
-                        <li><a href="" title="">item 3</a></li>
-                        <li><a href="" title="">item 4</a></li>
+                        
+                        @foreach($empreendimentos as $e)
+                        @if($e->empreendimentostipo_id=='2')
+                        <li><a href="empreendimentos/visualizar/{{$e->id}}" title="">{{$e->residencial}}</a></li>
+                        @endif
+                        @endforeach
+
                     </ul>
                 </div>
 
@@ -86,10 +94,13 @@
 
                 <div class="col-lg-3 col-xl-3 col-md-3 col-sm-12 row4">
                     <hr>
+                    
                     <ul>
-                        <li><a href="" title="">item 1</a></li>
-                        <li><a href="" title="">item 2</a></li>
-                        <li><a href="" title="">item 3</a></li>
+                        @foreach($empreendimentos as $e)
+                        @if($e->empreendimentostipo_id=='1')
+                        <li><a href="empreendimentos/visualizar/{{$e->id}}" title="">{{$e->residencial}}</a></li>
+                        @endif
+                        @endforeach
                     </ul>
                 </div>
 
@@ -144,7 +155,7 @@
                         </div>
 
                         <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
-                            <a href="http://www.human2be.com.br/" target="_blank" class="">
+                            <a href="http://www.human2be.com.br/" target="_blank" title="Human2Be">
                                 <svg xmlns="http://www.w3.org/2000/svg" id="human2be" viewBox="0 0 500 500">
                                     <switch>
                                         <g>

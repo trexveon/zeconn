@@ -1094,7 +1094,7 @@ body{
                             margin-top:7px;
                             a{
                                 color:$cinzafonte3;
-                                :hover{
+                                &:hover{
                                     text-decoration: none;
                                 }
                             }
@@ -1124,7 +1124,7 @@ body{
                             margin-top:7px;
                             a{
                                 color:$cinzafonte3;
-                                :hover{
+                                &:hover{
                                     text-decoration: none;
                                 }
                             }
@@ -1790,6 +1790,9 @@ body{
             position:absolute;
             top:45%;
             left:70px;
+            &:hover{
+                text-decoration: none;
+            }
             P{
                 color:white;
                 font-family: FiraSansSemiBold;
@@ -1820,6 +1823,9 @@ body{
             position:absolute;
             top:45%;
             right:70px;
+            &:hover{
+                text-decoration: none;
+            }
             img{
                 transform:rotate(180deg);
                 transition:all 0.3s ease-in-out;
@@ -2169,6 +2175,7 @@ body{
                 margin-right:50px;
                 margin-left: 50px;
                 margin-bottom:100px;
+                max-width:1120px;
             }
             
             ul{

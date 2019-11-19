@@ -1,6 +1,6 @@
 @extends('layouts.principal')
 
-@section('titulo','Zecon - Residencial Jasmim')
+@section('titulo','Zecon - '.$empreendimento->residencial)
 @section('color','#ce5a2a')
    
 @section('conteudo')
@@ -11,15 +11,13 @@
 use App\Empreendimento;
 $empreendimentoprev = Empreendimento::find($empreendimento->id-1);
 $empreendimentoprox = Empreendimento::find($empreendimento->id+1);
-
 @endphp
 
-<section class="essencial d-flex justify-content-center align-items-center flex-column" style="background-image:url('{{Voyager::image( $empreendimento->empreendimentosDado->bg_imagem )}}');">
+<section class="essencial d-flex justify-content-center align-items-center flex-column" style="background-image:url('{{Voyager::image( $empreendimento->empreendimentosDado->bg_imagem )}}');" id="head">
 
 <h2>RESIDENCIAL</h2>
 <h1>{{$empreendimento->empreendimentosDado->residencial_nome}}</h1>
-<h3>{{$empreendimento->empreendimentosDado->frase_inicio}}</h3>
-<!-- <h3>CHEGOU!</h3> -->
+<h3 style="max-width:300px" class="text-center">{{$empreendimento->empreendimentosDado->frase_inicio}}</h3>
 <button class="btn btn-outline-light">TENHO INTERESSE</button>
 
 
@@ -44,15 +42,15 @@ $empreendimentoprox = Empreendimento::find($empreendimento->id+1);
 </a>
 @endif
 
-<div class="conheca d-flex align-items-center justify-content-center flex-row">
-    <a href="#apres" class="text-uppercase">
+<div class="conheca d-flex align-items-center justify-content-center flex-row" id="conheca">
+    <a href="#conheca" class="text-uppercase">
         CONHECA O {{$empreendimento->empreendimentosDado->residencial_nome}} <br>
         <img src="{{asset('img/arrow-ant.png')}}" alt="">    
     </a>
 </div>
 </section>
 
-<section class="apres" id="#apres">
+<section class="apres" >
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center flex-row">
@@ -184,7 +182,7 @@ $empreendimentoprox = Empreendimento::find($empreendimento->id+1);
 
 
     
-    <div class="link text-center"><a href="{{asset('catalogo/catalogo.png')}}" download class="text-center btn btn-outline-light">BAIXAR CATÁLOGO</a></div>
+    <div class="link text-center"><a href="/storage/{{ json_decode($empreendimento->empreendimentosDado->catalogo)[0]->download_link}}" download class="text-center btn btn-outline-light">BAIXAR CATÁLOGO</a></div>
 </section>
 
 

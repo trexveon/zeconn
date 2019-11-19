@@ -15,7 +15,7 @@
 
 <section  id="#visualizarnoticias" class="visualisarnoticia">
     <div class="voltar float-left">
-        <a href="{{ url()->previous() }}"><img src="{{asset('img/arrowempdireitadeactivate.png')}}" alt="">VOLTAR</a>
+        <a href="{{ url()->previous() }}"><img src="{{asset('img/arrowempdireitadeactivate.png')}}" title="voltar">VOLTAR</a>
     </div>
     
     <h1 class="text-left">
@@ -61,7 +61,7 @@
 
             <div class="col-lg-4 col-xl-4 col-md-12 col-sm-12 noticia">
            
-                    <div class="imagemnoticia" style="background-image: url('{{Voyager::image( $n->foto )}}');">
+                    <div class="imagemnoticia" style="background-image: url('{{Voyager::image( $n->foto )}}');" alt="{{$n->titulo}}" title="{{$n->titulo}}">
 
                     </div>
 

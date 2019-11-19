@@ -1246,7 +1246,7 @@ body .links .container .row .row2 ul li a {
   color: #abb5bb;
 }
 
-body .links .container .row .row2 ul li a :hover {
+body .links .container .row .row2 ul li a:hover {
   text-decoration: none;
 }
 
@@ -1282,7 +1282,7 @@ body .links .container .row .row4 ul li a {
   color: #abb5bb;
 }
 
-body .links .container .row .row4 ul li a :hover {
+body .links .container .row .row4 ul li a:hover {
   text-decoration: none;
 }
 
@@ -1994,6 +1994,11 @@ body .elemental .prevv {
   left: 70px;
 }
 
+body .essencial .prevv:hover,
+body .elemental .prevv:hover {
+  text-decoration: none;
+}
+
 body .essencial .prevv P,
 body .elemental .prevv P {
   color: white;
@@ -2039,6 +2044,11 @@ body .elemental .proxx {
   position: absolute;
   top: 45%;
   right: 70px;
+}
+
+body .essencial .proxx:hover,
+body .elemental .proxx:hover {
+  text-decoration: none;
 }
 
 body .essencial .proxx img,
@@ -2463,6 +2473,7 @@ body .plantas .row .planta1 {
   margin-right: 50px;
   margin-left: 50px;
   margin-bottom: 100px;
+  max-width: 1120px;
 }
 
 body .plantas .row ul {
@@ -2688,6 +2699,12 @@ body #tempo .container .itens .item .bairro {
 
 #human2be:hover .h2be_dot {
   fill: #fff;
+}
+
+@media screen and (max-width: 1440px) {
+  body .plantas .row img {
+    max-width: 900px;
+  }
 }
 
 @media screen and (max-width: 1024px) {

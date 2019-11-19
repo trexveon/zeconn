@@ -6,17 +6,17 @@
                     underline
                 @endif
             "
-            ><a href="/zecon">A ZECON</a></li>
+            ><a href="/" title="A zecon">A ZECON</a></li>
             <li class="
                 @if (\Request::is('empreendimentos'))  
                     underline
                 @endif
-            "><a href="/empreendimentos">EMPREENDIMENTOS</a></li>
+            "><a href="/empreendimentos" title="empreendimentos">EMPREENDIMENTOS</a></li>
             <li class="
                 @if (\Request::is('noticias'))  
                     underline
                 @endif
-            "><a href="/noticias">NOTICIAS</a></li>    
+            "><a href="/noticias" title="noticias">NOTICIAS</a></li>    
         </ul>
         <a href="" class="faleconosco falle">FALE CONOSCO</a>
         <ul class="redessociais">
@@ -34,17 +34,17 @@
     
         <div class="container">
             <div class="esquerda">
-                <a href="/"><img src="{{asset('img/ZECON.png')}}" alt="zecon construtora" title="Zecon Construtora" class="iconz"></a>
+                <a href="#head"><img src="{{asset('img/ZECON.png')}}" alt="zecon construtora" title="Zecon Construtora" class="iconz"></a>
             </div>
 
             <div class="direita">
                 <ul>
                     <li>
-                        <a href="/zecon " title="A zecon" class="itens 
-                        @if(isset(explode('/',Request::url())[3]) ) 
-                            @if(explode('/',Request::url())[3] == 'zecon')
+                        <a href="/ " title="A zecon" class="itens 
+                        @if(!isset(explode('/',Request::url())[3]) ) 
+                            
                                 traco
-                            @endif
+                            
                         @endif
                         ">A ZECON</a>
                     </li>

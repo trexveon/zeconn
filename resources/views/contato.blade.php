@@ -17,7 +17,7 @@
 @php
 unset($msg)
 @endphp
-<div class="contato">
+<div class="contato" id="head">
 
 <h1 class="text-center">FALE CONOSCO</h1>
     
