@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Noticia extends Model
 {
     protected $table = 'noticias';
+
+    public function User()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

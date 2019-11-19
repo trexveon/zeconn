@@ -24,7 +24,7 @@
     
     <hr>
     <h3 class="float-left">
-        {{ \Carbon\Carbon::parse($noticia->created_at)->format('d.m.Y')}}  /  por {{$noticia->usuario}}
+        {{ \Carbon\Carbon::parse($noticia->created_at)->format('d.m.Y')}}  /  por {{$noticia->User->name}}
     </h3>
     <div class="dados float-right">
         <ul class="d-flex align-items-center justify-content-center flex-row">
